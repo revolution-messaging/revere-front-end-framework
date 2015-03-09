@@ -1,0 +1,36 @@
+// Top Level Vertical Navigation
+
+nav.v {
+  display:none;
+  // To-do Mobile Navigation Handling
+  @include media($tablet) {
+  	width: 270px;
+  	vertical-align: top;
+  	background-color: $blackmid;
+  	display: table-cell;
+  	min-height: 100%;
+  	border-right: 1px solid $black;
+    display:block;
+    float:left;
+  }
+  ul {
+    padding-top:58px;
+    margin:0 20px;
+    > li {
+      font-size:12.5px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      padding:20px 30px;
+      border-bottom:1px solid $greymid;
+      ul {
+        li {
+          text-transform:none;
+        }
+      }
+    }
+  }
+  a {
+    display:block;
+    color:$greylt;
+  }
+}

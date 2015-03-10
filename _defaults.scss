@@ -1,0 +1,54 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+html, body {
+	min-height: 100%;
+	min-width: 320px;
+	background-color: $greydk;
+	color: #ddd;
+}
+
+#sb-site {background: $greydk;}
+
+a {
+	color: #54e3f4;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1, h2 ,h3, h4 {
+	font-weight: 200;
+	letter-spacing: .75px;
+}
+
+h1 {
+
+}
+
+h2 {
+	font-size: 1.35em;
+}
+
+h3 {
+	font-size: 1.2375em;
+}
+
+h4 {
+	font-size: 0.675em;
+	text-decoration: uppercase;
+}
+
+p {
+	font-size: .9em;
+	line-height: 140%;
+}

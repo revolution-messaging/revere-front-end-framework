@@ -6,10 +6,10 @@ nav.v {
   @include media($tablet) {
   	width: 270px;
   	vertical-align: top;
-  	background-color: $blackmid;
+  	background-color: #202123;
   	display: table-cell;
   	min-height: 100%;
-  	border-right: 1px solid $black;
+  	border-right: 1px solid #191919;
     display:block;
     float:left;
   }

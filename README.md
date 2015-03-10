@@ -12,34 +12,34 @@ Design for specific apps is defined by the body class. Each app must contain the
 
 Basic page structure should appear as follows:
 
-<pre>
-  <header>
-    <h1 class="logo">Revere AppName</h1>
-    <div class="user">
-      User info
-    </div>
-  </header>
-  <nav class="v">
-    <ul>
-      <li>
-        <a href="#">Nav Item</a>
-        <ul>
-          <li><a href="#">Nav Item</a></li>
-          <li><a href="#">Nav Item</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Nav Item</a></li>
-    </ul>
-  </nav>
-  <section class="primary">
+  <code>
     <header>
-      <h2 class="logo">Section Header If needed</h2>
+      <h1 class="logo">Revere AppName</h1>
+      <div class="user">
+        User info
+      </div>
     </header>
-  </section>
-  <footer>
-  </footer>
-</pre>
-
+    <nav class="v">
+      <ul>
+        <li>
+          <a href="#">Nav Item</a>
+          <ul>
+            <li><a href="#">Nav Item</a></li>
+            <li><a href="#">Nav Item</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Nav Item</a></li>
+      </ul>
+    </nav>
+    <section class="primary">
+      <header>
+        <h2 class="logo">Section Header If needed</h2>
+      </header>
+    </section>
+    <footer>
+    </footer>
+  </code>
+  
 ## Page Structure
 
 All Revere products consist of four main components as direct children of the body. For basic Revere styling, no additional classes or id's should be necessary 

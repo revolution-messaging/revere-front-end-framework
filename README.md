@@ -12,6 +12,7 @@ Design for specific apps is defined by the body class. Each app must contain the
 
 Basic page structure should appear as follows:
 
+<pre>
   <header>
     <h1 class="logo">Revere AppName</h1>
     <div class="user">
@@ -37,7 +38,7 @@ Basic page structure should appear as follows:
   </section>
   <footer>
   </footer>
-  
+</pre>
 
 ## Page Structure
 

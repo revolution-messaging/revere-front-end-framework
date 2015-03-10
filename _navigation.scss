@@ -4,10 +4,12 @@ nav.v {
   display:none;
   // To-do Mobile Navigation Handling
   @include media($tablet) {
+    position:fixed;
+    bottom:0;
   	width: 270px;
   	vertical-align: top;
   	background-color: #202123;
-  	display: table-cell;
+  	display: table;
   	min-height: 100%;
   	border-right: 1px solid #191919;
     display:block;

@@ -12,7 +12,7 @@ Design for specific apps is defined by the body class. Each app must contain the
 
 Basic page structure should appear as follows:
 
-<code>
+```html
     <header>
       <h1 class="logo">Revere AppName</h1>
       <div class="user">
@@ -38,8 +38,7 @@ Basic page structure should appear as follows:
     </section>
     <footer>
     </footer>
-</code>
-  
+```  
 ## Page Structure
 
 All Revere products consist of four main components as direct children of the body. For basic Revere styling, no additional classes or id's should be necessary 

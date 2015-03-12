@@ -75,6 +75,14 @@ p {
       }      
     }
   }
+  form & {
+    &.deactivated {
+      margin-top:0;
+    }
+    &.activated {
+      margin-top:-4px;
+    }
+  }
   &.deactivated {
     .content {
       background:white;
@@ -89,6 +97,7 @@ p {
   }
 }
 .activate {
+  display:block;
   background-color: #4e97e2;
   border: none;
   box-sizing: border-box;

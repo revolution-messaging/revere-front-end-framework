@@ -58,4 +58,16 @@ All structured navigation should consist of nested unordered lists inside of the
 
 ## Icon handling
 
-Write-up about icon handling.
+All icon art should be exported as SVGs with no fill or stroke applied. This is so that we can control those and others filters via CSS. SVGs should be saved in to 'images/svg-icons'. When new icons have been saved to this folder, it will be necessary to re-generate the SVG sprite. Run 'gulp svgstore'. This will create a new SVG sprite file called svg-icons.svg in 'images/'. All of the SVG icons will be saved with the ID of the file name of which they were saved.
+
+The default style for all icons can be found in "sass/revere-front-end-framework/_icons.scss". You may also use this file to change the CSS attributes of specific icons.
+
+Markup:
+
+```html
+    <svg class="icon icon-name">
+      <use xlink:href="#icon-name"></use>
+    </svg>
+```    
+  
+* to do: Automate inclusion of markup to display icons in icons.php include

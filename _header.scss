@@ -28,6 +28,8 @@ body.revere {
     padding:20px 0;
     @include clearfix;
     position:fixed;
+    right:0;
+    left:0;
     z-index:1;
     h1.logo {
       @include bgimg;

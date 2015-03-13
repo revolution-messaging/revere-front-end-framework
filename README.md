@@ -71,3 +71,19 @@ Markup:
 ```    
   
 * to do: Automate inclusion of markup to display icons in icons.php include
+
+## Patterns
+
+* **Modals:** The Modal design pattern can be found in `_defaults.scss`. Modal elements consist of `.modal` block-level element with two children, `.activate` and `.content`. Modal Animation is created through `_animations.scss`. 
+
+
+
+
+
+
+
+
+
+
+
+

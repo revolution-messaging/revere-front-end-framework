@@ -13,7 +13,9 @@ html, body {
 	background-color: $greydk;
 	color: #ddd;
 }
-
+body {
+  border-top:4px solid #535353;
+}
 #sb-site {background: $greydk;}
 
 a {
@@ -44,7 +46,10 @@ h4 {
 	font-size: 0.675em;
 	text-decoration: uppercase;
 }
-
+h6 {
+	font-size: .9em;
+	line-height: 140%;
+}
 p {
 	font-size: .9em;
 	line-height: 140%;
@@ -113,6 +118,7 @@ p {
   cursor: pointer;
   height: 2.5rem;
   svg {
+    overflow:visible;
     text-align: center;
     content: "";
     padding: 0.35em;

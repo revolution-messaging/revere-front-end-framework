@@ -1,10 +1,19 @@
 .icon {
 	background-repeat: no-repeat;
-  width:50px;
-  height:50px;
   fill:white;
   &.iconname {
     // Icon specific styles
+  }
+  .user & {
+    vertical-align:middle;
+    width:18px;
+    height:18px;
+  }
+  .user .activated & {
+    @include animation(rotate90 .1s 0s linear forwards);
+  }
+  .user .deactivated & {
+    @include animation(return90 .1s 0s linear forwards);
   }
 }
 

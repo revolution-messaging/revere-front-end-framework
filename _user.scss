@@ -10,7 +10,11 @@
     padding:5px 0 5px 0;
     cursor:pointer;
   }
-  
+  & .icon {
+    vertical-align:middle;
+    width:18px;
+    height:18px;
+  }
   img {
     display:inline-block;
     width:24px;
@@ -19,11 +23,6 @@
     overflow:hidden;
     margin-right:10px;
     vertical-align:middle;
-    & .icon {
-      vertical-align:middle;
-      width:18px;
-      height:18px;
-    }
   }
   > li {
     padding:5px 10px;

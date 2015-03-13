@@ -1,8 +1,6 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  font-size:1em;
 	box-sizing: border-box;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
 }
@@ -48,100 +46,4 @@ h4 {
 p {
 	font-size: .9em;
 	line-height: 140%;
-}
-
-
-// MODAL BOXES
-.modal {
-  position:relative;
-  .content {
-    position:absolute;
-    top: 2.5rem;
-    max-height:0;
-    overflow:hidden;
-  }
-  header & {
-    max-width:220px;
-    z-index:2;
-    &.deactivated {
-      max-width:500px;
-      @include animation(slim-modal .3s .5s linear forwards);
-    }
-    &.activated {
-      max-width:500px;
-      @include animation(wide-modal .2s 0s linear forwards);
-      .content {
-        @include animation-delay(.5s);
-      }      
-    }
-  }
-  form & {
-    &.deactivated {
-      margin-top:0;
-    }
-    &.activated {
-      margin-top:-4px;
-    }
-  }
-  &.deactivated {
-    .content {
-      background:white;
-      @include animation(contract-modal .3s linear forwards);
-    }
-  }
-  &.activated {
-    .content {
-      background:white;
-      @include animation(expand-modal .5s linear forwards);
-    }
-  }
-}
-.activate {
-  display:block;
-  background-color: #4e97e2;
-  border: none;
-  box-sizing: border-box;
-  width: 100%;
-  position: relative;
-  padding: .75rem 1rem .75rem 3.125rem;
-  color: white;
-  font-size: 0.9rem;
-  text-shadow: -1px -1px 1px rgba(42, 112, 185, 0.5);
-  text-align: left;
-  line-height: 1em;
-  outline: none;
-  cursor: pointer;
-  height: 2.5rem;
-  svg {
-    text-align: center;
-    content: "";
-    padding: 0.35em;
-    font-size: 1.4rem;
-    box-sizing: border-box;
-    width: 2.5rem;
-    height: 2.5rem;
-    top: 0;
-    bottom:0;
-    left: 0;
-    display: block;
-    position: absolute;
-    background-color: #3381d2;
-    border-right: 1px solid #2a70b9;
-  }
-//  &:after {
-//    text-align: center;
-//    content: "";
-//    padding: 0.35em;
-//    font-size: 1.4rem;
-//    box-sizing: border-box;
-//    width: 2.5rem;
-//    height: 2.5rem;
-//    top: 0;
-//    bottom:0;
-//    right: 0;
-//    display: block;
-//    position: absolute;
-//    background-color: #3381d2;
-//    border-left: 1px solid #2a70b9;
-//  }
 }

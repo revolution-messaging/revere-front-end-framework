@@ -1,8 +1,4 @@
 // Modal
-@include keyframes (load-modal) {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
 @include keyframes (expand-modal) {
   0% {max-height:0; padding: 0 20px;}
   30% {padding: 20px;}
@@ -20,4 +16,12 @@
 @include keyframes (slim-modal) {
   0% {width:500px;}
   100% {width:220px;}
+}
+@include keyframes (rotate90) {
+  0% { @include transform(rotate(0deg)); }
+100% { @include transform(rotate(180deg)); }
+}
+@include keyframes (return90) {
+  0% { @include transform(rotate(180deg)); }
+100% { @include transform(rotate(0deg)); }
 }

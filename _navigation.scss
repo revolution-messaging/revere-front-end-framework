@@ -16,7 +16,7 @@ nav.v {
     float:left;
   }
   ul {
-    padding-top:58px;
+    padding-top:63px;
     margin:0 20px;
     > li {
       font-size:12.5px;
@@ -24,6 +24,29 @@ nav.v {
       text-transform:uppercase;
       padding:20px 30px;
       border-bottom:1px solid $greymid;
+      position: relative;
+      a{
+        color: #90949a;
+        -webkit-transition: all 100ms ease-in 50ms;
+        transition: all 100ms ease-in 50ms;
+        &:hover{
+          color: #ffffff;
+        }
+      }
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 2px;
+        border-radius: 50%;
+        top: 1.6em;
+        width: .8em;
+        height: .8em;
+        background-color: #3a3b3e;
+      }
+      &:first-child{
+        border-top: 1px solid $greymid;
+      }
       ul {
         li {
           text-transform:none;
@@ -34,5 +57,8 @@ nav.v {
   a {
     display:block;
     color:$greylt;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.9em;
   }
 }

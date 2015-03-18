@@ -3,6 +3,7 @@
   right:15px;
   top:8px;
   min-width:136px;
+  z-index:4;
   // To-do Mobile Interface for .user content
   a {
     color:#ccc;
@@ -85,4 +86,15 @@
       }
     }
   }
+  body.dashboard &  {
+    margin: 0;
+    h6, ul {
+      margin: 0;
+      padding: 0;
+      box-sizing:content-box;
+    }
+    ul li {
+      padding:0;
+    }
+   }
 }

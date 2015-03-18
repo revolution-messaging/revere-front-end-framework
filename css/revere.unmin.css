@@ -204,7 +204,6 @@ html {
 
 html,
 body {
-	height: 100%;
 	min-width: 320px;
 	background-color: #2f3032;
 	color: #ddd;
@@ -212,6 +211,38 @@ body {
 
 body {
 	border-top: 4px solid #535353;
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	box-align: stretch;
+	-webkit-align-items: stretch;
+	-moz-align-items: stretch;
+	-ms-align-items: stretch;
+	-o-align-items: stretch;
+	align-items: stretch;
+	-ms-flex-align: stretch;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-box-pack: start;
+	-moz-box-pack: start;
+	box-pack: start;
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+	-o-justify-content: flex-start;
+	justify-content: flex-start;
+	-ms-flex-pack: start;
 }
 
 #sb-site {
@@ -381,7 +412,7 @@ body.revere.pattern header h1.logo {
 
 body.revere > header {
 	padding: 25px 0 20px;
-	position: fixed;
+	position: absolute;
 	right: 0;
 	left: 0;
 	z-index: 1;
@@ -414,6 +445,7 @@ body.revere > header h1.logo a {
 	right: 15px;
 	top: 8px;
 	min-width: 136px;
+	z-index: 4;
 }
 
 .user a {
@@ -522,6 +554,21 @@ body.revere > header h1.logo a {
 	display: none;
 }
 
+body.dashboard .user {
+	margin: 0;
+}
+
+body.dashboard .user h6,
+body.dashboard .user ul {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+body.dashboard .user ul li {
+	padding: 0;
+}
+
 nav.v {
 	display: none;
 }
@@ -580,10 +627,12 @@ nav.v a {
 }
 
 .primary {
-	left: 270px;
+	-webkit-flex-grow: 2;
+	-moz-flex-grow: 2;
+	flex-grow: 2;
+	-ms-flex-positive: 2;
 	position: relative;
 	padding: 0 15px;
-	width: calc(100% - 270px);
 }
 
 .primary > header {
@@ -645,16 +694,22 @@ body.revere > header h1.logo {
 }
 
 nav.v {
-	position: fixed;
-	bottom: 0;
-	width: 270px;
-	vertical-align: top;
+	display: block;
+	-webkit-flex-shrink: 0;
+	-moz-flex-shrink: 0;
+	flex-shrink: 0;
+	-ms-flex-negative: 0;
+	-webkit-flex-grow: 1;
+	-moz-flex-grow: 1;
+	flex-grow: 1;
+	-ms-flex-positive: 1;
+	-webkit-flex-basis: 270px;
+	-moz-flex-basis: 270px;
+	flex-basis: 270px;
+	-ms-flex-preferred-size: 270px;
 	background-color: #202123;
-	display: table;
 	min-height: 100%;
 	border-right: 1px solid #191919;
-	display: block;
-	float: left;
 }
 
 }

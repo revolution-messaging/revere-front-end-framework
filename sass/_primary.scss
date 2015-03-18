@@ -1,8 +1,7 @@
 .primary {
-  left: 270px;
+  @include flex-grow(2);
   position:relative;
   padding: 0 15px;
-  width: calc(100% - 270px);
   > header {
     padding:15px 0 20px;
     h2 {

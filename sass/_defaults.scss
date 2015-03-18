@@ -8,13 +8,16 @@ html {
 }
 
 html, body {
-	height: 100%;
 	min-width: 320px;
 	background-color: $greydk;
 	color: #ddd;
 }
 body {
   border-top:4px solid #535353;
+  @include align-items(stretch);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
 }
 #sb-site {background: $greydk;}
 

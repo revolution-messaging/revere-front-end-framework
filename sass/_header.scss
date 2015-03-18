@@ -27,7 +27,7 @@ body.revere {
   > header {
     padding:25px 0 20px;
     @include clearfix;
-    position:fixed;
+    position:absolute;
     right:0;
     left:0;
     z-index:1;

@@ -27,8 +27,7 @@ nav.v {
       position: relative;
       a{
         color: #90949a;
-        -webkit-transition: all 100ms ease-in 50ms;
-        transition: all 100ms ease-in 50ms;
+        @include transition(all 100ms ease-in 50ms);    
         &:hover{
           color: #ffffff;
         }

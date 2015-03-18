@@ -6,6 +6,11 @@
   // To-do Mobile Interface for .user content
   a {
     color:#ccc;
+    text-decoration:none;
+    @include transition(all 100ms ease-in 500ms);   
+    &:hover {
+      color:white;
+    }
   }
   h6 {
     padding:5px 0 5px 0;

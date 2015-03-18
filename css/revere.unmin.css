@@ -418,6 +418,14 @@ body.revere > header h1.logo a {
 
 .user a {
 	color: #ccc;
+	text-decoration: none;
+	-webkit-transition: all 100ms ease-in 500ms;
+	-moz-transition: all 100ms ease-in 500ms;
+	transition: all 100ms ease-in 500ms;
+}
+
+.user a:hover {
+	color: white;
 }
 
 .user h6 {
@@ -535,6 +543,7 @@ nav.v ul > li {
 nav.v ul > li a {
 	color: #90949a;
 	-webkit-transition: all 100ms ease-in 50ms;
+	-moz-transition: all 100ms ease-in 50ms;
 	transition: all 100ms ease-in 50ms;
 }
 

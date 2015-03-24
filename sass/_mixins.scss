@@ -19,7 +19,7 @@ $imgPath: /wp-content/themes/revere-pattern/images;
 @mixin bgimg { // Text indent when using background image
 	text-indent:-9999em;
 	overflow:hidden;
-} 
+}
 /* Structure */
 $fg-column: 7.107%;
 $fg-gutter: 1.3377%;
@@ -65,7 +65,7 @@ $linkColor: #54e3f4;
 $formBkgd: #47494d;
 
 $border: #333333;
-$topBorderGray: #535353; // Might remove this one. Not sure if its going to be used multiple times. 
+$topBorderGray: #535353; // Might remove this one. Not sure if its going to be used multiple times.
 
 
 .lightPrimary {
@@ -119,5 +119,14 @@ color: $formBkgd;
 color: $border;
 }
 .topBorderGray{
-color: $topBorderGray; // Might remove this one. Not sure if its going to be used multiple times. 
+color: $topBorderGray; // Might remove this one. Not sure if its going to be used multiple times.
+}
+
+// ------------------------------------------------------------
+// Omega Reset
+// ------------------------------------------------------------
+
+@mixin omega-reset($nth) {
+  &amp;:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &amp;:nth-child(#{$nth}+1) { clear: none }
 }

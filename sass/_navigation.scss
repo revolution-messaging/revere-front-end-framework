@@ -44,6 +44,14 @@ nav.v {
         height: .8em;
         background-color: #3a3b3e;
       }
+      &.active{
+        a{
+          color: #FFFFFF;
+        }
+        &:before {
+          background-color: #61e699;
+        }
+      }
       &:first-child{
         border-top: 1px solid $greymid;
       }

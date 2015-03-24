@@ -4,16 +4,13 @@ nav.v {
   display:none;
   // To-do Mobile Navigation Handling
   @include media($tablet) {
-    position:fixed;
-    bottom:0;
-  	width: 270px;
-  	vertical-align: top;
+    display:block;
+    @include flex-shrink(0);
+    @include flex-grow(1);
+    @include flex-basis(270px);
   	background-color: #202123;
-  	display: table;
   	min-height: 100%;
   	border-right: 1px solid #191919;
-    display:block;
-    float:left;
   }
   ul {
     padding-top:63px;
@@ -27,8 +24,7 @@ nav.v {
       position: relative;
       a{
         color: #90949a;
-        -webkit-transition: all 100ms ease-in 50ms;
-        transition: all 100ms ease-in 50ms;
+        @include transition(all 100ms ease-in 50ms);    
         &:hover{
           color: #ffffff;
         }

@@ -56,11 +56,13 @@ Logos are generated as data URI's in `_header.scss`. Each logo should be placed 
 
 All structured navigation should consist of nested unordered lists inside of the `nav` element. Apps within the Revere Suite are built on a variety of platforms, and because of this, CSS for the top-level navigation should be applied to the elements themselves and not to additional classes or id's that may not be available across all platforms. If icons are required see additional notes regarding icons
 
+* to-do **Navigation Handling:**
+
 ## Icon handling
 
-All icon art should be exported as SVGs with no fill or stroke applied. This is so that we can control those and others filters via CSS. SVGs should be saved in to 'images/svg-icons'. When new icons have been saved to this folder, it will be necessary to re-generate the SVG sprite. Run 'gulp svgstore'. This will create a new SVG sprite file called svg-icons.svg in 'images/'. All of the SVG icons will be saved with the ID of the file name of which they were saved.
+All icon art should be exported as SVGs with no fill or stroke applied. This is so that we can control those and others filters via CSS. SVGs should be saved in to `icons/svg/`. When new icons have been saved to this folder, it will be necessary to re-generate the SVG sprite. Run `gulp svgstore`. This will create a new SVG sprite file called `icons.svg` in `icons/`. All of the SVG icons will be saved with the ID of the file name of which they were saved.
 
-The default style for all icons can be found in "sass/revere-front-end-framework/_icons.scss". You may also use this file to change the CSS attributes of specific icons.
+The default style for all icons can be found in `revere-front-end-framework/sass/_icons.scss`. You may also use this file to change the CSS attributes of specific icons.
 
 Markup:
 
@@ -76,6 +78,7 @@ Markup:
 
 * **Modals:** The Modal design pattern can be found in `_defaults.scss`. Modal elements consist of `.modal` block-level element with two children, `.activate` and `.content`. Modal Animation is created through `_animations.scss`. 
 
+* to-do **User Header:** 
 
 
 

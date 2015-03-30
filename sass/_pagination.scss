@@ -1,0 +1,16 @@
+.pagination{
+  li{
+    display: inline;
+    a{
+      background-color: #414348;
+      padding: 0.4em 0.5em;
+      text-decoration: none;
+      &:hover{
+        background-color: #53555c;
+      }
+    }
+    a:not([href]){
+      background-color: transparent;
+    }
+  }
+}

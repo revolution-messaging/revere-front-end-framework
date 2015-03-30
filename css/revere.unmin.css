@@ -416,6 +416,7 @@ body.revere > header {
 	right: 0;
 	left: 0;
 	z-index: 1;
+	width: 270px;
 }
 
 body.revere > header:after {
@@ -558,15 +559,51 @@ body.dashboard .user {
 	margin: 0;
 }
 
-body.dashboard .user h6,
+body.dashboard .user .icon {
+	fill: #fff;
+}
+
+body.dashboard .user > li {
+	padding: 10px 15px;
+}
+
+body.dashboard .user > li:hover ul li {
+	-webkit-animation: show-text 0.1s linear forwards;
+	-moz-animation: show-text 0.1s linear forwards;
+	animation: show-text 0.1s linear forwards;
+}
+
+body.dashboard .user h6 {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	font-size: .9em;
+	position: relative;
+	cursor: default;
+	font-weight: normal;
+}
+
 body.dashboard .user ul {
+	top: 25px;
 	margin: 0;
 	padding: 0;
 	box-sizing: content-box;
 }
 
+body.dashboard .user ul > li {
+	opacity: 0;
+}
+
+body.dashboard .user ul > li a:hover {
+	color: #fff;
+}
+
 body.dashboard .user ul li {
 	padding: 0;
+}
+
+body.dashboard .user ul li a {
+	display: block;
 }
 
 nav.v {
@@ -608,6 +645,14 @@ nav.v ul > li:before {
 	width: .8em;
 	height: .8em;
 	background-color: #3a3b3e;
+}
+
+nav.v ul > li.active a {
+	color: #FFFFFF;
+}
+
+nav.v ul > li.active:before {
+	background-color: #61e699;
 }
 
 nav.v ul > li:first-child {
@@ -818,6 +863,54 @@ nav.v {
 100% {
 	max-height: 0;
 	padding: 0 20px;
+}
+
+}
+
+@-webkit-keyframes show-text {
+
+0% {
+	opacity: 0;
+}
+
+70% {
+	opacity: .5;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@-moz-keyframes show-text {
+
+0% {
+	opacity: 0;
+}
+
+70% {
+	opacity: .5;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes show-text {
+
+0% {
+	opacity: 0;
+}
+
+70% {
+	opacity: .5;
+}
+
+100% {
+	opacity: 1;
 }
 
 }

@@ -127,6 +127,6 @@ color: $topBorderGray; // Might remove this one. Not sure if its going to be use
 // ------------------------------------------------------------
 
 @mixin omega-reset($nth) {
-  &amp;:nth-child(#{$nth}) { margin-right: flex-gutter(); }
-  &amp;:nth-child(#{$nth}+1) { clear: none }
+  &&:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &&:nth-child(#{$nth}+1) { clear: none }
 }

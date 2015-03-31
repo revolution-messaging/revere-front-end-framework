@@ -39,3 +39,7 @@ $('.modal .activate, .user li h6').click( function(){
     modalBox.addClass('activated');
   }
 });
+var $disabled = '.setting :disabled';
+if ($($disabled) ) {
+  $($disabled).closest('div.setting').addClass('disabled');
+}

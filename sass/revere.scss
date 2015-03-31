@@ -5,10 +5,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {	line-height: 1;}ol, ul {	list-style: none;}
 table {	border-collapse: collapse;	border-spacing: 0;}
 
-@import "../../../bourbon/bourbon";
-@import "../../../neat/neat";
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
 //@import "fonts";
 @import "mixins";
+@import "colors";
 @import "animations";
 @import "defaults";
 @import "header";
@@ -16,6 +17,9 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 @import "navigation";
 @import "primary";
 @import "icons";
+@import "table";
+@import "pagination";
 
 //@import "login";
 @import "forms";
+

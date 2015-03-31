@@ -5,9 +5,7 @@ nav.v {
   // To-do Mobile Navigation Handling
   @include media($tablet) {
     display:block;
-    @include flex-shrink(0);
-    @include flex-grow(1);
-    @include flex-basis(270px);
+    @include flex(0 0 270px);
   	background-color: #202123;
   	min-height: 100%;
   	border-right: 1px solid #191919;
@@ -28,6 +26,9 @@ nav.v {
         &:hover{
           color: #ffffff;
         }
+      }
+      svg {
+        float:right;
       }
       &:before {
         display: block;

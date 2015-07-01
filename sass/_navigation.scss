@@ -10,7 +10,7 @@ nav.v {
   	min-height: 100%;
   	border-right: 1px solid #191919;
   }
-  ul {
+  > ul {
     padding-top:63px;
     margin:0 20px;
     > li {
@@ -53,8 +53,28 @@ nav.v {
         border-top: 1px solid $greymid;
       }
       ul {
+        margin:0;
+        padding:0;
         li {
           text-transform:none;
+          color: #90949a;
+          font-size: 1.2em;
+          letter-spacing: 1px;
+          list-style-type: none;
+          margin: 1em 0 0;
+          position: relative;
+          text-transform: none;
+          &:before {
+            background-color: #3a3b3e;
+            border-radius: 50%;
+            content: "";
+            display: block;
+            height: 0.7em;
+            left: -28px;
+            position: absolute;
+            top: 0.3em;
+            width: 0.7em;
+          }
         }
       }
     }

@@ -26,7 +26,12 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 body.exchange {
   .canvas {
     padding:25px 35px 40px;
+    h3 {
+      margin-bottom:12px;
+    }
+    
   }
+  // Campaign Creation Form
   .field-group {
     border-width:1px 1px 0 1px;
     border-style:solid;
@@ -146,11 +151,28 @@ body.exchange {
               border-left: 1px solid #5B9BF4;
             }
           }
+          &.deactivated {
+            z-index:1;
+          }
         }
         label {
           padding:0;
         }
       }
     }
+  }
+  .main {
+      @include align-items(space-between);
+      @include display(flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include justify-content(space-between);
+      li {
+        margin:.5rem 0;
+        @include flex(0 1 24%);
+        padding:12px 20px;
+        border:1px solid #d7dde5;
+        background:white;
+      }
   }
 }

@@ -3,7 +3,10 @@
   position:relative;
   padding: 0 15px;
   > header {
-    padding:15px 0 20px;
+    padding:15px 0 22px;
+    border-bottom:1px solid #535353;
+    .app & {
+    }
     h2 {
       margin:0.2em 0 0 14px;
     }

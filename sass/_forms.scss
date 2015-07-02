@@ -58,17 +58,17 @@ button:focus {
     vertical-align: middle;
     width: 218px;
   }
-  input, select {
+  input {
     background:$primarylt;
-    padding-left:45px;
   }
   select {
     width:120%;
+    margin-left:45px;
+    background:transparent;
     &:focus {
       background:white;
     }
     option {
-      padding-left:45px;
       background:white;
     }
   }

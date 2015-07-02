@@ -43,3 +43,18 @@ var $disabled = '.setting :disabled';
 if ($($disabled) ) {
   $($disabled).closest('div.setting').addClass('disabled');
 }
+$('.modal-h .activate').hover( function(){
+  var modalBox = $(this).parent()
+  // $(this).parent().toggleClass('activated', 'deactivated');
+  if (modalBox.hasClass('activated')) {
+    modalBox.removeClass('activated');
+    modalBox.addClass('deactivated');
+  } else {
+    modalBox.removeClass('deactivated');
+    modalBox.addClass('activated');
+  }
+});
+var $disabled = '.setting :disabled';
+if ($($disabled) ) {
+  $($disabled).closest('div.setting').addClass('disabled');
+}

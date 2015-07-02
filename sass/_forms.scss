@@ -3,7 +3,7 @@ select,
 textarea {
 	width: 100%;
 	border: 0;
-	font-size: .9em;
+	font-size: 1em;
 	color: $greydk;
 	padding: 10px;
 	line-height: 1em;
@@ -46,9 +46,9 @@ button:focus {
       border-bottom: 1px solid $primarymdlt;
     }
   }
-  label {
+  > label {
     background-color: $primarymdlt;
-    display: table-cell;
+    display: block;
     font-size: 0.63em;
     font-weight: 400;
     letter-spacing: 1px;

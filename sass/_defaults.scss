@@ -64,7 +64,31 @@ p {
 }
 
 
-// MODAL BOXES
+// MODAL & TIP BOXES
+// .modal-c on click / .modal-h on hover
+.modal-c, .modal-h {
+  &.deactivated {
+    .content {
+      background:white;
+      @include animation(contract-modal .3s linear forwards);
+    }
+  }
+  &.activated {
+    .content {
+      background:white;
+      @include animation(expand-modal .5s linear forwards);
+    }
+  }
+  form & {
+    &.deactivated {
+      margin-top:0;
+    }
+    &.activated {
+      margin-top:-4px;
+    }
+  }
+}
+
 .modal {
   position:relative;
   .content {
@@ -88,43 +112,31 @@ p {
       }      
     }
   }
-  form & {
-    &.deactivated {
-      margin-top:0;
-    }
-    &.activated {
-      margin-top:-4px;
-    }
-  }
-  &.deactivated {
-    .content {
-      background:white;
-      @include animation(contract-modal .3s linear forwards);
-    }
-  }
-  &.activated {
-    .content {
-      background:white;
-      @include animation(expand-modal .5s linear forwards);
-    }
-  }
+}
+.modal-h, .modal-c {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
 }
 .activate {
   display:block;
-  background-color: #4e97e2;
   border: none;
   box-sizing: border-box;
   width: 100%;
   position: relative;
   padding: .75rem 1rem .75rem 3.125rem;
-  color: white;
   font-size: 0.9rem;
-  text-shadow: -1px -1px 1px rgba(42, 112, 185, 0.5);
   text-align: left;
   line-height: 1em;
   outline: none;
   cursor: pointer;
   height: 2.5rem;
+  .modal & {
+    background-color: #4e97e2;
+    text-shadow: -1px -1px 1px rgba(42, 112, 185, 0.5);
+    color: white;
+  }
   svg {
     overflow:visible;
     text-align: center;
@@ -136,11 +148,16 @@ p {
     height: 2.5rem;
     top: 0;
     bottom:0;
-    left: 0;
     display: block;
     position: absolute;
-    background-color: #3381d2;
-    border-right: 1px solid #2a70b9;
+    .modal, .modal-c {
+      left: 0;
+      background-color: #3381d2;
+      border-right: 1px solid #2a70b9;
+    }
+    .modal-h & {
+      right:0;
+    }
   }
 //  &:after {
 //    text-align: center;

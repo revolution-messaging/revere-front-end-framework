@@ -41,6 +41,7 @@ body.exchange {
     @include flex-direction(row);
     @include justify-content(space-between);
     overflow:visible;
+    position: relative;
     &:last-of-type {
       border-width:1px;
     }
@@ -110,6 +111,15 @@ body.exchange {
               &:hover {
                 background:#F2F4F5;
               }
+              &.selected {
+                label {
+
+                  &:before {
+                    border:2px solid #2662B5;
+                    background-color: #2662B5;
+                  }
+                }
+              }
               label {
                 font-size: 0.63em;
                 font-weight: 400;
@@ -130,6 +140,22 @@ body.exchange {
             }
             > label {
               padding: 6px 0 6px 20px;
+            }
+          }
+          &.selected {
+            background:#3282F1;
+            > label {
+              display: block;
+              color:white;
+            }
+            .content {
+              padding: 12px 20px;
+              max-height:400px;
+            }
+            svg {
+              fill:white;
+              background-color: #2662B5;
+              border-left: 1px solid #5B9BF4;
             }
           }
           &.activated {

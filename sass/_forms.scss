@@ -115,6 +115,7 @@ button:focus {
     background:$primarylt;
   }
   select {
+    @include appearance(none);
     width:120%;
     margin-left:45px;
     background:transparent;

@@ -43,6 +43,10 @@ var $disabled = '.setting :disabled';
 if ($($disabled) ) {
   $($disabled).closest('div.setting').addClass('disabled');
 }
+// Margins field-group
+$('input').focusin(function() {
+  $(this).parent('.field-group').addClass('active');
+});
 $('.modal-h .activate').hover( function(){
   var modalBox = $(this).parent()
   // $(this).parent().toggleClass('activated', 'deactivated');

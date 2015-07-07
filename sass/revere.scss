@@ -33,7 +33,7 @@ body.exchange {
   }
   // Campaign Creation Form
   .field-group {
-    border-width:1px 1px 0 1px;
+    border-width:1px;
     border-style:solid;
     border-color:#D7DDE5;
     @include align-items(stretch);
@@ -41,8 +41,13 @@ body.exchange {
     @include flex-direction(row);
     @include justify-content(space-between);
     overflow:visible;
-    &:last-of-type {
-      border-width:1px;
+    position:relative;
+    @include transition(all .1s linear);
+    &.active {
+      margin-top:30px;
+    }
+    &.completed  {
+      border-bottom-width:0;
     }
     > label {
       @include flex(0 0 33.3333%);
@@ -145,8 +150,18 @@ body.exchange {
               padding: 12px 20px;
               max-height:400px;
             }
+            input[type=radio]:unchecked + label{
+              svg.info {
+                fill:white;
+              }
+            }
+            input[type=radio]:checked + label{
+              svg.settings {
+                fill:white;
+              }
+            }
+            
             svg {
-              fill:white;
               background-color: #2662B5;
               border-left: 1px solid #5B9BF4;
             }

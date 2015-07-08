@@ -43,10 +43,14 @@ body.exchange {
     overflow:visible;
     position:relative;
     @include transition(all .1s linear);
+    &.inactive {
+      opacity:0;
+    }
     &.active {
-      margin-top:30px;
+      margin:30px 0;
     }
     &.completed  {
+//      margin:0;
       border-bottom-width:0;
     }
     &:last-of-type {
@@ -84,17 +88,13 @@ body.exchange {
         > div {
           min-height:40px;
           @include transition(all .1s linear);
-          svg {
-            @include transition(all .1s linear);
-            right:0;
-            fill:transparent;
-          }
           label {
             font-size:1rem;
             font-weight: 400;
             padding: 12px 20px;
           }
-           input[type="radio"],  input[type="checkbox"] {
+           input[type="radio"],  
+           input[type="checkbox"] {
             height:0;
             width:0;
             overflow:hidden;
@@ -159,11 +159,6 @@ body.exchange {
               padding: 12px 20px;
               max-height:400px;
             }
-            svg {
-              fill:white;
-              background-color: #2662B5;
-              border-left: 1px solid #5B9BF4;
-            }
           }
           &.activated {
             box-shadow:0 0 5px black;
@@ -177,18 +172,7 @@ body.exchange {
             .content {
               padding: 12px 20px;
               max-height:400px;
-            }
-            input[type=radio]:unchecked + label{
-              svg.info {
-                fill:white;
-              }
-            }
-            input[type=radio]:checked + label{
-              svg.settings {
-                fill:white;
-              }
-            }
-            
+            }            
             svg {
               background-color: #2662B5;
               border-left: 1px solid #5B9BF4;
@@ -196,6 +180,52 @@ body.exchange {
           }
           &.deactivated {
             z-index:1;
+          }
+        }
+        div {
+          input + label {
+            svg {
+              @include transition(all .1s linear);
+              right:0;
+              fill:#f2f4f5;
+            }
+          }
+          &.activated {
+            input:not(checked) + label {
+              svg.info {
+                z-index:1;
+                fill-opacity:1;
+                fill:white;
+              }
+              svg.settings {
+                fill-opacity:0;
+                fill:white;
+              }
+            }
+          }
+          &.deactivated {
+            input:not(checked) + label {
+              svg {
+                fill:#f2f4f5;
+              }
+            }
+          }
+          &.selected {
+            svg {
+              background-color: #2662B5;
+              border-left: 1px solid #5B9BF4;
+            }
+            input:checked + label {
+              svg.info {
+                fill-opacity:0;
+                fill:white;
+              }
+              svg.settings {
+                z-index:1;
+                fill-opacity:1;
+                fill:white;
+              }
+            }
           }
         }
         label {

@@ -52,7 +52,6 @@ body.exchange {
       margin:30px 0;
     }
     &.completed  {
-//      margin:0;
       border-bottom-width:0;
     }
     &:last-of-type {
@@ -251,9 +250,10 @@ body.exchange {
       @include flex-direction(row);
       @include flex-wrap(wrap);
       @include justify-content(space-between);
+      margin:0 -.5rem;
       li {
-        margin:.5rem 0;
-        @include flex(0 1 24%);
+        margin:.5rem;
+        @include flex(1 1 24%);
         padding:12px 20px;
         border:1px solid #d7dde5;
         background:white;

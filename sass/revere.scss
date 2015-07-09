@@ -150,38 +150,6 @@ body.exchange {
               padding: 6px 0 6px 20px;
             }
           }
-          &.selected {
-            background:#3282F1;
-            > label {
-              display: block;
-              color:white;
-            }
-            .content {
-              padding: 12px 20px;
-              max-height:400px;
-            }
-          }
-          &.activated {
-            box-shadow:0 0 5px black;
-            background:#3282F1;
-            margin-top:-4px;
-            z-index:2;
-            > label {
-              display: block;
-              color:white;
-            }
-            .content {
-              padding: 12px 20px;
-              max-height:400px;
-            }            
-            svg {
-              background-color: #2662B5;
-              border-left: 1px solid #5B9BF4;
-            }
-          }
-          &.deactivated {
-            z-index:1;
-          }
         }
         div {
           input + label {
@@ -234,6 +202,38 @@ body.exchange {
         }
       }
     }
+    .selected {
+      background:#3282F1;
+      > label {
+        display: block;
+        color:white;
+      }
+      .content {
+        padding: 12px 20px;
+        max-height:400px;
+      }
+    }
+    .activated {
+      box-shadow:0 0 5px black;
+      background:#3282F1;
+      margin-top:-4px;
+      z-index:2;
+      > label {
+        display: block;
+        color:white;
+      }
+      .content {
+        padding: 12px 20px;
+        max-height:400px;
+      }            
+      svg {
+        background-color: #2662B5;
+        border-left: 1px solid #5B9BF4;
+      }
+    }
+    .deactivated {
+      z-index:1;
+    }
     svg.toggle {
       position:absolute;
       left:calc(33.3333% + 20px);
@@ -258,5 +258,68 @@ body.exchange {
         border:1px solid #d7dde5;
         background:white;
       }
+  }
+  // Datepicker
+  #days-of-flight {
+    input.ng-datepicker-input {
+      position:absolute;
+      top:0;
+      left:0;
+      background:transparent;
+      
+    }
+    .activated {
+      input.ng-datepicker-input {
+        color:white;
+      }
+      .ng-datepicker {
+        position:absolute;
+        top:0;
+        left:0;
+        text-align:center;
+        .controls {
+          color:white;
+          font-size: 0.63em;
+          font-weight: 700;
+          letter-spacing: 1px;
+          line-height:1rem;
+          min-height: 40px;
+          padding: 12px 20px;
+          text-transform: uppercase;
+          vertical-align: baseline;
+        }
+        .day-names {
+          background:white;
+          padding: 12px 10px 0;
+          @include align-items(space-between);
+          @include display(flex);
+          @include flex-direction(row);
+          @include flex-wrap(nowrap);
+          @include justify-content(flex-start);
+          > span {
+            display:block;
+            @include flex(0 1 38px);
+            padding:0 5px;
+            margin: 5px;
+          }
+        }
+        .calendar {
+          background:white;
+          padding:0 10px 12px;
+          @include align-items(space-between);
+          @include display(flex);
+          @include flex-direction(row);
+          @include flex-wrap(wrap);
+          @include justify-content(flex-start);
+          > span {
+            background:#f2f4f5;
+            display:block;
+            @include flex(0 1 38px);
+            padding:2px 5px;
+            margin: 5px;
+          }
+        }
+      }
+    }
   }
 }

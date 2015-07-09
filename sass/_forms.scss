@@ -28,6 +28,15 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+button {
+	font-size: 1em;
+	line-height: 1em;
+  padding:12px 20px;
+  background:#3282f1;
+  color:white;
+  border:0;
+  cursor:pointer;
+}
 // Can be li or div child of .settings-group
 
 .settings-section {
@@ -125,6 +134,10 @@ button:focus {
     option {
       background:white;
     }
+  }
+  button {
+    display:block;
+    margin:20px 0 20px 33.3333%;
   }
 }
 // Parent element of dissabled form item

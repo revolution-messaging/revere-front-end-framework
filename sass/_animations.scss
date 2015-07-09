@@ -1,8 +1,8 @@
 // Modal
 @include keyframes (expand-modal) {
   0% {max-height:0; padding: 0 20px;}
-  30% {padding: 20px;}
-  100% {max-height:800px;padding:30px 20px 10px;}
+  30% {padding: 0 20px;}
+  100% {max-height:800px;padding: 10px 20px;}
 }
 @include keyframes (contract-modal) {
   0% {max-height:800px;padding:30px 20px 10px;}
@@ -29,5 +29,14 @@
 @include keyframes (return90) {
   0% { @include transform(rotate(180deg)); }
 100% { @include transform(rotate(0deg)); }
+}
+
+@include keyframes (rotate90reverse) {
+  0% { @include transform(rotate(180deg)); }
+100% { @include transform(rotate(0deg)); }
+}
+@include keyframes (return90reverse) {
+  0% { @include transform(rotate(0deg)); }
+100% { @include transform(rotate(180deg)); }
 }
 

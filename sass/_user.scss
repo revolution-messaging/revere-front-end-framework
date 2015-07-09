@@ -34,7 +34,7 @@
   > li {
     padding:5px 10px;
     list-style:none;
-    display:inline-block;
+    float: left;
     position:relative;
     & {
       .icon {
@@ -45,7 +45,8 @@
        @include animation(contract-modal .1s linear forwards);
       }
     }
-    &:hover {
+    &:hover,
+    &.hover {
       background:#414348;
       .icon {
         @include animation(rotate90 .2s 0s linear forwards);

@@ -176,3 +176,18 @@ p {
 //    border-left: 1px solid #2a70b9;
 //  }
 }
+
+.feedback {
+  &.error {
+    background-color: #d44949;
+  }
+  &.success {
+    background-color: #4aae74;
+  }
+  p {
+    padding: 10px;
+    color: #fff;
+    line-height: 1em;
+    font-size: .9em;
+  }
+}

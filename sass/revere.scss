@@ -208,6 +208,9 @@ body.exchange {
         display: block;
         color:white;
       }
+      input {
+        color:white;
+      }
       .content {
         padding: 12px 20px;
         max-height:400px;
@@ -259,7 +262,6 @@ body.exchange {
         background:white;
       }
   }
-<<<<<<< HEAD
   // Datepicker
   #days-of-flight {
     input.ng-datepicker-input {
@@ -269,7 +271,7 @@ body.exchange {
       background:transparent;
       
     }
-    .activated {
+    .activated, .selected {
       input.ng-datepicker-input {
         color:white;
       }
@@ -278,6 +280,7 @@ body.exchange {
         top:0;
         left:0;
         text-align:center;
+        z-index:2;
         .controls {
           color:white;
           font-size: 0.63em;
@@ -288,6 +291,35 @@ body.exchange {
           padding: 12px 20px;
           text-transform: uppercase;
           vertical-align: baseline;
+          div.left, div.right {
+            display:inline-block;
+            width:20px;
+          }
+          .prev-year-btn, .next-year-btn {
+            display:none;
+          }
+          .prev-month-btn svg {
+            @include transform(rotate(45deg));
+            @include transform-origin(12px 16px 0);
+          }
+          .next-month-btn svg {
+            @include transform(rotate(-45deg));
+            @include transform-origin(16px 12px 0);
+          }
+          svg {
+            position:relative;
+            border:0;
+            background:transparent;
+            fill:white;
+            display:inline-block;
+            left:auto;
+            padding:0;
+            top:auto;
+            bottom:auto;
+            vertical-align:middle;
+            width:20px;
+            height:20px;
+          }
         }
         .day-names {
           background:white;
@@ -319,64 +351,8 @@ body.exchange {
             padding:2px 5px;
             margin: 5px;
           }
-=======
-  // User Navigation
-  .user {
-    top: 15px;
-    .clientmenu {
-      margin-right: 10px;
-      padding: 0;
-      &:hover {
-        -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
-        box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
-        background: #fff;
-        h6 {
-          border-bottom: 1px solid #d7dde5;
-        }
-        > ul {
-          background: #fff;
-          padding: 0;
-          margin: 0;
-        }
-        svg.toggle {
-          width: 20px;
-          position: relative;
-          top: 0;
-          height: 20px;
-          fill: #72767A;
-          @include animation(rotate90reverse .2s 0s linear forwards);
-        }
-      }
-      h6 {
-        text-align: right;
-        padding: 12px 10px;
-        svg.toggle {
-          width: 20px;
-          position: relative;
-          top: 0;
-          height: 20px;
-          fill: #72767A;
-          @include animation(return90reverse .2s 0s linear forwards);
-        }
-      }
-      > ul {
-        right: 0;
-        left: auto;
-        position: static;
-        padding-top: 0 !important;
-        li {
-          margin: 0;
-          padding: 10px 0;
-          text-align: right;
-          border: 0;
-          cursor: pointer;
->>>>>>> ba17a8c3282f6bc73835b657b630cdcc90c11fdf
         }
       }
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ba17a8c3282f6bc73835b657b630cdcc90c11fdf

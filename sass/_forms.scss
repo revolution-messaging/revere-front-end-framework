@@ -63,7 +63,7 @@ button:focus {
       position:relative;
       background:white;
       box-shadow:0 0 5px black;
-      vertical-align:middle;
+      vertical-align:baseline;
       span {
         display:none;
       }
@@ -108,7 +108,7 @@ button:focus {
     min-height: 40px;
     padding: 10px 20px;
     text-transform: uppercase;
-    vertical-align: middle;
+    vertical-align: baseline;
     width: 218px;
   }
   input {

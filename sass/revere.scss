@@ -44,7 +44,6 @@ body.exchange {
   .upload-btn,
   .submit-btn {
     width: 120px;
-    position: absolute;
     top: 8px;
     right: 20px;
     border: 0;
@@ -59,6 +58,9 @@ body.exchange {
     margin: 0;
     font-size: .75rem; 
     background-color: #49ad74;
+  }
+  .upload-btn {
+    position: absolute;
     svg {
       background-color: #388356;
       border-right: 1px solid #6dbd90;
@@ -301,6 +303,23 @@ body.exchange {
         background:white;
       }
   }
+  .supplamental {
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:white;
+    overflow:hidden;
+    &.activated {
+      background:white;
+     .content {
+      margin:12px 20px;
+      > * {
+        margin:12px 0;
+      }
+      }
+    }
+  }
   // Datepicker
   #days-of-flight {
     input.ng-datepicker-input {
@@ -335,7 +354,7 @@ body.exchange {
       }
     }
     .deactivated .ng-datepicker {
-//      @include animation(contract-modal .3s linear forwards);
+      // @include animation(contract-modal .3s linear forwards);
     }
     .activated, .selected {
       svg {
@@ -345,7 +364,7 @@ body.exchange {
         color:white;
       }
       .ng-datepicker {
-//        @include animation(expand-modal .5s linear forwards);
+        // @include animation(expand-modal .5s linear forwards);
         position:absolute;
         top:0;
         left:0;
@@ -367,15 +386,6 @@ body.exchange {
           }
           .prev-year-btn, .next-year-btn {
             display:none;
-          }
-          .prev-month-btn svg {
-//          transform:rotate(45deg);
-//            @include transform-origin(16 16 0);
-          }
-          .next-month-btn svg {
-//            @include transform(rotate(-45deg 16px 16px));
-//            transform:rotate(-45deg);
-//            @include transform-origin(16 16 0);
           }
           svg {
             position:relative;

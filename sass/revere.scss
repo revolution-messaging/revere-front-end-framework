@@ -34,8 +34,47 @@ body.exchange {
     }
   }
   // Campaign Creation Form
+  .audience-add {
+    position: relative;
+  }
+  .submit-btn {
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .upload-btn,
+  .submit-btn {
+    width: 120px;
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    border: 0;
+    text-align: left;
+    line-height: 1em;
+    outline: none;
+    cursor: pointer;
+    text-align: right;
+    height: 1.65rem;
+    z-index: 2;
+    padding: 0 25px 0 0;
+    margin: 0;
+    font-size: .75rem; 
+    background-color: #49ad74;
+    svg {
+      background-color: #388356;
+      border-right: 1px solid #6dbd90;
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: #fff;
+      padding: 0.45em;
+      box-sizing: border-box;
+      width: 1.75rem;
+      height: 1.65rem;
+    }
+  }
   .field-group {
     border-width:1px;
+    position: relative;
     border-style:solid;
     border-color:#D7DDE5;
     @include align-items(stretch);

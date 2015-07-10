@@ -1,4 +1,6 @@
-input[type=text],
+input[type="text"],
+input[type="number"],
+input[type="email"],
 select,
 textarea {
 	width: 100%;
@@ -8,7 +10,11 @@ textarea {
 	padding: 10px;
 	line-height: 1em;
 }
-
+input[type="number"],
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  @include appearance(none);
+}
 textarea {
 	height: 150px;
 	margin: 5px 0px;

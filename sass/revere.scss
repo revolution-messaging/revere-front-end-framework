@@ -269,13 +269,44 @@ body.exchange {
       top:0;
       left:0;
       background:transparent;
-      
+      max-width:160px;
+      padding-right:0;
+    }
+    li > div > div:not(.ng-datepicker) {
+      position:absolute;
+      top:0;
+      right:0;
+      left:0;
+    }
+    .activate {
+      svg {
+        fill:#f2f4f5;
+        right: 0;
+        transition: all 0.1s linear 0s;
+        .activated &, .selected & {
+          svg {
+            fill: #f2f4f5;
+          }
+        }
+      }
+    }
+    .activated {
+      input.ng-datepicker-input {
+        max-width:120px;
+      }
+    }
+    .deactivated .ng-datepicker {
+//      @include animation(contract-modal .3s linear forwards);
     }
     .activated, .selected {
+      svg {
+        fill: #f2f4f5;
+      }
       input.ng-datepicker-input {
         color:white;
       }
       .ng-datepicker {
+//        @include animation(expand-modal .5s linear forwards);
         position:absolute;
         top:0;
         left:0;
@@ -287,7 +318,7 @@ body.exchange {
           font-weight: 700;
           letter-spacing: 1px;
           line-height:1rem;
-          min-height: 40px;
+          height: 40px;
           padding: 12px 20px;
           text-transform: uppercase;
           vertical-align: baseline;
@@ -344,12 +375,15 @@ body.exchange {
           @include flex-direction(row);
           @include flex-wrap(wrap);
           @include justify-content(flex-start);
-          > span {
-            background:#f2f4f5;
+          > span  {
             display:block;
             @include flex(0 1 38px);
-            padding:2px 5px;
             margin: 5px;
+            background:#f2f4f5;
+            > span {
+              display:block;
+              padding:2px 5px;
+            }
           }
         }
       }

@@ -1,4 +1,13 @@
 // Modal
+@include keyframes (slide-down) {
+  0% {max-height:0;}
+  100% {max-height:500px;}
+}
+@include keyframes (slide-up) {
+  0% {max-height:500px;}
+  100% {max-height:0;}
+}
+
 @include keyframes (expand-modal) {
   0% {max-height:0; padding: 0 20px;}
   30% {padding: 0 20px;}

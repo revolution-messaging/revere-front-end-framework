@@ -86,6 +86,7 @@ body.exchange {
     @include justify-content(space-between);
     overflow:visible;
     position:relative;
+    height: 42px;
     @include transition(all .1s linear);
     &.inactive {
       opacity:0;
@@ -311,7 +312,9 @@ body.exchange {
     right:0;
     background:white;
     overflow:hidden;
+    max-height:0;
     &.activated {
+      max-height:500px;
       background:white;
      .content {
       margin:12px 20px;
@@ -327,16 +330,21 @@ body.exchange {
     label svg {
       display:none;
     }
-    svg.settings {
+    div.settings {
+      opacity:1;
+      display:block;
+      cursor:pointer;
       position:absolute;
       top:50%;
-      margin-top:-9px;
       right:50px;
-      width: 18px;
-      height: 18px;
-      fill:#616568;
-      z-index:3;
-      background:transparent;
+      z-index:30000;
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-top:-9px;
+        fill:#616568;
+        background:transparent;
+      }
     }
     .selected {
       background:transparent;

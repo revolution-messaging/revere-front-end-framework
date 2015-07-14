@@ -9,6 +9,9 @@ textarea {
 	color: $greydk;
 	padding: 10px;
 	line-height: 1em;
+  &:disabled {
+    opacity:.8;
+  }
 }
 input[type="number"],
 input[type="number"]::-webkit-inner-spin-button,

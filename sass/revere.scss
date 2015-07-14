@@ -30,6 +30,7 @@ body.exchange {
       margin-bottom:12px;
     }
     h2 {
+      position:relative;
       margin-bottom:30px;
     }
   }
@@ -317,6 +318,48 @@ body.exchange {
       > * {
         margin:12px 0;
       }
+      }
+    }
+  }
+
+  .set {
+    position:relative;
+    label svg {
+      display:none;
+    }
+    svg.settings {
+      position:absolute;
+      top:50%;
+      margin-top:-9px;
+      right:50px;
+      width: 18px;
+      height: 18px;
+      fill:#616568;
+      z-index:3;
+      background:transparent;
+    }
+    .selected {
+      background:transparent;
+    }
+    button {
+      opacity:0;
+    }
+    input[type="radio"] {
+      & + label {
+        opacity:0;
+      }
+      &:checked + label {
+        color:#616568;
+        opacity:.6;
+      }
+    }
+    input[type="checkbox"] {
+      & + label {
+        opacity:0;
+      }
+      &:checked + label {
+        color:#616568;
+        opacity:.6;
       }
     }
   }

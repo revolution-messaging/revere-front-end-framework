@@ -346,7 +346,8 @@ body.exchange {
         background:transparent;
       }
     }
-    .selected {
+    .selected.deactivated {
+      width:auto;
       background:transparent;
     }
     button {

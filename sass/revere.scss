@@ -358,7 +358,7 @@ body.exchange {
     }
     .activated, .selected {
       svg {
-        fill: #f2f4f5;
+        //fill: #f2f4f5;
       }
       input.ng-datepicker-input {
         color:white;
@@ -430,6 +430,10 @@ body.exchange {
             @include flex(0 1 38px);
             margin: 5px;
             background:#f2f4f5;
+            &.notvalid {
+              background: #FFFAD0;
+              cursor: default;
+            }
             > span {
               display:block;
               padding:2px 5px;

@@ -102,6 +102,9 @@ body.exchange {
     }
     select {
       padding-left:0;
+      option:checked:not(:disabled) {
+        color:#616568;
+      }
     }
     > label {
       @include flex(0 0 33.3333%);
@@ -293,6 +296,32 @@ body.exchange {
       height:20px;
       fill:#72767A;
     }
+    &.set#ad-content {
+      li:not(.set) {
+        @include flex-basis(0);
+        @include flex-grow(0);
+        overflow:hidden;
+      }
+    }
+    li.set {
+      @include flex-basis(30%);
+      @include flex-grow(1);
+      @include transition(all, .1s linear);
+      overflow:hidden;
+      > div {
+        overflow:hidden;
+      }
+      .set {
+        width:220%;
+      }
+      &:not(:last-child) {
+        border-right:1px solid #d7dde5;
+      }
+      &:hover {
+        @include flex-basis(56%);
+      }
+    }
+    
   }
   .main {
       @include align-items(space-between);
@@ -363,7 +392,7 @@ body.exchange {
       }
       &:checked + label {
         color:#616568;
-        opacity:.6;
+        opacity:1;
       }
     }
     input[type="checkbox"] {
@@ -372,10 +401,19 @@ body.exchange {
       }
       &:checked + label {
         color:#616568;
-        opacity:.6;
+        opacity:1;
       }
     }
+    span {
+      margin-left:12px;
+      font-size: 0.63em;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
   }
+  
   // Datepicker
   #days-of-flight {
     input.ng-datepicker-input {
@@ -412,14 +450,22 @@ body.exchange {
     .deactivated .ng-datepicker {
       // @include animation(contract-modal .3s linear forwards);
     }
-    .activated, .selected {
-      height: 100%;
+    .activated {
       background:#3282F1;
-      svg {
-        //fill: #f2f4f5;
-      }
       input.ng-datepicker-input {
         color:white;
+      }
+    }
+    .selected {
+      background:transparent;
+      input.ng-datepicker-input {
+        color:#616568;
+      }
+    }
+    .activated, .selected {
+      height: 100%;
+      svg {
+        //fill: #f2f4f5;
       }
       .ng-datepicker {
         // @include animation(expand-modal .5s linear forwards);
@@ -490,7 +536,8 @@ body.exchange {
             margin: 5px;
             background:#f2f4f5;
             &.notvalid {
-              background: #FFFAD0;
+              background: #FFFFFF;
+              opacity:.6;
               cursor: default;
             }
             > span {

@@ -100,6 +100,9 @@ body.exchange {
     &:last-of-type {
       border-width:1px;
     }
+    select {
+      padding-left:0;
+    }
     > label {
       @include flex(0 0 33.3333%);
       background:#D7DDE5;
@@ -114,7 +117,7 @@ body.exchange {
     input:not([type="radio"]) {
       @include flex(1 1 64%);
       display: block;
-      padding: 12px 20px;
+      padding: 12px 20px 12px 45px;
       vertical-align: middle;
       font-size:1em;
       font-weight: 400;
@@ -135,7 +138,7 @@ body.exchange {
           label {
             font-size:1rem;
             font-weight: 400;
-            padding: 12px 20px;
+            padding: 12px 20px 12px 45px;
           }
            input[type="radio"],  
            input[type="checkbox"] {
@@ -175,6 +178,7 @@ body.exchange {
                 font-size: 0.63em;
                 font-weight: 400;
                 letter-spacing: 1px;
+                padding: 12px 20px;
                 min-height: 40px;
                 text-transform: uppercase;
                 vertical-align: middle;

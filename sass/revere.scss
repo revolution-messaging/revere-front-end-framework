@@ -30,6 +30,7 @@ body.exchange {
       margin-bottom:12px;
     }
     h2 {
+      position:relative;
       margin-bottom:30px;
     }
   }
@@ -85,6 +86,7 @@ body.exchange {
     @include justify-content(space-between);
     overflow:visible;
     position:relative;
+    height: 42px;
     @include transition(all .1s linear);
     &.inactive {
       opacity:0;
@@ -310,13 +312,62 @@ body.exchange {
     right:0;
     background:white;
     overflow:hidden;
+    max-height:0;
     &.activated {
+      max-height:500px;
       background:white;
      .content {
       margin:12px 20px;
       > * {
         margin:12px 0;
       }
+      }
+    }
+  }
+
+  .set {
+    position:relative;
+    label svg {
+      display:none;
+    }
+    div.settings {
+      opacity:1;
+      display:block;
+      cursor:pointer;
+      position:absolute;
+      top:50%;
+      right:50px;
+      z-index:30000;
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-top:-9px;
+        fill:#616568;
+        background:transparent;
+      }
+    }
+    .selected {
+      background:transparent;
+    }
+    button {
+      opacity:0;
+    }
+    input[type="radio"] {
+      & + label {
+        opacity:0;
+      }
+      &:checked + label {
+        color:#616568;
+        opacity:.6;
+      }
+    }
+    input[type="checkbox"] {
+      & + label {
+        opacity:0;
+      }
+      &:checked + label {
+        color:#616568;
+        opacity:.6;
       }
     }
   }

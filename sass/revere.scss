@@ -409,8 +409,10 @@ body.exchange {
       // @include animation(contract-modal .3s linear forwards);
     }
     .activated, .selected {
+      height: 100%;
+      background:#3282F1;
       svg {
-        fill: #f2f4f5;
+        //fill: #f2f4f5;
       }
       input.ng-datepicker-input {
         color:white;
@@ -423,6 +425,7 @@ body.exchange {
         text-align:center;
         z-index:2;
         .controls {
+          background:#3282F1;
           color:white;
           font-size: 0.63em;
           font-weight: 700;
@@ -482,6 +485,10 @@ body.exchange {
             @include flex(0 1 38px);
             margin: 5px;
             background:#f2f4f5;
+            &.notvalid {
+              background: #FFFAD0;
+              cursor: default;
+            }
             > span {
               display:block;
               padding:2px 5px;

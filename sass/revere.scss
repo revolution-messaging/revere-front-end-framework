@@ -36,12 +36,56 @@ body.exchange {
   }
   .audience-container:not(:last-child) {
     .supplamental {
-      display: none;
+     // display: none;
     }
   }
   // Campaign Creation Form
   .audience-add {
     position: relative;
+    span.no-results {
+      width: 120%;
+      margin-left: 45px;
+      padding: 10px;
+      color: #D7DDE5;
+    }
+  }
+  #ad-content {
+    .content {
+      button.btn-addad {
+        width: 100%;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 0.63em;
+        font-weight: 400;
+      }
+    }
+    .ad-select {
+      margin: 10px 0;
+      label {
+        padding: 0;
+        width: 100%;
+      }
+      select {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+        line-height: 1rem;
+        background: #F2F4F5;
+      }
+    }
+    .saturation-level {
+      label {
+        padding: 0;
+        width: 100%;
+      }
+    }
+    .controls {
+      @include clearfix;
+      button {
+        float: left;
+        margin-right: 10px;
+      }
+    }
   }
   .submit-btn {
     padding: 0 !important;
@@ -111,6 +155,16 @@ body.exchange {
         color:#616568;
       }
     }
+    span.no-audience {
+      width: 100%;
+      border: 0;
+      font-size: 1em;
+      color: #2f3032;
+      padding: 12px 20px 12px 45px;
+      line-height: 1em;
+      font-weight: normal !important;
+
+    }
     > label {
       @include flex(0 0 33.3333%);
       background:#D7DDE5;
@@ -129,7 +183,7 @@ body.exchange {
       vertical-align: middle;
       font-size:1em;
       font-weight: 400;
-    }
+    }  
     > ul {
       @include flex(1 1 64%);
       @include align-items(stretch);
@@ -328,6 +382,16 @@ body.exchange {
     }
     
   }
+  #ad-type {
+    input[type=radio] {
+      position: static;
+      top: auto;
+      left: auto;
+      opacity: 1;
+      width: auto;
+      height: auto;
+    }
+  }
   .main {
       @include align-items(space-between);
       @include display(flex);
@@ -356,6 +420,12 @@ body.exchange {
       background:white;
      .content {
       margin:12px 20px;
+      h5 {
+        span {
+          padding-left: 20px;
+          color: #D7DDE5;
+        }
+      }
       > * {
         margin:12px 0;
       }
@@ -467,12 +537,7 @@ body.exchange {
         color:#616568;
       }
     }
-    .activated, .selected {
-      height: 100%;
-      svg {
-        //fill: #f2f4f5;
-      }
-      .ng-datepicker {
+    .ng-datepicker {
         // @include animation(expand-modal .5s linear forwards);
         position:absolute;
         top:0;
@@ -552,6 +617,12 @@ body.exchange {
           }
         }
       }
+    .activated, .selected {
+      height: 100%;
+      svg {
+        //fill: #f2f4f5;
+      }
+      
     }
   }
   // User Navigation

@@ -24,6 +24,11 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 @import "forms";
 
 body.exchange {
+  h2 {
+    a {
+      color:#616568;
+    }
+  }
   .canvas {
     padding:25px 35px 40px;
     h3 {
@@ -47,6 +52,16 @@ body.exchange {
       margin-left: 45px;
       padding: 10px;
       color: #D7DDE5;
+    }
+  }
+  #campaign-name {
+    small {
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      padding:12px 10px;
+      font-size:.75rem;
     }
   }
   #ad-content {
@@ -330,6 +345,7 @@ body.exchange {
       background:#3282F1;
       margin-top:-4px;
       z-index:2;
+      min-width:237px;
       > label {
         display: block;
         color:white;
@@ -366,7 +382,7 @@ body.exchange {
       @include flex-basis(30%);
       @include flex-grow(1);
       @include transition(all, .1s linear);
-      overflow:hidden;
+//      overflow:hidden;
       > div {
         overflow:hidden;
       }
@@ -378,20 +394,23 @@ body.exchange {
       }
       &:hover {
         @include flex-basis(76%);
+        span {
+          display:inline;
+        }
       }
     }
     
   }
-  #ad-type {
-    input[type=radio] {
-      position: static;
-      top: auto;
-      left: auto;
-      opacity: 1;
-      width: auto;
-      height: auto;
-    }
-  }
+//  #ad-type {
+//    input[type=radio] {
+//      position: static;
+//      top: auto;
+//      left: auto;
+//      opacity: 1;
+//      width: auto;
+//      height: auto;
+//    }
+//  }
   .main {
       @include align-items(space-between);
       @include display(flex);
@@ -480,6 +499,7 @@ body.exchange {
       }
     }
     span {
+      display:none;
       margin-left:12px;
       font-size: 0.63em;
       font-weight: 400;
@@ -489,6 +509,32 @@ body.exchange {
     }
   }
   
+  
+  // Add Advertisment
+  .ad-type {
+    input[type="radio"] + label {
+      transition: all 0.1s linear 0s;
+      &:hover {
+        color:white;
+        box-shadow:0 0 5px black;
+        background:#3282F1;
+        z-index:2;
+      }
+    }
+    input[type="radio"]:not(:checked) + label:hover {
+      margin-top:-4px;
+    }   
+    input[type="radio"]:checked + label {
+      color:white;
+      background:#3282F1;
+      z-index:2;
+      min-width:237px;
+      &:hover  {
+        box-shadow:none;
+        
+      }
+    }
+  }
   // Datepicker
   #days-of-flight {
     input.ng-datepicker-input {

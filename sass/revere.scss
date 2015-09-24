@@ -315,7 +315,7 @@ body.exchange {
       background:#3282F1;
       > label {
         display: block;
-        color:white;
+//        color:white;
       }
       input {
         color:white;
@@ -463,9 +463,9 @@ body.exchange {
     }
     input[type="radio"] {
       &:not(:checked) + label {
-        opacity:.2;
+        opacity:1;
       }
-      &:checked + label {
+      &:checked + label[for="display-ad"], &:checked + label[for="video-ad"], &:checked + label[for="native-ad"] {
         color:#616568;
         opacity:1;
       }

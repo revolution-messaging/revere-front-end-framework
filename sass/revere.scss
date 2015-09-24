@@ -377,7 +377,7 @@ body.exchange {
         border-right:1px solid #d7dde5;
       }
       &:hover {
-        @include flex-basis(56%);
+        @include flex-basis(76%);
       }
     }
     
@@ -462,8 +462,8 @@ body.exchange {
       opacity:0;
     }
     input[type="radio"] {
-      & + label {
-        opacity:0;
+      &:not(:checked) + label {
+        opacity:.2;
       }
       &:checked + label {
         color:#616568;

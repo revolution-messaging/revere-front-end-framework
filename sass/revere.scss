@@ -64,6 +64,9 @@ body.exchange {
       font-size:.75rem;
     }
   }
+  #campaign-goal {
+    
+  }
   #ad-content {
     .content {
       button.btn-addad {
@@ -92,6 +95,7 @@ body.exchange {
       label {
         padding: 0;
         width: 100%;
+        min-height:auto;
       }
     }
     .controls {
@@ -263,7 +267,7 @@ body.exchange {
                   border:2px solid #2662B5;
                   width:1em;
                   height:1em;
-                  content:'';
+//                  content:'';
                   border-radius:50%;
                   display:inline-block;
                   margin-right:6px;
@@ -310,8 +314,10 @@ body.exchange {
             }
             input:checked + label {
               svg.info {
-                fill-opacity:0;
-                fill:white;
+                display:block;
+                z-index:1;
+//                fill-opacity:0;
+//                fill:white;
               }
               svg.settings {
                 z-index:1;
@@ -327,6 +333,7 @@ body.exchange {
       }
     }
     .selected {
+      color:white;
       background:#3282F1;
       > label {
         display: block;
@@ -393,7 +400,7 @@ body.exchange {
         border-right:1px solid #d7dde5;
       }
       &:hover {
-        @include flex-basis(76%);
+        @include flex-basis(56%);
         span {
           display:inline;
         }
@@ -455,7 +462,7 @@ body.exchange {
   .set {
     position:relative;
     label svg {
-      display:none;
+//      display:none;
     }
     div.settings {
       opacity:1;
@@ -475,7 +482,7 @@ body.exchange {
     }
     .selected.deactivated {
       width:auto;
-      background:transparent;
+//      background:transparent;
     }
     button {
       opacity:0;
@@ -542,7 +549,7 @@ body.exchange {
       top:0;
       left:0;
       background:transparent;
-      max-width:160px;
+      max-width:196px;
       padding-right:0;
     }
     li > div > div:not(.ng-datepicker) {

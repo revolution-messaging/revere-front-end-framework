@@ -1,12 +1,12 @@
 #loader{
-  zoom:1;/* Increase this for a bigger symbole*/
-  
+  zoom:1;
+  float:left;
   display:inline-block;
   
   width:16px;
   height:16px;
   
-  margin:0 .5rem 0 0;
+  margin:0 0 0 -24px;
   
   animation: wait 1.8s linear infinite;
   

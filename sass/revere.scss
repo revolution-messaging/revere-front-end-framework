@@ -10,7 +10,6 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 //@import "fonts";
 @import "mixins";
 @import "colors";
-@import "animations";
 @import "defaults";
 @import "header";
 @import "user";
@@ -19,6 +18,8 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 @import "icons";
 @import "table";
 @import "pagination";
+@import "feedback";
+@import "animations";
 
 //@import "login";
 @import "forms";
@@ -195,7 +196,7 @@ body.exchange {
       text-transform: uppercase;
       vertical-align: middle;
     }
-    input:not([type="radio"]) {
+    input:not([type="radio"]), div.budgetvalue {
       @include flex(1 1 64%);
       display: block;
       padding: 12px 20px 12px 45px;
@@ -267,7 +268,6 @@ body.exchange {
                   border:2px solid #2662B5;
                   width:1em;
                   height:1em;
-//                  content:'';
                   border-radius:50%;
                   display:inline-block;
                   margin-right:6px;
@@ -316,8 +316,6 @@ body.exchange {
               svg.info {
                 display:block;
                 z-index:1;
-//                fill-opacity:0;
-//                fill:white;
               }
               svg.settings {
                 z-index:1;
@@ -337,7 +335,6 @@ body.exchange {
       background:#3282F1;
       > label {
         display: block;
-//        color:white;
       }
       input {
         color:white;
@@ -389,7 +386,6 @@ body.exchange {
       @include flex-basis(30%);
       @include flex-grow(1);
       @include transition(all, .1s linear);
-//      overflow:hidden;
       > div {
         overflow:hidden;
       }
@@ -408,16 +404,6 @@ body.exchange {
     }
     
   }
-//  #ad-type {
-//    input[type=radio] {
-//      position: static;
-//      top: auto;
-//      left: auto;
-//      opacity: 1;
-//      width: auto;
-//      height: auto;
-//    }
-//  }
   .main {
       @include align-items(space-between);
       @include display(flex);

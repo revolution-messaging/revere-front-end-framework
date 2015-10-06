@@ -48,4 +48,31 @@
   0% { @include transform(rotate(0deg)); }
 100% { @include transform(rotate(180deg)); }
 }
+// Loading Animation
+@include keyframes(wait) {
+  12.5%{
+    background-position:   -4px, -4px, -4px, -4px, -4px;
+  }
+  25%{
+    background-position: -4px, -4px, -4px, -4px, 0;
+  }
+  37.5%{
+    background-position: -4px, -4px, -4px, 0, 6px;
+  }
+  50%{
+    background-position: -4px, -4px, 0, 6px, 12px;
+  }
+  62.5%{
+    background-position: -4px, 0, 6px, 12px, -4px;
+  }
+  75%{
+    background-position:     0, 6px, 12px, -4px, -4px;
+  }
+  87.5%{
+    background-position:   6px, 12px, -4px, -4px, -4px;  /* 1 */
+  }
+  100%{
+    background-position:    12px, -4px, -4px, -4px, -4px;
+  }
+}
 

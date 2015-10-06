@@ -30,6 +30,12 @@ body.exchange {
       color:#616568;
     }
   }
+  span.filename,
+  span.budgetvalue {
+    display: block;
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+  }
   .canvas {
     padding:25px 35px 40px;
     h3 {
@@ -616,6 +622,9 @@ body.exchange {
             height:20px;
           }
         }
+        .calendar-container {
+          background-color: white;
+        }
         .day-names {
           background:white;
           padding: 12px 10px 0;
@@ -626,9 +635,9 @@ body.exchange {
           @include justify-content(flex-start);
           > span {
             display:block;
-            @include flex(0 1 38px);
-            padding:0 5px;
-            margin: 5px;
+            width: 14.25%;
+            padding:5px;
+
           }
         }
         .calendar {
@@ -640,9 +649,10 @@ body.exchange {
           @include flex-wrap(wrap);
           @include justify-content(flex-start);
           > span  {
+            width: 12.25%;
             display:block;
-            @include flex(0 1 38px);
-            margin: 5px;
+            padding: 5px;
+            margin: 4px 1%;
             background:#f2f4f5;
             &.notvalid {
               background: #FFFFFF;

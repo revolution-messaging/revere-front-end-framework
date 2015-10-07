@@ -172,6 +172,64 @@ body.exchange {
     &.completed  {
       border-bottom-width:0;
     }
+    div.shortenBox {
+      label {
+        svg {
+          fill:white;
+          @include transition(all .1s linear);
+          right:0;
+          &.info, &.checkmark, &.down {
+            display:none;
+          }
+        }
+      }
+      &.activated {
+        label {
+          svg {
+            &.info {
+              display:block;
+            }
+            &.down {
+              display:block;
+            }
+            &.checkmark {
+              display:none;
+            }
+          }
+        }
+      }
+    }
+    &.set {
+      div.shortenBox {
+        &.activated {
+          input:checked + label {
+            border-right:0 solid #d7dde5;
+            svg {
+              fill:white;
+              &.info {
+                display:none;
+              }
+              &.checkmark {
+                display:block;
+              }
+            }
+          }
+        }
+        input:checked + label {
+          border-right:1px solid #d7dde5;
+          svg {
+            fill:#616568;
+            &.info {
+              display:none;
+            }
+            &.checkmark {
+              display:block;
+            }
+          }
+        }
+      }
+    }
+    
     &:last-of-type {
       border-width:1px;
     }
@@ -285,52 +343,6 @@ body.exchange {
             }
           }
         }
-        div {
-          input + label {
-            svg {
-              @include transition(all .1s linear);
-              right:0;
-              fill:#f2f4f5;
-            }
-          }
-          &.activated {
-            input:not(checked) + label {
-              svg.info {
-                z-index:1;
-                fill-opacity:1;
-                fill:white;
-              }
-              svg.settings {
-                fill-opacity:0;
-                fill:white;
-              }
-            }
-          }
-          &.deactivated {
-            input:not(checked) + label {
-              svg {
-                fill:#f2f4f5;
-              }
-            }
-          }
-          &.selected {
-            svg {
-              background-color: #2662B5;
-              border-left: 1px solid #5B9BF4;
-            }
-            input:checked + label {
-              svg.info {
-                display:block;
-                z-index:1;
-              }
-              svg.settings {
-                z-index:1;
-                fill-opacity:1;
-                fill:white;
-              }
-            }
-          }
-        }
         label {
           padding:0;
         }
@@ -389,20 +401,27 @@ body.exchange {
       }
     }
     li.set {
-      @include flex-basis(30%);
       @include flex-grow(1);
       @include transition(all, .1s linear);
       > div {
         overflow:hidden;
       }
-      .set {
-        width:220%;
+      input:checked + label {
+        svg {
+          fill:#616568;
+          &.info {
+            display:none;
+          }
+          &.checkmark {
+            display:block;
+          }
+        }
       }
+
       &:not(:last-child) {
         border-right:1px solid #d7dde5;
       }
       &:hover {
-        @include flex-basis(56%);
         span {
           display:inline;
         }
@@ -453,9 +472,6 @@ body.exchange {
 
   .set {
     position:relative;
-    label svg {
-//      display:none;
-    }
     div.settings {
       opacity:1;
       display:block;
@@ -474,28 +490,9 @@ body.exchange {
     }
     .selected.deactivated {
       width:auto;
-//      background:transparent;
     }
     button {
       opacity:0;
-    }
-    input[type="radio"] {
-      &:not(:checked) + label {
-        opacity:1;
-      }
-      &:checked + label[for="display-ad"], &:checked + label[for="video-ad"], &:checked + label[for="native-ad"] {
-        color:#616568;
-        opacity:1;
-      }
-    }
-    input[type="checkbox"] {
-      & + label {
-        opacity:0;
-      }
-      &:checked + label {
-        color:#616568;
-        opacity:1;
-      }
     }
     span {
       display:none;
@@ -520,10 +517,10 @@ body.exchange {
         z-index:2;
       }
     }
-    input[type="radio"]:not(:checked) + label:hover {
+    input[type="checkbox"]:not(:checked) + label:hover {
       margin-top:-4px;
     }   
-    input[type="radio"]:checked + label {
+    input[type="checkbox"]:checked + label {
       color:white;
       background:#3282F1;
       z-index:2;
@@ -531,6 +528,27 @@ body.exchange {
       &:hover  {
         box-shadow:none;
         
+      }
+    }
+  }
+  // Ad Content Upload 
+  table {
+    thead {
+      background:#d7dde5;
+    }
+    tr {
+      border-color:#d7dde5;
+      border-style:solid;
+      border-width:1px 0 1px 0;
+    }
+    td, th {
+      padding:0;
+      position:relative;
+      &:first-of-type {
+//        padding-left:20px;
+      }
+      * {
+        padding:12px 20px;
       }
     }
   }
@@ -555,11 +573,6 @@ body.exchange {
         fill:#f2f4f5;
         right: 0;
         transition: all 0.1s linear 0s;
-        .activated &, .selected & {
-          svg {
-            fill: #f2f4f5;
-          }
-        }
       }
     }
     .activated {

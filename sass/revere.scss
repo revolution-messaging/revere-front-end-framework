@@ -229,7 +229,6 @@ body.exchange {
         }
       }
     }
-    
     &:last-of-type {
       border-width:1px;
     }
@@ -508,6 +507,52 @@ body.exchange {
   
   // Add Advertisment
   .ad-type {
+    div.shortenBox {
+      &:hover {
+        input + label {
+          svg {
+            background-color: #2662B5;
+            border-left: 1px solid #5B9BF4;
+            fill:white;
+            &.info {
+              display:block;
+            }
+            &.down {
+              display:block;
+            }
+            &.checkmark {
+              display:none;
+            }
+          }
+        }
+      }
+      input:not(:checked) + label {
+        svg {
+          @include transition(all .1s linear);
+          right:0;
+        }
+      }
+      input:checked + label {
+        svg {
+          fill:#616568;
+          &.info {
+            display:none;
+          }
+          &.down {
+            display:none;
+          }
+          &.checkmark {
+            display:block;
+          }
+        }
+        &:hover {
+          svg {
+            fill:white;
+          }
+        }
+      }
+      
+    }
     input[type="radio"] + label {
       transition: all 0.1s linear 0s;
       &:hover {
@@ -517,6 +562,11 @@ body.exchange {
         z-index:2;
       }
     }
+    label {
+      svg {
+      }
+    }
+    
     input[type="checkbox"]:not(:checked) + label:hover {
       margin-top:-4px;
     }   

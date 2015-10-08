@@ -7,17 +7,26 @@
   0% {max-height:500px;}
   100% {max-height:0;}
 }
-
 @include keyframes (expand-modal) {
-  0% {max-height:0; padding: 0 20px;}
-  30% {padding: 0 20px;}
-  100% {max-height:800px;padding: 10px 20px;}
+  0% {max-height:0; padding-top: 0;}
+  30% {padding-top: 0;}
+  100% {max-height:800px;padding-top: 10px;}
 }
 @include keyframes (contract-modal) {
-  0% {max-height:800px;padding:30px 20px 10px;}
+  0% {max-height:800px;padding-top:30px;}
   70% {max-height:0;}
-  100% {max-height:0; padding: 0 20px;}
+  100% {max-height:0; padding-top: 0;}
 }
+//@include keyframes (expand-modal) {
+//  0% {max-height:0; padding: 0 20px;}
+//  30% {padding: 0 20px;}
+//  100% {max-height:800px;padding: 10px 20px;}
+//}
+//@include keyframes (contract-modal) {
+//  0% {max-height:800px;padding:30px 20px 10px;}
+//  70% {max-height:0;}
+//  100% {max-height:0; padding: 0 20px;}
+//}
 @include keyframes (show-text) {
   0% {opacity:0;}
   70% {opacity:.5;}

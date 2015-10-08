@@ -1,7 +1,7 @@
 .primary {
-  @include flex-grow(2);
-  position:relative;
-  padding: 0 15px;
+//  @include flex-grow(2);
+  @include flex(1 1 75%);
+  padding: 0 15px 22rem;
   > header {
     padding:15px 0 22px;
     .app & {

@@ -15,11 +15,11 @@ html, body {
   line-height:1.125em;
 }
 body {
-  border-top:4px solid #535353;
   @include align-items(stretch);
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(flex-start);
+  @include flex-wrap(wrap);
   &.app {
   	color: $primarydk;
     background:$primarylt;

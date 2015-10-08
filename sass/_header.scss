@@ -27,11 +27,19 @@ body.revere {
   > header {
     padding:25px 0 20px;
     @include clearfix;
-    position:absolute;
+    position:fixed;
     right:0;
     left:0;
     z-index:1;
 		width: 270px;
+    &:before {
+     position:fixed;
+     top:0;
+     right:0;
+     left:0;
+     border-top:4px solid #535353;
+     content:''; 
+    }
     h1.logo {
       @include bgimg;
       background-repeat:no-repeat;

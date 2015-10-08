@@ -1,0 +1,39 @@
+// FOOTER
+
+footer {
+  body.app & {
+    @include flex(1 0 auto);
+  	margin-top: -14em;
+  	padding: 7em 1.3625em 1.3625em;
+    background: url("/img/logo-rm-footer@2x.png") center 1em no-repeat;
+  	background-size: 49px 60px;
+  	font-size: 0.9em;
+    color: #616568;
+    text-align: center;
+  	a {
+  		color: #3381d2;
+  	}
+  	nav {
+  		ul {
+  			margin:1em auto;
+  			float:none;
+  			li {
+  				font-size: 0.8em;
+  			  padding: .125em .5em;
+  			}
+  			@include media($tablet) {
+  				list-style:none outside none;
+  				li {
+  					display:inline-block;
+  					padding:.125em .5em;
+  					vertical-align:top;
+  					border-right:1px solid $greylt;
+  					&:last-of-type {
+  						border:0;
+  					}
+  				}
+  			}
+  		}
+  	}
+  }
+}

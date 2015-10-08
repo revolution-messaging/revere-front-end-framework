@@ -3,7 +3,7 @@
 footer {
   body.app & {
     @include flex(1 0 auto);
-  	margin-top: -14em;
+  	margin: -14em 0 0 270px;
   	padding: 7em 1.3625em 1.3625em;
     background: url("/img/logo-rm-footer@2x.png") center 1em no-repeat;
   	background-size: 49px 60px;

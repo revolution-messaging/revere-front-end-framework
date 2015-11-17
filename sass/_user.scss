@@ -4,117 +4,118 @@
   top:8px;
   min-width:174px;
   z-index:4;
+  @include align-items(stretch);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-end);
+  @include flex-wrap(nowrap);  
   // To-do Mobile Interface for .user content
-  body.app & {
-    margin-right: 10px;
+  margin-right: 10px;
+  padding: 0;
+  top: 15px;
+  > li {
+    @include transition(all 200ms ease);
+    @include flex(0 0 auto);
+    list-style:none;
+    position:relative;
+    margin-right: 0px;
     padding: 0;
-    top: 15px;
-    > li {
-      margin-right: 0px;
-      padding: 0;
-      &:hover {
-        > ul {
-          background: #fff;
-          padding: 0;
-          margin: 0;
-        }
-        svg.toggle {
-          width: 20px;
-          position: relative;
-          top: 0;
-          height: 20px;
-          fill: #72767A;
-          @include animation(rotate90reverse .2s 0s linear forwards);
-        }
-      }
-      h6 {
-        margin-right: 0;
-        text-align: right;
-        padding: 12px 10px;
-        svg.toggle {
-          margin:0 10px;
-          width: 20px;
-          position: relative;
-          top: 0;
-          height: 20px;
-          fill: #72767A;
-          @include animation(return90reverse .2s 0s linear forwards);
-        }
-      }
-      > ul {
-        right: 0;
-        left: auto;
-        position: static;
-        padding-top: 0 !important;
-        li {
-          margin: 0;
-          padding: 10px 20px;
-          text-align: right;
-          border: 0;
-          cursor: pointer;
-        }
-      }
+    &.clientmenu {
+      @include flex(1 0 175px);
     }
-    
     &:hover {
-      -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
-      box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
-      background: #fff;
-      h6 {
-        border-bottom: 1px solid #d7dde5;
-      }
-      > ul {
-        background: #fff;
-        padding: 0;
-        margin: 0;
-      }
       svg.toggle {
-        width: 20px;
-        position: relative;
-        top: 0;
-        height: 20px;
-        fill: #72767A;
         @include animation(rotate90reverse .2s 0s linear forwards);
       }
-    }
-    h6 {
-      text-align: right;
-      padding: 12px 10px;
-      svg.toggle {
-        width: 20px;
-        position: relative;
-        top: 0;
-        height: 20px;
-        fill: #72767A;
-        @include animation(return90reverse .2s 0s linear forwards);
+      > ul {
+        @include animation(expand-modal 1s linear forwards);
+        overflow-y:scroll;
       }
     }
+    img {
+      display:inline-block;
+      width:24px;
+      height:24px;
+      border-radius:50%;
+      overflow:hidden;
+      margin-right:10px;
+      vertical-align:middle;
+    }
+    h6 {
+      margin-right: 0;
+      padding: 12px 20px;
+     display: block;
+     background-color: transparent;
+     border: 0;
+     outline: none;
+    }
+    svg.toggle {
+      float:right;
+      margin:0 10px;
+      width: 1.4rem;
+      position: relative;
+      top: 0;
+      height: 1.4rem;
+      @include animation(return90reverse .2s 0s linear forwards);
+    }
     > ul {
-      right: 0;
+      top:2rem;
+      right:0;
+      z-index:-1;
+      max-height:0;
+      overflow:hidden;
       left: auto;
+      margin: 0;
       position: static;
       padding-top: 0 !important;
+      @include animation(contract-modal .1s linear forwards);
       li {
         margin: 0;
-        padding: 10px 0;
-        text-align: right;
+        padding: 10px 20px;
         border: 0;
         cursor: pointer;
       }
     }
   }
+  body.app & {
+    a:link, a:visited {
+      color:#616568;
+    }
+    > li {
+      svg.toggle {
+        fill: #72767A;
+      }
+      &:hover,
+      &:hover {
+        background-color: #f9f9fa;
+        box-shadow: 0px 0px 3px 0px $ltgray;
+        h6 {
+          border-bottom: 1px solid #f1f2f3;
+        }
+        > ul {
+          > li {
+            border-bottom: 1px solid #f1f2f3;
+            &:hover {
+              background-color: lighten($ltbg, 2%);
+              color: $blue;         
+            }
+          }
+        }
+      }
+    }
+  }
   body.dashboard & {
-    margin: 0;
+    a:link, a:visited {
+      color:#616568;
+    }
     .icon {
       fill: #fff;
     }
     > li {
-      padding: 10px 15px;
       &:hover,
       &.hover {
         background:#414348;
         .icon {
-          @include animation(rotate90 .2s 0s linear forwards);
         }
         ul {
           background:darken(#414348,5%);
@@ -128,111 +129,15 @@
         }
       }
     }
-    h6 {
-      margin: 0;
-      padding: 0;
-      box-sizing:content-box;
-      font-size: .9em;
-      position: relative;
-      cursor: default;
-      font-weight: normal;
-    }
-    ul {
-      top: 25px;
-      margin: 0;
-      padding: 0;
-      box-sizing:content-box;
-      > li {
-        opacity: 0;
-        a {
-          &:hover {
-            color: #fff;
-          }
-        }
-      }
-    }
-    ul li {
-      padding: 0;
-      a {
-        display: block;
-      }
-    }
-    &:hover,
-    &.hover {
-      background:#414348;
-      ul {
-        background:darken(#414348,5%);
-        > li {
-          > ul {
-            li {
-              display:block;
-              padding:2px 10px 0 24px;
-              font-size:.9rem;
-              &:not(:last-of-type) {
-                margin-right:10px;
-                border-right:1px solid gray;
-              }
-              &.switch {
-              }
-              &.icon {
-              }
-              ul {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  &:hover,
-  &.hover {
-    .icon {
-      @include animation(rotate90 .2s 0s linear forwards);
-    }
-    ul {
-      @include animation(expand-modal .1s linear forwards);
-    }
-  }
-  > li {
-    list-style:none;
-//    float: left;
-    position:relative;
-    .icon {
-      float:right;
-      @include animation(return90 .2s 0s linear forwards);
-    }
-    ul {
-      background:transparent;
-     @include animation(contract-modal .1s linear forwards);
-    }
-    > ul {
-      top:2rem;
-      right:0;
-      left:0;
-      z-index:-1;
-      max-height:0;
-      overflow:hidden;
-      position:absolute;
-      li {
-        display:block;
-        padding:2px 10px 0 24px;
-        font-size:.9rem;
-        &:not(:last-of-type) {
-        }
-        &.switch {
-          padding-left:36px;
-          background:url('#{$imgPath}/icns/switch.svg');
-          background-position:0 2px;
-        }
-        &.icon {
-          background-repeat:no-repeat;
-          background-size:12px 12px;
-        }
-        ul {
-          display:none;
-        }
-      }
-    }
+//    h6 {
+//      margin: 0;
+//      padding: 0;
+//      box-sizing:content-box;
+//      font-size: .9em;
+//      position: relative;
+//      cursor: default;
+//      font-weight: normal;
+//    }
   }
   a {
     color:#ccc;
@@ -241,23 +146,5 @@
     &:hover {
       color:white;
     }
-  }
-  h6 {
-    padding:10px 10px;
-    cursor:pointer;
-  }
-  .icon {
-    vertical-align:middle;
-    width:18px;
-    height:18px;
-  }
-  img {
-    display:inline-block;
-    width:24px;
-    height:24px;
-    border-radius:50%;
-    overflow:hidden;
-    margin-right:10px;
-    vertical-align:middle;
   }
 }

@@ -22,7 +22,7 @@ body {
   @include flex-wrap(wrap);
   &.app {
   	color: $primarydk;
-    background:$primarylt;
+    background:$ltbg;
   }
 }
 #sb-site {background: $greydk;}

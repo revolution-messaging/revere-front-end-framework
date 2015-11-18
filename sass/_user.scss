@@ -10,6 +10,7 @@
   @include justify-content(flex-end);
   @include flex-wrap(nowrap);  
   // To-do Mobile Interface for .user content
+  list-style:none;
   margin-right: 10px;
   padding: 0;
   top: 15px;
@@ -59,6 +60,8 @@
       @include animation(return90reverse .2s 0s linear forwards);
     }
     > ul {
+      list-style:none;
+      padding-left:0;
       top:2rem;
       right:0;
       z-index:-1;

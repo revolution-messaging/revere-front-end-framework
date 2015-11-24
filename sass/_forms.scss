@@ -47,9 +47,42 @@ button {
   cursor:pointer;
 }
 // Can be li or div child of .settings-group
-
 .settings-section {
   padding:25px 0 40px;
+  &.overview {
+    @include align-items(space-between);
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    margin:0 -.5rem;
+    > * { // li on Echange
+      margin:.5rem 0;
+      @include flex(0 1 32%);
+      padding:12px 20px;
+      border:1px solid #d7dde5;
+      background:white;
+    }
+    > input[type="submit"], .button {
+      @include flex(0 0 auto);
+    }
+    .field-group {
+      display:block;
+      border:1px solid #d7dde5;
+      background:white;
+      > label {
+        display:block;
+        @include flex(0 0 100%);
+        margin:-12px -20px 0;
+        box-sizing:content-box;
+        min-height:initial;
+      }
+      input[type="text"], input[type="number"], input[type="email"], select, textarea {
+        margin:0 -20px -12px;
+        background:white;
+      }
+    }
+  }
   .field-group {
     border-right: 1px solid $primarymdlt;
     border-top: 1px solid $primarymdlt;
@@ -63,6 +96,18 @@ button {
     &:last-of-type {
       border-bottom: 1px solid $primarymdlt;
     }
+    > label {
+      @include flex(0 0 33.3333%);
+      background:#D7DDE5;
+      font-size: 0.63em;
+      font-weight: 400;
+      letter-spacing: 1px;
+      min-height: 40px;
+      padding: 12px 20px;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+    
   }
   .special-option {
     margin:20px 0 20px 33.3333%;

@@ -14,6 +14,7 @@ nav.v {
     position:fixed;
     padding-top:63px;
     margin:0 20px;
+    min-width:230px;
     > li {
       font-size:12.5px;
       letter-spacing:3px;
@@ -22,6 +23,29 @@ nav.v {
       border-bottom:1px solid $greymid;
       position: relative;
       &.has-children{
+        ul {
+          overflow:hidden;
+    			.icon {
+    				left: -2.4em;
+    				right: auto;
+    				top: 1.3em;
+    				-webkit-transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
+    	      transition:         all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
+    				@include media($tablet) {
+    					//width: 1.6em;
+    					//height: 1.6em;
+    					//left:  0.2em;
+    					//right: auto;
+    				}
+    				@include media($notebook) {
+    					width: 1.2em;
+    					height: 1.2em;
+    					left: -2.4em;
+    					right: auto;
+    					top: 0.9em;
+    				}
+    			}
+        }
         &:before {
           border-radius:0;
           background:transparent;
@@ -42,6 +66,7 @@ nav.v {
             @include transform(rotate(90deg));
           }
           ul {
+            overflow:visible;
             @include animation(slide-down .2s linear forwards);
           }
         }
@@ -57,12 +82,19 @@ nav.v {
         @include transition(all 100ms ease-in 50ms);    
         &:hover{
           color: #ffffff;
+          & + svg {
+            fill:#fff;
+          }
         }
       }
 			.icon {
-				left: -2.4em;
-				right: auto;
+        fill:#707377;
+        position:absolute;
+				left: auto;
+				right: 0;
 				top: 1.3em;
+        width: 1.2em;
+        height: 1.2em;
 				-webkit-transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
 	      transition:         all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
 				@include media($tablet) {
@@ -72,11 +104,9 @@ nav.v {
 					//right: auto;
 				}
 				@include media($notebook) {
-					width: 1.2em;
-					height: 1.2em;
-					left: -2.4em;
-					right: auto;
-					top: 0.9em;
+          //          left: -2.4em;
+          //          right: auto;
+          //          top: 0.9em;
 				}
 			}
       svg {
@@ -100,6 +130,9 @@ nav.v {
         &:before {
           background-color: #61e699;
         }
+        .icon {
+          fill:#fff;
+        }
       }
       &:first-child{
         border-top: 1px solid $greymid;
@@ -115,17 +148,6 @@ nav.v {
           list-style-type: none;
           margin: 1em 0 0;
           position: relative;
-          &:before {
-            background-color: #3a3b3e;
-            border-radius: 50%;
-            content: "";
-            display: block;
-            height: 0.7em;
-            left: -28px;
-            position: absolute;
-            top: 0.3em;
-            width: 0.7em;
-          }
           a {
             span {
               letter-spacing:0;

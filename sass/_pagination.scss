@@ -1,16 +1,29 @@
-.pagination{
-  li{
-    display: inline;
-    a{
-      background-color: #414348;
-      padding: 0.4em 0.5em;
+.pagination {
+	font-size: 0.9em;
+  list-style:none;
+  li {
+    display: inline-block;
+    a {
+      display:block;
+  		padding: 0.6em 0.8em 0.5em;
       text-decoration: none;
-      &:hover{
-        background-color: #53555c;
+      @include transition(all 50ms cubic-bezier(0.86, 0, 0.07, 1) 50ms);
+      body.dashboard & {
+        background-color: #414348;
+        &:hover{
+          background-color: #53555c;
+        }
+      }
+      body.app & {
+    		background-color: #e3e5e8;
+    		&:hover{
+    			background-color: #fff;
+    		}
+        
       }
     }
     a:not([href]){
       background-color: transparent;
-    }
+    }    
   }
 }

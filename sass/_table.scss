@@ -25,16 +25,29 @@ table{
 	}
 	tr{
     display: table-row;
-    //width: 100%;
-		&:first-child{
-			border-top: 1px solid #414348;
-			@include media($tablet) {
-				border-top: none;
-			}
-		}
+    body.dashboard & {
+  		border-bottom: 1px solid #414348;
+  		&.link-item{
+  			&:hover{
+  				background-color: #FFFFFF;
+  			}
+  		}
+    }
+    body.app & {
+  		border-bottom: 1px solid #d7dde5;
+  		&.link-item{
+  			&:hover{
+  				background-color: #FFFFFF;
+  			}
+  		}
+    }
+    &:first-of-type {
+      @include media($tablet) {
+        border-top-width: 0;
+      }      
+    }
 	}
 	th{
-		color: #a8adb5;
 		font-weight: 300;
 		text-transform: uppercase;
 		font-size: 0.75em;
@@ -43,6 +56,12 @@ table{
 		&:first-of-type{
 			padding-left: 0.5em;
 		}
+    body.dashboard & {
+  		color: #a8adb5;
+    }
+    body.app & {
+      color: #676c74;
+    }
 	}
 	.actions{
 		text-align: left;
@@ -83,23 +102,23 @@ table{
 			font-weight: 300;
 		}
 	}
-	tr{
-		border-bottom: 1px solid #414348;
-		&.link-item{
-			&:hover{
-				background-color: #FFFFFF;
-			}
-		}
-	}
 	.small-btn{
-		background-color: #b8bcbf;
 		padding: 0.8em 1.5em 0.6em;
 		font-size: 0.7em;
 		color: white;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		&:hover{
-			background-color: #4e97e2;
-		}
+    body.dashboard & {
+  		background-color: #b8bcbf;
+  		&:hover{
+  			background-color: #4e97e2;
+  		}
+    }
+    body.app & {
+      background-color: #b8bcbf;
+      &:hover{
+        background-color: #4e97e2;
+      }
+    }
 	}
 }

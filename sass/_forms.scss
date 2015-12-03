@@ -45,6 +45,13 @@ button {
   color:white;
   border:0;
   cursor:pointer;
+  @include transition(all ease-in .2s);   
+  &:hover {
+    background:#4AAE74;
+  }
+  &:active, &:focus {
+    background:#E54141;
+  }
 }
 // Can be li or div child of .settings-group
 .settings-section {

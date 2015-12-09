@@ -129,6 +129,9 @@ body {
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row;
@@ -177,8 +180,23 @@ h2 {
   font-size: 1.35em;
 }
 
+.content h2 {
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 1.5em;
+}
+
 h3 {
   font-size: 1.2375em;
+}
+
+.content h3 {
+  margin-top: 1.5em;
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 h4 {
@@ -391,6 +409,7 @@ body.revere > header h1.logo a {
 }
 
 .user {
+  font-weight: 300;
   position: absolute;
   right: 15px;
   top: 8px;
@@ -415,6 +434,9 @@ body.revere > header h1.logo a {
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row;
@@ -435,7 +457,8 @@ body.revere > header h1.logo a {
   -moz-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  margin-right: 10px;
+  list-style: none;
+  margin: 0 10px 0 0;
   padding: 0;
   top: 15px;
 }
@@ -512,6 +535,8 @@ body.revere > header h1.logo a {
 }
 
 .user > li > ul {
+  list-style: none;
+  padding-left: 0;
   top: 2rem;
   right: 0;
   z-index: -1;
@@ -554,7 +579,7 @@ body.app .user > li:hover > ul > li,body.app .user > li:hover > ul > li {
   border-bottom: 1px solid #f1f2f3;
 }
 
-body.app .user > li:hover > ul > li:hover,body.app .user > li:hover > ul > li:hover {
+body.app .user > li:hover > ul > li:hover,body.app .user > li:hover > ul > li:hover a,body.app .user > li:hover > ul > li:hover,body.app .user > li:hover > ul > li:hover a {
   background-color: #f8f9f9;
   color: #4E97E2;
 }
@@ -604,6 +629,7 @@ nav.v > ul {
   position: fixed;
   padding-top: 63px;
   margin: 0 20px;
+  min-width: 230px;
 }
 
 nav.v > ul > li {
@@ -613,6 +639,18 @@ nav.v > ul > li {
   padding: 20px 30px;
   border-bottom: 1px solid #535353;
   position: relative;
+}
+
+nav.v > ul > li.has-children ul {
+  overflow: hidden;
+}
+
+nav.v > ul > li.has-children ul .icon {
+  left: -2.4em;
+  right: auto;
+  top: 1.3em;
+  -webkit-transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
+  transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
 }
 
 nav.v > ul > li.has-children:before {
@@ -639,6 +677,7 @@ nav.v > ul > li.has-children.expand:before {
 }
 
 nav.v > ul > li.has-children.expand ul {
+  overflow: visible;
   -webkit-animation: slide-down 0.2s linear forwards;
   -moz-animation: slide-down 0.2s linear forwards;
   animation: slide-down 0.2s linear forwards;
@@ -661,10 +700,18 @@ nav.v > ul > li a:hover {
   color: #ffffff;
 }
 
+nav.v > ul > li a:hover + svg {
+  fill: #fff;
+}
+
 nav.v > ul > li .icon {
-  left: -2.4em;
-  right: auto;
+  fill: #707377;
+  position: absolute;
+  left: auto;
+  right: 0;
   top: 1.3em;
+  width: 1.2em;
+  height: 1.2em;
   -webkit-transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
   transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
 }
@@ -693,6 +740,10 @@ nav.v > ul > li.active:before {
   background-color: #61e699;
 }
 
+nav.v > ul > li.active .icon {
+  fill: #fff;
+}
+
 nav.v > ul > li:first-child {
   border-top: 1px solid #535353;
 }
@@ -710,18 +761,6 @@ nav.v > ul > li ul li {
   list-style-type: none;
   margin: 1em 0 0;
   position: relative;
-}
-
-nav.v > ul > li ul li:before {
-  background-color: #3a3b3e;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 0.7em;
-  left: -28px;
-  position: absolute;
-  top: 0.3em;
-  width: 0.7em;
 }
 
 nav.v > ul > li ul li a span {
@@ -760,6 +799,66 @@ nav.v a {
 
 .primary > header h2 {
   margin: 0.2em 0 0 14px;
+}
+
+.primary .main {
+  -webkit-box-align: space-between;
+  -moz-box-align: space-between;
+  box-align: space-between;
+  -webkit-align-items: space-between;
+  -moz-align-items: space-between;
+  -ms-align-items: space-between;
+  -o-align-items: space-between;
+  align-items: space-between;
+  -ms-flex-align: space-between;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  margin: 0 -.5rem;
+}
+
+.primary .main > * {
+  margin: .5rem;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 24%;
+  -moz-flex: 1 1 24%;
+  -ms-flex: 1 1 24%;
+  flex: 1 1 24%;
+  padding: 12px 20px;
+  border: 1px solid #d7dde5;
+  background: white;
 }
 
 .icon {
@@ -805,12 +904,23 @@ table tr {
   display: table-row;
 }
 
-table tr:first-child {
-  border-top: 1px solid #414348;
+body.dashboard table tr {
+  border-bottom: 1px solid #414348;
+}
+
+body.dashboard table tr.link-item:hover {
+  background-color: #FFFFFF;
+}
+
+body.app table tr {
+  border-bottom: 1px solid #d7dde5;
+}
+
+body.app table tr.link-item:hover {
+  background-color: #FFFFFF;
 }
 
 table th {
-  color: #a8adb5;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 0.75em;
@@ -820,6 +930,14 @@ table th {
 
 table th:first-of-type {
   padding-left: 0.5em;
+}
+
+body.dashboard table th {
+  color: #a8adb5;
+}
+
+body.app table th {
+  color: #676c74;
 }
 
 table .actions {
@@ -852,16 +970,7 @@ table td a {
   font-weight: 300;
 }
 
-table tr {
-  border-bottom: 1px solid #414348;
-}
-
-table tr.link-item:hover {
-  background-color: #FFFFFF;
-}
-
 table .small-btn {
-  background-color: #b8bcbf;
   padding: 0.8em 1.5em 0.6em;
   font-size: 0.7em;
   color: white;
@@ -869,22 +978,748 @@ table .small-btn {
   letter-spacing: 0.1em;
 }
 
-table .small-btn:hover {
+body.dashboard table .small-btn {
+  background-color: #b8bcbf;
+}
+
+body.dashboard table .small-btn:hover {
   background-color: #4e97e2;
 }
 
-.pagination li {
+body.app table .small-btn {
+  background-color: #b8bcbf;
+}
+
+body.app table .small-btn:hover {
+  background-color: #4e97e2;
+}
+
+input[type="text"],input[type="number"],input[type="url"],input[type="email"],select,textarea {
+  width: 100%;
+  border: 0;
+  font-size: 1em;
+  color: #2f3032;
+  padding: 10px;
+  line-height: 1em;
+}
+
+input[type="text"]:disabled,input[type="number"]:disabled,input[type="url"]:disabled,input[type="email"]:disabled,select:disabled,textarea:disabled {
+  opacity: .8;
+}
+
+input[type="number"],input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  height: 150px;
+  margin: 5px 0px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+input:focus,select:focus,textarea:focus,button:focus {
+  outline: none;
+}
+
+button,input[type="submit"] {
+  font-size: 1em;
+  line-height: 1em;
+  padding: 12px 20px;
+  background: #3282f1;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: all ease-in 0.2s;
+  -moz-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+button:hover,input[type="submit"]:hover {
+  background: #4AAE74;
+}
+
+button:active,button:focus,input[type="submit"]:active,input[type="submit"]:focus {
+  background: #E54141;
+}
+
+.field-group {
+  border-width: 1px;
+  position: relative;
+  border-style: solid;
+  border-color: #D7DDE5;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  overflow: visible;
+  position: relative;
+  height: 42px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.field-group.inactive {
+  opacity: 0;
+}
+
+.field-group.active {
+  margin: 30px 0;
+}
+
+.field-group.completed:not(:last-child) {
+  border-bottom-width: 0;
+}
+
+.field-group.completed input:not(:checked) + label {
+  opacity: .6;
+}
+
+.field-group div.shortenBox label svg {
+  fill: white;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  right: 0;
+}
+
+.field-group div.shortenBox label svg.info,.field-group div.shortenBox label svg.checkmark,.field-group div.shortenBox label svg.down {
+  display: none;
+}
+
+.field-group div.shortenBox.activated label svg.info {
+  display: block;
+}
+
+.field-group div.shortenBox.activated label svg.down {
+  display: block;
+}
+
+.field-group div.shortenBox.activated label svg.checkmark {
+  display: none;
+}
+
+.field-group.set div.shortenBox.activated input:checked + label svg {
+  fill: white;
+}
+
+.field-group.set div.shortenBox.activated input:checked + label svg.info {
+  display: none;
+}
+
+.field-group.set div.shortenBox.activated input:checked + label svg.checkmark {
+  display: block;
+}
+
+.field-group.set div.shortenBox input:checked + label {
+  color: #2f3032;
+}
+
+.field-group.set div.shortenBox input:checked + label svg {
+  fill: #616568;
+}
+
+.field-group.set div.shortenBox input:checked + label svg.info {
+  display: none;
+}
+
+.field-group.set div.shortenBox input:checked + label svg.checkmark {
+  display: block;
+}
+
+.field-group:last-of-type {
+  border-width: 1px;
+}
+
+.field-group select {
+  padding-left: 0;
+}
+
+.field-group select option:checked:not(:disabled) {
+  color: #616568;
+}
+
+.field-group span.no-audience {
+  width: 100%;
+  border: 0;
+  font-size: 1em;
+  color: #2f3032;
+  padding: 12px 20px 12px 45px;
+  line-height: 1em;
+  font-weight: normal !important;
+}
+
+.field-group > label {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 33.3333%;
+  -moz-flex: 0 0 33.3333%;
+  -ms-flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%;
+  background: #D7DDE5;
+  font-size: 0.63em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  min-height: 40px;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.field-group input:not([type="radio"]),.field-group div.budgetvalue {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 64%;
+  -moz-flex: 1 1 64%;
+  -ms-flex: 1 1 64%;
+  flex: 1 1 64%;
+  display: block;
+  padding: 12px 20px 12px 45px;
+  vertical-align: middle;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.field-group > ul {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 64%;
+  -moz-flex: 1 1 64%;
+  -ms-flex: 1 1 64%;
+  flex: 1 1 64%;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+
+.field-group > ul > li {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 50%;
+  -moz-flex: 0 1 50%;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+  position: relative;
+  vertical-align: middle;
+}
+
+.field-group > ul > li > div {
+  min-height: 40px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.field-group > ul > li > div label {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 20px 12px 45px;
+}
+
+.field-group > ul > li > div input[type="radio"],.field-group > ul > li > div input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  opacity: 0;
+}
+
+.field-group > ul > li > div input + label svg.info {
+  display: none;
+}
+
+.field-group > ul > li > div input + label svg.checkmark {
+  display: none;
+}
+
+.field-group > ul > li > div input:checked + label {
+  color: #2f3032;
+}
+
+.field-group > ul > li > div input:checked + label svg {
+  fill: #616568;
+}
+
+.field-group > ul > li > div input:checked + label svg.info {
+  display: none;
+}
+
+.field-group > ul > li > div input:checked + label svg.checkmark {
+  display: block;
+}
+
+.field-group > ul > li > div .content {
+  position: relative;
+  top: 0;
+  background: white;
+  max-height: 0;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.field-group > ul > li > div .content ul {
+  margin: 20px -20px 0;
+}
+
+.field-group > ul > li > div .content li {
+  padding: 6px 20px;
+}
+
+.field-group > ul > li > div .content li:hover {
+  background: #F2F4F5;
+}
+
+.field-group > ul > li > div .content li.selected label:before {
+  border: 2px solid #2662B5;
+  background-color: #2662B5;
+}
+
+.field-group > ul > li > div .content li label {
+  font-size: 0.63em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+  min-height: 40px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.field-group > ul > li > div .content li label:before {
+  border: 2px solid #2662B5;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.field-group > ul > li > div .content > label {
+  padding: 6px 0 6px 20px;
+}
+
+.field-group > ul > li label {
+  padding: 0;
+}
+
+.field-group .selected {
+  color: white;
+  background: #3282F1;
+}
+
+.field-group .selected > label {
+  display: block;
+}
+
+.field-group .selected input {
+  color: white;
+}
+
+.field-group .selected .content {
+  padding: 12px 20px;
+  max-height: 400px;
+}
+
+.field-group .activated {
+  box-shadow: 0 0 5px black;
+  background: #3282F1;
+  margin-top: -4px;
+  z-index: 2;
+  min-width: 237px;
+}
+
+.field-group .activated > label {
+  display: block;
+  color: white;
+}
+
+.field-group .activated .content {
+  padding: 12px 20px;
+  max-height: 400px;
+}
+
+.field-group .activated svg {
+  background-color: #2662B5;
+  border-left: 1px solid #5B9BF4;
+}
+
+.field-group .deactivated {
+  z-index: 1;
+}
+
+.field-group svg.toggle {
+  position: absolute;
+  left: calc(33.3333% + 20px);
+  top: 10px;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  fill: #72767A;
+}
+
+.field-group.set#ad-content li:not(.set) {
+  -webkit-flex-basis: 0;
+  -moz-flex-basis: 0;
+  flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  -webkit-flex-grow: 0;
+  -moz-flex-grow: 0;
+  flex-grow: 0;
+  -ms-flex-positive: 0;
+  overflow: hidden;
+}
+
+.field-group li.set {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-transition: all, 0.1s linear;
+  -moz-transition: all, 0.1s linear;
+  transition: all, 0.1s linear;
+}
+
+.field-group li.set > div {
+  overflow: hidden;
+}
+
+.field-group li.set input:checked + label svg {
+  fill: #616568;
+}
+
+.field-group li.set input:checked + label svg.info {
+  display: none;
+}
+
+.field-group li.set input:checked + label svg.checkmark {
+  display: block;
+}
+
+.field-group li.set:not(:last-child) {
+  border-right: 1px solid #d7dde5;
+}
+
+.field-group li.set:hover span {
   display: inline;
 }
 
-.pagination li a {
-  background-color: #414348;
-  padding: 0.4em 0.5em;
-  text-decoration: none;
+.settings-section {
+  padding: 25px 0 40px;
 }
 
-.pagination li a:hover {
+.settings-section.overview {
+  -webkit-box-align: space-between;
+  -moz-box-align: space-between;
+  box-align: space-between;
+  -webkit-align-items: space-between;
+  -moz-align-items: space-between;
+  -ms-align-items: space-between;
+  -o-align-items: space-between;
+  align-items: space-between;
+  -ms-flex-align: space-between;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  margin: 0 -.5rem;
+}
+
+.settings-section.overview > * {
+  margin: .5rem 0;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 32%;
+  -moz-flex: 0 1 32%;
+  -ms-flex: 0 1 32%;
+  flex: 0 1 32%;
+  padding: 12px 20px;
+  border: 1px solid #d7dde5;
+  background: white;
+}
+
+.settings-section.overview > input[type="submit"],.settings-section.overview .button {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.settings-section.overview .field-group {
+  display: block;
+  border: 1px solid #d7dde5;
+  background: white;
+}
+
+.settings-section.overview .field-group > label {
+  display: block;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: -12px -20px 0;
+  box-sizing: content-box;
+  min-height: initial;
+}
+
+.settings-section.overview .field-group input[type="text"],.settings-section.overview .field-group input[type="number"],.settings-section.overview .field-group input[type="url"],.settings-section.overview .field-group input[type="email"],.settings-section.overview .field-group select,.settings-section.overview .field-group textarea {
+  margin: 0 -20px -12px;
+  background: white;
+}
+
+.settings-section .special-option {
+  margin: 20px 0 20px 33.3333%;
+  display: block;
+}
+
+.settings-section .special-option span {
+  padding: 12px 20px;
+  cursor: pointer;
+  display: block;
+}
+
+.settings-section .special-option label,.settings-section .special-option ul {
+  display: none;
+}
+
+.settings-section .special-option.show-option {
+  max-width: 440px;
+  max-height: 40px;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 5px black;
+  vertical-align: baseline;
+}
+
+.settings-section .special-option.show-option span {
+  display: none;
+}
+
+.settings-section .special-option.show-option label,.settings-section .special-option.show-option ul {
+  display: inline-block;
+}
+
+.settings-section .special-option.show-option > label {
+  padding: 12px 20px;
+  background: #3282f1;
+  color: white;
+}
+
+.settings-section .special-option.show-option ul li {
+  display: inline-block;
+  padding: 12px 20px;
+}
+
+.settings-section .special-option.show-option ul li label {
+  padding-left: 6px;
+}
+
+.settings-section .special-option.show-option ul .reset {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  border-left: 1px solid #D7DDE5;
+}
+
+.settings-section .special-option.show-option ul .reset svg {
+  width: 20px;
+  height: 20px;
+  fill: #D7DDE5;
+}
+
+.settings-section > label {
+  background-color: #d7dde5;
+  display: block;
+  font-size: 0.63em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  min-height: 40px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  width: 218px;
+}
+
+.settings-section input {
+  background: #f2f4f5;
+}
+
+.settings-section select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  width: 120%;
+  margin-left: 45px;
+  background: transparent;
+}
+
+.settings-section select:focus {
+  background: white;
+}
+
+.settings-section select option {
+  background: white;
+}
+
+.settings-section button {
+  display: block;
+  margin: 20px 0 20px 33.3333%;
+}
+
+.disabled {
+  opacity: .44;
+}
+
+.pagination {
+  font-size: 0.9em;
+  list-style: none;
+}
+
+.pagination li {
+  display: inline-block;
+}
+
+.pagination li a {
+  display: block;
+  padding: 0.6em 0.8em 0.5em;
+  text-decoration: none;
+  -webkit-transition: all 50ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
+  -moz-transition: all 50ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
+  transition: all 50ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
+}
+
+body.dashboard .pagination li a {
+  background-color: #414348;
+}
+
+body.dashboard .pagination li a:hover {
   background-color: #53555c;
+}
+
+body.app .pagination li a {
+  background-color: #e3e5e8;
+}
+
+body.app .pagination li a:hover {
+  background-color: #fff;
 }
 
 .pagination li a:not([href]) {
@@ -906,7 +1741,7 @@ table .small-btn:hover {
   background-position: -4px 3px, -4px 3px, -4px 3px, -4px 2px, -4px 0;
 }
 
-input[type="text"],input[type="number"],input[type="email"],select,textarea {
+input[type="text"],input[type="number"],input[type="url"],input[type="email"],select,textarea {
   width: 100%;
   border: 0;
   font-size: 1em;
@@ -915,7 +1750,7 @@ input[type="text"],input[type="number"],input[type="email"],select,textarea {
   line-height: 1em;
 }
 
-input[type="text"]:disabled,input[type="number"]:disabled,input[type="email"]:disabled,select:disabled,textarea:disabled {
+input[type="text"]:disabled,input[type="number"]:disabled,input[type="url"]:disabled,input[type="email"]:disabled,select:disabled,textarea:disabled {
   opacity: .8;
 }
 
@@ -932,11 +1767,11 @@ textarea {
   margin: 5px 0px;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   -webkit-appearance: checkbox;
 }
 
-input[type=radio] {
+input[type="radio"] {
   -webkit-appearance: radio;
 }
 
@@ -944,7 +1779,7 @@ input:focus,select:focus,textarea:focus,button:focus {
   outline: none;
 }
 
-button {
+button,input[type="submit"] {
   font-size: 1em;
   line-height: 1em;
   padding: 12px 20px;
@@ -952,26 +1787,545 @@ button {
   color: white;
   border: 0;
   cursor: pointer;
+  -webkit-transition: all ease-in 0.2s;
+  -moz-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+button:hover,input[type="submit"]:hover {
+  background: #4AAE74;
+}
+
+button:active,button:focus,input[type="submit"]:active,input[type="submit"]:focus {
+  background: #E54141;
+}
+
+.field-group {
+  border-width: 1px;
+  position: relative;
+  border-style: solid;
+  border-color: #D7DDE5;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  overflow: visible;
+  position: relative;
+  height: 42px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.field-group.inactive {
+  opacity: 0;
+}
+
+.field-group.active {
+  margin: 30px 0;
+}
+
+.field-group.completed:not(:last-child) {
+  border-bottom-width: 0;
+}
+
+.field-group.completed input:not(:checked) + label {
+  opacity: .6;
+}
+
+.field-group div.shortenBox label svg {
+  fill: white;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  right: 0;
+}
+
+.field-group div.shortenBox label svg.info,.field-group div.shortenBox label svg.checkmark,.field-group div.shortenBox label svg.down {
+  display: none;
+}
+
+.field-group div.shortenBox.activated label svg.info {
+  display: block;
+}
+
+.field-group div.shortenBox.activated label svg.down {
+  display: block;
+}
+
+.field-group div.shortenBox.activated label svg.checkmark {
+  display: none;
+}
+
+.field-group.set div.shortenBox.activated input:checked + label svg {
+  fill: white;
+}
+
+.field-group.set div.shortenBox.activated input:checked + label svg.info {
+  display: none;
+}
+
+.field-group.set div.shortenBox.activated input:checked + label svg.checkmark {
+  display: block;
+}
+
+.field-group.set div.shortenBox input:checked + label {
+  color: #2f3032;
+}
+
+.field-group.set div.shortenBox input:checked + label svg {
+  fill: #616568;
+}
+
+.field-group.set div.shortenBox input:checked + label svg.info {
+  display: none;
+}
+
+.field-group.set div.shortenBox input:checked + label svg.checkmark {
+  display: block;
+}
+
+.field-group:last-of-type {
+  border-width: 1px;
+}
+
+.field-group select {
+  padding-left: 0;
+}
+
+.field-group select option:checked:not(:disabled) {
+  color: #616568;
+}
+
+.field-group span.no-audience {
+  width: 100%;
+  border: 0;
+  font-size: 1em;
+  color: #2f3032;
+  padding: 12px 20px 12px 45px;
+  line-height: 1em;
+  font-weight: normal !important;
+}
+
+.field-group > label {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 33.3333%;
+  -moz-flex: 0 0 33.3333%;
+  -ms-flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%;
+  background: #D7DDE5;
+  font-size: 0.63em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  min-height: 40px;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.field-group input:not([type="radio"]),.field-group div.budgetvalue {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 64%;
+  -moz-flex: 1 1 64%;
+  -ms-flex: 1 1 64%;
+  flex: 1 1 64%;
+  display: block;
+  padding: 12px 20px 12px 45px;
+  vertical-align: middle;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.field-group > ul {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 64%;
+  -moz-flex: 1 1 64%;
+  -ms-flex: 1 1 64%;
+  flex: 1 1 64%;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+
+.field-group > ul > li {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 50%;
+  -moz-flex: 0 1 50%;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+  position: relative;
+  vertical-align: middle;
+}
+
+.field-group > ul > li > div {
+  min-height: 40px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.field-group > ul > li > div label {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 20px 12px 45px;
+}
+
+.field-group > ul > li > div input[type="radio"],.field-group > ul > li > div input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  opacity: 0;
+}
+
+.field-group > ul > li > div input + label svg.info {
+  display: none;
+}
+
+.field-group > ul > li > div input + label svg.checkmark {
+  display: none;
+}
+
+.field-group > ul > li > div input:checked + label {
+  color: #2f3032;
+}
+
+.field-group > ul > li > div input:checked + label svg {
+  fill: #616568;
+}
+
+.field-group > ul > li > div input:checked + label svg.info {
+  display: none;
+}
+
+.field-group > ul > li > div input:checked + label svg.checkmark {
+  display: block;
+}
+
+.field-group > ul > li > div .content {
+  position: relative;
+  top: 0;
+  background: white;
+  max-height: 0;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.field-group > ul > li > div .content ul {
+  margin: 20px -20px 0;
+}
+
+.field-group > ul > li > div .content li {
+  padding: 6px 20px;
+}
+
+.field-group > ul > li > div .content li:hover {
+  background: #F2F4F5;
+}
+
+.field-group > ul > li > div .content li.selected label:before {
+  border: 2px solid #2662B5;
+  background-color: #2662B5;
+}
+
+.field-group > ul > li > div .content li label {
+  font-size: 0.63em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+  min-height: 40px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.field-group > ul > li > div .content li label:before {
+  border: 2px solid #2662B5;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.field-group > ul > li > div .content > label {
+  padding: 6px 0 6px 20px;
+}
+
+.field-group > ul > li label {
+  padding: 0;
+}
+
+.field-group .selected {
+  color: white;
+  background: #3282F1;
+}
+
+.field-group .selected > label {
+  display: block;
+}
+
+.field-group .selected input {
+  color: white;
+}
+
+.field-group .selected .content {
+  padding: 12px 20px;
+  max-height: 400px;
+}
+
+.field-group .activated {
+  box-shadow: 0 0 5px black;
+  background: #3282F1;
+  margin-top: -4px;
+  z-index: 2;
+  min-width: 237px;
+}
+
+.field-group .activated > label {
+  display: block;
+  color: white;
+}
+
+.field-group .activated .content {
+  padding: 12px 20px;
+  max-height: 400px;
+}
+
+.field-group .activated svg {
+  background-color: #2662B5;
+  border-left: 1px solid #5B9BF4;
+}
+
+.field-group .deactivated {
+  z-index: 1;
+}
+
+.field-group svg.toggle {
+  position: absolute;
+  left: calc(33.3333% + 20px);
+  top: 10px;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  fill: #72767A;
+}
+
+.field-group.set#ad-content li:not(.set) {
+  -webkit-flex-basis: 0;
+  -moz-flex-basis: 0;
+  flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  -webkit-flex-grow: 0;
+  -moz-flex-grow: 0;
+  flex-grow: 0;
+  -ms-flex-positive: 0;
+  overflow: hidden;
+}
+
+.field-group li.set {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-transition: all, 0.1s linear;
+  -moz-transition: all, 0.1s linear;
+  transition: all, 0.1s linear;
+}
+
+.field-group li.set > div {
+  overflow: hidden;
+}
+
+.field-group li.set input:checked + label svg {
+  fill: #616568;
+}
+
+.field-group li.set input:checked + label svg.info {
+  display: none;
+}
+
+.field-group li.set input:checked + label svg.checkmark {
+  display: block;
+}
+
+.field-group li.set:not(:last-child) {
+  border-right: 1px solid #d7dde5;
+}
+
+.field-group li.set:hover span {
+  display: inline;
 }
 
 .settings-section {
   padding: 25px 0 40px;
 }
 
-.settings-section .field-group {
-  border-right: 1px solid #d7dde5;
-  border-top: 1px solid #d7dde5;
-  display: table;
-  list-style: outside none none;
-  margin-bottom: 1px;
-  position: relative;
-  width: 100%;
-  background: #f2f4f5;
-  overflow: hidden;
+.settings-section.overview {
+  -webkit-box-align: space-between;
+  -moz-box-align: space-between;
+  box-align: space-between;
+  -webkit-align-items: space-between;
+  -moz-align-items: space-between;
+  -ms-align-items: space-between;
+  -o-align-items: space-between;
+  align-items: space-between;
+  -ms-flex-align: space-between;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  margin: 0 -.5rem;
 }
 
-.settings-section .field-group:last-of-type {
-  border-bottom: 1px solid #d7dde5;
+.settings-section.overview > * {
+  margin: .5rem 0;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 32%;
+  -moz-flex: 0 1 32%;
+  -ms-flex: 0 1 32%;
+  flex: 0 1 32%;
+  padding: 12px 20px;
+  border: 1px solid #d7dde5;
+  background: white;
+}
+
+.settings-section.overview > input[type="submit"],.settings-section.overview .button {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.settings-section.overview .field-group {
+  display: block;
+  border: 1px solid #d7dde5;
+  background: white;
+}
+
+.settings-section.overview .field-group > label {
+  display: block;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: -12px -20px 0;
+  box-sizing: content-box;
+  min-height: initial;
+}
+
+.settings-section.overview .field-group input[type="text"],.settings-section.overview .field-group input[type="number"],.settings-section.overview .field-group input[type="url"],.settings-section.overview .field-group input[type="email"],.settings-section.overview .field-group select,.settings-section.overview .field-group textarea {
+  margin: 0 -20px -12px;
+  background: white;
 }
 
 .settings-section .special-option {
@@ -1206,405 +2560,6 @@ body.exchange .upload-btn svg {
   height: 1.65rem;
 }
 
-body.exchange .field-group {
-  border-width: 1px;
-  position: relative;
-  border-style: solid;
-  border-color: #D7DDE5;
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
-  box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  -o-align-items: stretch;
-  align-items: stretch;
-  -ms-flex-align: stretch;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
-  overflow: visible;
-  position: relative;
-  height: 42px;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-
-body.exchange .field-group.inactive {
-  opacity: 0;
-}
-
-body.exchange .field-group.active {
-  margin: 30px 0;
-}
-
-body.exchange .field-group.completed:not(:last-child) {
-  border-bottom-width: 0;
-}
-
-body.exchange .field-group.completed input:not(:checked) + label {
-  opacity: .6;
-}
-
-body.exchange .field-group div.shortenBox label svg {
-  fill: white;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-  right: 0;
-}
-
-body.exchange .field-group div.shortenBox label svg.info,body.exchange .field-group div.shortenBox label svg.checkmark,body.exchange .field-group div.shortenBox label svg.down {
-  display: none;
-}
-
-body.exchange .field-group div.shortenBox.activated label svg.info {
-  display: block;
-}
-
-body.exchange .field-group div.shortenBox.activated label svg.down {
-  display: block;
-}
-
-body.exchange .field-group div.shortenBox.activated label svg.checkmark {
-  display: none;
-}
-
-body.exchange .field-group.set div.shortenBox.activated input:checked + label svg {
-  fill: white;
-}
-
-body.exchange .field-group.set div.shortenBox.activated input:checked + label svg.info {
-  display: none;
-}
-
-body.exchange .field-group.set div.shortenBox.activated input:checked + label svg.checkmark {
-  display: block;
-}
-
-body.exchange .field-group.set div.shortenBox input:checked + label {
-  color: #2f3032;
-}
-
-body.exchange .field-group.set div.shortenBox input:checked + label svg {
-  fill: #616568;
-}
-
-body.exchange .field-group.set div.shortenBox input:checked + label svg.info {
-  display: none;
-}
-
-body.exchange .field-group.set div.shortenBox input:checked + label svg.checkmark {
-  display: block;
-}
-
-body.exchange .field-group:last-of-type {
-  border-width: 1px;
-}
-
-body.exchange .field-group select {
-  padding-left: 0;
-}
-
-body.exchange .field-group select option:checked:not(:disabled) {
-  color: #616568;
-}
-
-body.exchange .field-group span.no-audience {
-  width: 100%;
-  border: 0;
-  font-size: 1em;
-  color: #2f3032;
-  padding: 12px 20px 12px 45px;
-  line-height: 1em;
-  font-weight: normal !important;
-}
-
-body.exchange .field-group > label {
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  box-flex: 0;
-  -webkit-flex: 0 0 33.3333%;
-  -moz-flex: 0 0 33.3333%;
-  -ms-flex: 0 0 33.3333%;
-  flex: 0 0 33.3333%;
-  background: #D7DDE5;
-  font-size: 0.63em;
-  font-weight: 400;
-  letter-spacing: 1px;
-  min-height: 40px;
-  padding: 12px 20px;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-body.exchange .field-group input:not([type="radio"]),body.exchange .field-group div.budgetvalue {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1 1 64%;
-  -moz-flex: 1 1 64%;
-  -ms-flex: 1 1 64%;
-  flex: 1 1 64%;
-  display: block;
-  padding: 12px 20px 12px 45px;
-  vertical-align: middle;
-  font-size: 1em;
-  font-weight: 400;
-}
-
-body.exchange .field-group > ul {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1 1 64%;
-  -moz-flex: 1 1 64%;
-  -ms-flex: 1 1 64%;
-  flex: 1 1 64%;
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
-  box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  -o-align-items: stretch;
-  align-items: stretch;
-  -ms-flex-align: stretch;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
-}
-
-body.exchange .field-group > ul > li {
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  box-flex: 0;
-  -webkit-flex: 0 1 50%;
-  -moz-flex: 0 1 50%;
-  -ms-flex: 0 1 50%;
-  flex: 0 1 50%;
-  position: relative;
-  vertical-align: middle;
-}
-
-body.exchange .field-group > ul > li > div {
-  min-height: 40px;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-
-body.exchange .field-group > ul > li > div label {
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 12px 20px 12px 45px;
-}
-
-body.exchange .field-group > ul > li > div input[type="radio"],body.exchange .field-group > ul > li > div input[type="checkbox"] {
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  opacity: 0;
-}
-
-body.exchange .field-group > ul > li > div .content {
-  position: relative;
-  top: 0;
-  background: white;
-  max-height: 0;
-  padding: 0 20px;
-  overflow: hidden;
-}
-
-body.exchange .field-group > ul > li > div .content ul {
-  margin: 20px -20px 0;
-}
-
-body.exchange .field-group > ul > li > div .content li {
-  padding: 6px 20px;
-}
-
-body.exchange .field-group > ul > li > div .content li:hover {
-  background: #F2F4F5;
-}
-
-body.exchange .field-group > ul > li > div .content li.selected label:before {
-  border: 2px solid #2662B5;
-  background-color: #2662B5;
-}
-
-body.exchange .field-group > ul > li > div .content li label {
-  font-size: 0.63em;
-  font-weight: 400;
-  letter-spacing: 1px;
-  padding: 12px 20px;
-  min-height: 40px;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-body.exchange .field-group > ul > li > div .content li label:before {
-  border: 2px solid #2662B5;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 6px;
-}
-
-body.exchange .field-group > ul > li > div .content > label {
-  padding: 6px 0 6px 20px;
-}
-
-body.exchange .field-group > ul > li label {
-  padding: 0;
-}
-
-body.exchange .field-group .selected {
-  color: white;
-  background: #3282F1;
-}
-
-body.exchange .field-group .selected > label {
-  display: block;
-}
-
-body.exchange .field-group .selected input {
-  color: white;
-}
-
-body.exchange .field-group .selected .content {
-  padding: 12px 20px;
-  max-height: 400px;
-}
-
-body.exchange .field-group .activated {
-  box-shadow: 0 0 5px black;
-  background: #3282F1;
-  margin-top: -4px;
-  z-index: 2;
-  min-width: 237px;
-}
-
-body.exchange .field-group .activated > label {
-  display: block;
-  color: white;
-}
-
-body.exchange .field-group .activated .content {
-  padding: 12px 20px;
-  max-height: 400px;
-}
-
-body.exchange .field-group .activated svg {
-  background-color: #2662B5;
-  border-left: 1px solid #5B9BF4;
-}
-
-body.exchange .field-group .deactivated {
-  z-index: 1;
-}
-
-body.exchange .field-group svg.toggle {
-  position: absolute;
-  left: calc(33.3333% + 20px);
-  top: 10px;
-  bottom: 10px;
-  width: 20px;
-  height: 20px;
-  fill: #72767A;
-}
-
-body.exchange .field-group.set#ad-content li:not(.set) {
-  -webkit-flex-basis: 0;
-  -moz-flex-basis: 0;
-  flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  -webkit-flex-grow: 0;
-  -moz-flex-grow: 0;
-  flex-grow: 0;
-  -ms-flex-positive: 0;
-  overflow: hidden;
-}
-
-body.exchange .field-group li.set {
-  -webkit-flex-grow: 1;
-  -moz-flex-grow: 1;
-  flex-grow: 1;
-  -ms-flex-positive: 1;
-  -webkit-transition: all, 0.1s linear;
-  -moz-transition: all, 0.1s linear;
-  transition: all, 0.1s linear;
-}
-
-body.exchange .field-group li.set > div {
-  overflow: hidden;
-}
-
-body.exchange .field-group li.set input:checked + label svg {
-  fill: #616568;
-}
-
-body.exchange .field-group li.set input:checked + label svg.info {
-  display: none;
-}
-
-body.exchange .field-group li.set input:checked + label svg.checkmark {
-  display: block;
-}
-
-body.exchange .field-group li.set:not(:last-child) {
-  border-right: 1px solid #d7dde5;
-}
-
-body.exchange .field-group li.set:hover span {
-  display: inline;
-}
-
 body.exchange .main {
   -webkit-box-align: space-between;
   -moz-box-align: space-between;
@@ -1625,6 +2580,9 @@ body.exchange .main {
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row;
@@ -1933,6 +2891,9 @@ body.exchange #days-of-flight .ng-datepicker .day-names {
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row;
@@ -1983,6 +2944,9 @@ body.exchange #days-of-flight .ng-datepicker .calendar {
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row;
@@ -2082,6 +3046,10 @@ body.app footer nav ul li {
 }
 
 @media screen and (min-width: 640px) {
+  .content h3 {
+    margin-top: 2.5em;
+  }
+
   body.revere > header h1.logo {
     min-width: 270px;
     height: 18px;
@@ -2114,8 +3082,8 @@ body.app footer nav ul li {
     display: table-header-group;
   }
 
-  table tr:first-child {
-    border-top: none;
+  table tr:first-of-type {
+    border-top-width: 0;
   }
 
   table .actions {
@@ -2153,7 +3121,7 @@ body.app footer nav ul li {
 }
 
 @media screen and (min-width: 1024px) {
-  nav.v > ul > li .icon {
+  nav.v > ul > li.has-children ul .icon {
     width: 1.2em;
     height: 1.2em;
     left: -2.4em;

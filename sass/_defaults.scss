@@ -37,6 +37,7 @@ a {
 h1, h2 ,h3, h4 {
 	font-weight: 200;
 	letter-spacing: .75px;
+  line-height:1.125em;
 }
 
 h1 {
@@ -176,22 +177,6 @@ p {
       right:0;
     }
   }
-//  &:after {
-//    text-align: center;
-//    content: "";
-//    padding: 0.35em;
-//    font-size: 1.4rem;
-//    box-sizing: border-box;
-//    width: 2.5rem;
-//    height: 2.5rem;
-//    top: 0;
-//    bottom:0;
-//    right: 0;
-//    display: block;
-//    position: absolute;
-//    background-color: #3381d2;
-//    border-left: 1px solid #2a70b9;
-//  }
 }
 // Max height zero
 

@@ -46,19 +46,19 @@ button, input[type="submit"], .settings-section a.button {
 	font-size: 1em;
 	line-height: 1em;
   padding:12px 20px;
-  background:#3282f1;
+  background:$dkbtn;
   color:white;
   border:0;
   cursor:pointer;
   &:hover {
-    background:#4AAE74;
+    background:$green;
   }
   &:active, &:focus {
-    background:#E54141;
+    background:$red;
   }
   &.cancel {
     background:transparent;
-    color:#616568;
+    color:$dkgray;
     position:relative;
   }
 }
@@ -67,7 +67,7 @@ button, input[type="submit"], .settings-section a.button {
   border-width:1px;
   position: relative;
   border-style:solid;
-  border-color:#D7DDE5;
+  border-color:$ltborder;
   @include align-items(stretch);
   @include display(flex);
   @include flex-direction(row);
@@ -83,7 +83,7 @@ button, input[type="submit"], .settings-section a.button {
     margin:30px 0;
   }
   &.completed  {
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       border-bottom-width:0;
       margin-bottom:1px;
     }
@@ -134,9 +134,9 @@ button, input[type="submit"], .settings-section a.button {
         }
       }
       input:checked + label {
-        color:#2f3032;
+        color:$dkgray;
         svg {
-          fill:#616568;
+          fill:$topborder;
           &.info {
             display:none;
           }
@@ -152,14 +152,14 @@ button, input[type="submit"], .settings-section a.button {
   }
   select {
     option:checked:not(:disabled) {
-      color:#616568;
+      color:$topborder;
     }
   }
   span.no-audience {
     width: 100%;
     border: 0;
     font-size: 1em;
-    color: #2f3032;
+    color: $dkgray;
     padding: 12px 20px 12px 45px;
     line-height: 1em;
     font-weight: normal !important;
@@ -167,7 +167,7 @@ button, input[type="submit"], .settings-section a.button {
   }
   > label {
     @include flex(0 0 33.3333%);
-    background:#D7DDE5;
+    background:$ltborder;
     font-size: 0.63em;
     font-weight: 400;
     letter-spacing: 1px;
@@ -213,9 +213,9 @@ button, input[type="submit"], .settings-section a.button {
           opacity:0;
         }
         input + label {
-//          color:#2f3032;
+//          color:$dkgray;
           svg {
-//            fill:#616568;
+//            fill:$topborder;
             &.info {
               display:none;
             }
@@ -225,9 +225,9 @@ button, input[type="submit"], .settings-section a.button {
           }
         }
         input:checked + label {
-          color:#2f3032;
+          color:$dkgray;
           svg {
-            fill:#616568;
+            fill:$topborder;
             &.info {
               display:none;
             }
@@ -249,13 +249,13 @@ button, input[type="submit"], .settings-section a.button {
           li {
             padding: 6px 20px;
             &:hover {
-              background:#F2F4F5;
+              background:$ltbg;
             }
             &.selected {
               label {
                 &:before {
-                  border:2px solid #2662B5;
-                  background-color: #2662B5;
+                  border:2px solid $blue;
+                  background-color: $blue;
                 }
               }
             }
@@ -268,7 +268,7 @@ button, input[type="submit"], .settings-section a.button {
               text-transform: uppercase;
               vertical-align: middle;
               &:before {
-                border:2px solid #2662B5;
+                border:2px solid $blue;
                 width:1em;
                 height:1em;
                 border-radius:50%;
@@ -289,7 +289,7 @@ button, input[type="submit"], .settings-section a.button {
   }
   .selected {
     color:white;
-    background:#3282F1;
+    background:$dkbtn;
     > label {
       display: block;
     }
@@ -303,7 +303,7 @@ button, input[type="submit"], .settings-section a.button {
   }
   .activated {
     box-shadow:0 0 5px black;
-    background:#3282F1;
+    background:$dkbtn;
     margin-top:-4px;
     z-index:2;
     min-width:237px;
@@ -316,8 +316,8 @@ button, input[type="submit"], .settings-section a.button {
       max-height:400px;
     }            
     svg {
-      background-color: #2662B5;
-      border-left: 1px solid #5B9BF4;
+      background-color: $blue;
+      border-left: 1px solid $bluedarktint;
     }
   }
   .deactivated {
@@ -330,7 +330,7 @@ button, input[type="submit"], .settings-section a.button {
     bottom:10px;
     width:20px;
     height:20px;
-    fill:#72767A;
+    fill:$dkgray;
   }
   &.set#ad-content {
     li:not(.set) {
@@ -347,7 +347,7 @@ button, input[type="submit"], .settings-section a.button {
     }
     input:checked + label {
       svg {
-        fill:#616568;
+        fill:$topborder;
         &.info {
           display:none;
         }
@@ -358,7 +358,7 @@ button, input[type="submit"], .settings-section a.button {
     }
 
     &:not(:last-child) {
-      border-right:1px solid #d7dde5;
+      border-right:1px solid $ltborder;
     }
     &:hover {
       span {
@@ -383,7 +383,7 @@ button, input[type="submit"], .settings-section a.button {
       margin:.5rem 0;
       @include flex(0 1 32%);
       padding:12px 20px;
-      border:1px solid #d7dde5;
+      border:1px solid $ltborder;
       background:white;
     }
     > input[type="submit"], .button {
@@ -391,7 +391,7 @@ button, input[type="submit"], .settings-section a.button {
     }
     .field-group {
       display:block;
-      border:1px solid #d7dde5;
+      border:1px solid $ltborder;
       background:white;
       > label {
         display:block;
@@ -432,7 +432,7 @@ button, input[type="submit"], .settings-section a.button {
       }
       > label {
         padding:12px 20px;
-        background:#3282f1;
+        background:$dkbtn;
         color:white;
       }
       ul {
@@ -449,18 +449,18 @@ button, input[type="submit"], .settings-section a.button {
           right:0;
           bottom:0;
           padding:10px;
-          border-left:1px solid #D7DDE5;
+          border-left:1px solid $ltborder;
           svg {
             width:20px;
             height:20px;
-            fill:#D7DDE5;
+            fill:$ltborder;
           }
         }
       }
     }
   }
   > label {
-    background-color: $primarymdlt;
+    background-color: $ltborder;
     display: block;
     font-size: 0.63em;
     font-weight: 400;
@@ -471,8 +471,8 @@ button, input[type="submit"], .settings-section a.button {
     vertical-align: baseline;
     width: 218px;
   }
-  input {
-    background:$primarylt;
+  input:not([type="submit"]) {
+    background:$ltbg;
   }
   select {
     @include appearance(none);

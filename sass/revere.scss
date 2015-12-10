@@ -8,8 +8,8 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 @import "fonts";
-@import "mixins";
 @import "colors";
+@import "mixins";
 @import "defaults";
 @import "header";
 @import "user";
@@ -28,7 +28,7 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 body.exchange {
   h2 {
     a {
-      color:#616568;
+      color:$topborder;
     }
   }
   span.filename,
@@ -44,7 +44,7 @@ body.exchange {
       width: 120%;
       margin-left: 45px;
       padding: 10px;
-      color: #D7DDE5;
+      color: $ltborder;
     }
   }
   #campaign-name {
@@ -81,7 +81,7 @@ body.exchange {
         margin: 5px 0;
         padding: 10px;
         line-height: 1rem;
-        background: #F2F4F5;
+        background: $ltbg;
       }
     }
     .saturation-level {
@@ -119,17 +119,17 @@ body.exchange {
     padding: 0 25px 0 0;
     margin: 0;
     font-size: .75rem; 
-    background-color: #49ad74;
+    background-color: $green;
   }
   .upload-btn {
     position: absolute;
     svg {
-      background-color: #388356;
-      border-right: 1px solid #6dbd90;
+      background-color: $dkgreenbadge;
+      border-right: 1px solid $green;
       position: absolute;
       top: 0;
       left: 0;
-      fill: #fff;
+      fill: $white;
       padding: 0.45em;
       box-sizing: border-box;
       width: 1.75rem;
@@ -147,7 +147,7 @@ body.exchange {
         margin:.5rem;
         @include flex(1 1 24%);
         padding:12px 20px;
-        border:1px solid #d7dde5;
+        border:1px solid $ltborder;
         background:white;
       }
   }
@@ -167,7 +167,7 @@ body.exchange {
       h5 {
         span {
           padding-left: 20px;
-          color: #D7DDE5;
+          color: $ltborder;
         }
       }
       > * {
@@ -191,7 +191,7 @@ body.exchange {
         width: 18px;
         height: 18px;
         margin-top:-9px;
-        fill:#616568;
+        fill:$topborder;
         background:transparent;
       }
     }
@@ -219,8 +219,8 @@ body.exchange {
       &:hover {
         input + label {
           svg {
-            background-color: #2662B5;
-            border-left: 1px solid #5B9BF4;
+            background-color: $blue;
+            border-left: 1px solid $bluedarktint;
             fill:white;
             &.info {
               display:block;
@@ -242,7 +242,7 @@ body.exchange {
       }
       input:checked + label {
         svg {
-          fill:#616568;
+          fill:$topborder;
           &.info {
             display:none;
           }
@@ -266,7 +266,7 @@ body.exchange {
       &:hover {
         color:white;
         box-shadow:0 0 5px black;
-        background:#3282F1;
+        background:$dkbtn;
         z-index:2;
       }
     }
@@ -280,7 +280,7 @@ body.exchange {
     }   
     input[type="checkbox"]:checked + label {
       color:white;
-      background:#3282F1;
+      background:$dkbtn;
       z-index:2;
       min-width:237px;
       &:hover  {
@@ -292,10 +292,10 @@ body.exchange {
   // Ad Content Upload 
   table {
     thead {
-      background:#d7dde5;
+      background:$ltborder;
     }
     tr {
-      border-color:#d7dde5;
+      border-color:$ltborder;
       border-style:solid;
       border-width:1px 0 1px 0;
     }
@@ -328,7 +328,7 @@ body.exchange {
     }
     .activate {
       svg {
-        fill:#f2f4f5;
+        fill:$ltbg;
         right: 0;
         transition: all 0.1s linear 0s;
       }
@@ -342,7 +342,7 @@ body.exchange {
       // @include animation(contract-modal .3s linear forwards);
     }
     .activated {
-      background:#3282F1;
+      background:$dkbtn;
       input.ng-datepicker-input {
         color:white;
       }
@@ -350,7 +350,7 @@ body.exchange {
     .selected {
       background:transparent;
       input.ng-datepicker-input {
-        color:#616568;
+        color:$topborder;
       }
     }
     .ng-datepicker {
@@ -361,7 +361,7 @@ body.exchange {
         text-align:center;
         z-index:2;
         .controls {
-          background:#3282F1;
+          background:$dkbtn;
           color:white;
           font-size: 0.63em;
           font-weight: 700;
@@ -424,9 +424,9 @@ body.exchange {
             display:block;
             padding: 5px;
             margin: 4px 1%;
-            background:#f2f4f5;
+            background:$ltbg;
             &.notvalid {
-              background: #FFFFFF;
+              background: $white;
               opacity:.6;
               cursor: default;
             }
@@ -440,7 +440,7 @@ body.exchange {
     .activated, .selected {
       height: 100%;
       svg {
-        //fill: #f2f4f5;
+        //fill: $ltbg;
       }
       
     }
@@ -449,7 +449,7 @@ body.exchange {
   // User Navigation
   .group-items {
     .button {
-      background:#3282f1;
+      background:$dkbtn;
       font-size: .75em;
       line-height:1em;
       height: 1.65rem;
@@ -461,10 +461,10 @@ body.exchange {
       display:inline-block;
       margin-top:1rem;
       &.delete {
-        background:#f45454;
+        background:$dkred;
       }
       &:hover, &.delete:hover {
-        background:#4aae74;
+        background:$green;
       }
     }
   }

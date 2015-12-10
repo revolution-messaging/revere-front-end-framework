@@ -9,15 +9,15 @@
       text-decoration: none;
       @include transition(all 50ms cubic-bezier(0.86, 0, 0.07, 1) 50ms);
       body.dashboard & {
-        background-color: #414348;
+        background-color: $dkborder;
         &:hover{
-          background-color: #53555c;
+          background-color: $lticon;
         }
       }
       body.app & {
-    		background-color: #e3e5e8;
+    		background-color: $ltgray;
     		&:hover{
-    			background-color: #fff;
+    			background-color: $white;
     		}
         
       }

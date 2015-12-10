@@ -83,22 +83,22 @@
   }
   body.app & {
     a:link, a:visited {
-      color:#616568;
+      color:$topborder;
     }
     > li {
       svg.toggle {
-        fill: #72767A;
+        fill: $dkgray;
       }
       &:hover,
       &:hover {
-        background-color: #f9f9fa;
+        background-color: $white;
         box-shadow: 0px 0px 3px 0px $ltgray;
         h6 {
-          border-bottom: 1px solid #f1f2f3;
+          border-bottom: 1px solid $ltgray;
         }
         > ul {
           > li {
-            border-bottom: 1px solid #f1f2f3;
+            border-bottom: 1px solid $ltgray;
             &:hover, &:hover a {
               background-color: lighten($ltbg, 2%);
               color: $blue;         
@@ -110,19 +110,19 @@
   }
   body.dashboard & {
     a:link, a:visited {
-      color:#616568;
+      color:$topborder;
     }
     .icon {
-      fill: #fff;
+      fill: $white;
     }
     > li {
       &:hover,
       &.hover {
-        background:#414348;
+        background:$dkborder;
         .icon {
         }
         ul {
-          background:darken(#414348,5%);
+          background:darken($dkborder,5%);
           @include animation(expand-modal .1s linear forwards);
         }
       }

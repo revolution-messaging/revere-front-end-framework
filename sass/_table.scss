@@ -26,18 +26,18 @@ table{
 	tr{
     display: table-row;
     body.dashboard & {
-  		border-bottom: 1px solid #414348;
+  		border-bottom: 1px solid $dkborder;
   		&.link-item{
   			&:hover{
-  				background-color: #FFFFFF;
+  				background-color: $white;
   			}
   		}
     }
     body.app & {
-  		border-bottom: 1px solid #d7dde5;
+  		border-bottom: 1px solid $ltborder;
   		&.link-item{
   			&:hover{
-  				background-color: #FFFFFF;
+  				background-color: $white;
   			}
   		}
     }
@@ -57,7 +57,7 @@ table{
 			padding-left: 0.5em;
 		}
     body.dashboard & {
-  		color: #a8adb5;
+  		color: $dklabeltxt;
     }
     body.app & {
       color: #676c74;
@@ -109,15 +109,15 @@ table{
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
     body.dashboard & {
-  		background-color: #b8bcbf;
+  		background-color: $lticon;
   		&:hover{
-  			background-color: #4e97e2;
+  			background-color: $blue;
   		}
     }
     body.app & {
-      background-color: #b8bcbf;
+      background-color: $lticon;
       &:hover{
-        background-color: #4e97e2;
+        background-color: $blue;
       }
     }
 	}

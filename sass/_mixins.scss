@@ -31,7 +31,7 @@ $greylogin:	#eee;
 $greydk:	#2f3032;
 $greywt:	#f9f9f9;
 $greylt: 	#ccc;
-$greymid:	#535353;
+$greymid:	$topborder;
 
 $bluewt:	#e4eef6;
 $bluelt: 	#b3d2ed;
@@ -43,8 +43,8 @@ $actgreendk:#649d2e;
 $actred:	#CC3535;
 $actreddk:	#B12C2C;
 
-$noticeGreen: #4aae74;
-$warningRed: #d44949;
+$noticeGreen: $green;
+$warningRed: $red;
 
 
 // Color Test
@@ -58,14 +58,14 @@ $bkgdSecondary: #202123;
 $green: #61e699;
 $red: #f45454;
 $cta1: #50a1f7;
-$cta2: #4aae74;
+$cta2: $green;
 $cta3: #717171;
 $cta4: #F49F54;
-$linkColor: #54e3f4;
+$linkColor: $dklink;
 $formBkgd: #47494d;
 
 $border: #333333;
-$topBorderGray: #535353; // Might remove this one. Not sure if its going to be used multiple times.
+$topBorderGray: $topborder; // Might remove this one. Not sure if its going to be used multiple times.
 
 
 .lightPrimary {

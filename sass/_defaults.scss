@@ -21,14 +21,14 @@ body {
   @include justify-content(flex-start);
   @include flex-wrap(wrap);
   &.app {
-  	color: $primarydk;
+  	color: $text;
     background:$ltbg;
   }
 }
 #sb-site {background: $greydk;}
 
 a {
-	color: #54e3f4;
+	color: $dklink;
 	&:hover {
 		text-decoration: none;
 	}
@@ -151,7 +151,7 @@ p {
   cursor: pointer;
   height: 2.5rem;
   .modal & {
-    background-color: #4e97e2;
+    background-color: $blue;
     text-shadow: -1px -1px 1px rgba(42, 112, 185, 0.5);
     color: white;
   }
@@ -170,8 +170,8 @@ p {
     position: absolute;
     .modal, .modal-c {
       left: 0;
-      background-color: #3381d2;
-      border-right: 1px solid #2a70b9;
+      background-color: $blue;
+      border-right: 1px solid $bluedarktint;
     }
     .modal-h & {
       right:0;
@@ -182,14 +182,14 @@ p {
 
 .feedback {
   &.error {
-    background-color: #d44949;
+    background-color: $red;
   }
   &.success {
-    background-color: #4aae74;
+    background-color: $green;
   }
   p {
     padding: 10px;
-    color: #fff;
+    color: $white;
     line-height: 1em;
     font-size: .9em;
   }

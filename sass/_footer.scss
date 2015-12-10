@@ -8,10 +8,10 @@ footer {
     background: url("/img/logo-rm-footer@2x.png") center 1em no-repeat;
   	background-size: 49px 60px;
   	font-size: 0.9em;
-    color: #616568;
+    color: $topborder;
     text-align: center;
   	a {
-  		color: #3381d2;
+  		color: $bluedarktint;
   	}
   	nav {
   		ul {

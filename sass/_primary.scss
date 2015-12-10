@@ -8,7 +8,7 @@
   > header {
     padding:15px 0 22px;
     .app & {
-      border-bottom:1px solid #d7dde5;
+      border-bottom:1px solid $ltborder;
     }
     h2 {
       margin:0.2em 0 0 14px;
@@ -25,9 +25,22 @@
       margin:.5rem;
       @include flex(1 1 24%);
       padding:12px 20px;
-      border:1px solid #d7dde5;
+      border:1px solid $ltborder;
       background:white;
     }
+    > h3 {
+      @include flex(0 0 100%);
+      padding:12px 0;
+      border:0;
+      background:transparent;
+    }
+    .pattern & {
+      @include justify-content(flex-start);
+      > div {
+        @include flex(0 1 216px);
+      }
+    }
+    
   }
   .canvas {
     padding:25px 35px 40px;

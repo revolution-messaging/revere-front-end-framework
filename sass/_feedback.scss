@@ -10,15 +10,15 @@
   
   animation: wait 1.8s linear infinite;
   
-  background: linear-gradient(90deg, #f2f4f5 1px, #f2f4f5 0, #f2f4f5 3px, #f2f4f5 3px),
+  background: linear-gradient(90deg, $ltbg 1px, $ltbg 0, $ltbg 3px, $ltbg 3px),
     
-              linear-gradient(90deg, #d7dde5 1px, #d7dde5 0, #d7dde5 3px, #d7dde5 3px),
+              linear-gradient(90deg, $ltborder 1px, $ltborder 0, $ltborder 3px, $ltborder 3px),
     
-              linear-gradient(90deg, #d7dde5 1px, #d7dde5 0, #d7dde5 3px, #d7dde5 3px),
+              linear-gradient(90deg, $ltborder 1px, $ltborder 0, $ltborder 3px, $ltborder 3px),
     
-              linear-gradient(90deg, #a7afb8 1px, #a7afb8 0, #a7afb8 3px, #a7afb8 3px),
+              linear-gradient(90deg, $lticonhover 1px, $lticonhover 0, $lticonhover 3px, $lticonhover 3px),
               
-              linear-gradient(90deg, #93989e 1px, #93989e 0, #93989e 3px, #93989e 3px);  
+              linear-gradient(90deg, $dksubhead 1px, $dksubhead 0, $dksubhead 3px, $dksubhead 3px);  
   background-repeat: no-repeat;
   background-size: 4px 9px, 4px 9px, 4px 9px, 4px 11px, 4px 16px;  /* 1 */
   background-position: -4px 3px, -4px 3px, -4px 3px, -4px 2px, -4px 0;

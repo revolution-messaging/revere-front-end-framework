@@ -326,6 +326,10 @@ header .modal.activated .content {
   right: 0;
 }
 
+.feedback {
+  background-color: #61e699;
+}
+
 .feedback.error {
   background-color: #f45454;
 }
@@ -987,7 +991,7 @@ body.dashboard table th {
 }
 
 body.app table th {
-  color: #676c74;
+  color: #676C74;
 }
 
 table .actions {

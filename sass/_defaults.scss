@@ -181,6 +181,7 @@ p {
 // Max height zero
 
 .feedback {
+  background-color: $green;
   &.error {
     background-color: $red;
   }

@@ -24,7 +24,7 @@
     var t = document.createElement("style");
     t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t)
   }
-  var o = "//wp-content/themes/revere-pattern/front-end-framework/css/font.css";
+  var o = "//wp-content/themes/revere-pattern/front-end-framework/css/fonts.css";
   window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
 }();
 

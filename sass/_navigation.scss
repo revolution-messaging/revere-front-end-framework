@@ -28,7 +28,7 @@ nav.v {
     			.icon {
     				left: -2.4em;
     				right: auto;
-    				top: 1.3em;
+    				top: 1em;
     				-webkit-transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
     	      transition:         all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;
     				@include media($tablet) {
@@ -42,7 +42,7 @@ nav.v {
     					height: 1.2em;
     					left: -2.4em;
     					right: auto;
-    					top: 0.9em;
+    					top: .25em;
     				}
     			}
         }
@@ -91,7 +91,7 @@ nav.v {
         position:absolute;
 				left: auto;
 				right: 0;
-				top: 1.3em;
+				top: 1.625em;
         width: 1.2em;
         height: 1.2em;
 				-webkit-transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1) 50ms;

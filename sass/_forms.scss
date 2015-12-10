@@ -39,7 +39,10 @@ textarea:focus,
 button:focus {
     outline: none;
 }
-button, input[type="submit"] {
+button, input[type="submit"], a.button {
+  @include transition(all ease-in .2s);   
+}
+button, input[type="submit"], .settings-section a.button {
 	font-size: 1em;
 	line-height: 1em;
   padding:12px 20px;
@@ -47,12 +50,16 @@ button, input[type="submit"] {
   color:white;
   border:0;
   cursor:pointer;
-  @include transition(all ease-in .2s);   
   &:hover {
     background:#4AAE74;
   }
   &:active, &:focus {
     background:#E54141;
+  }
+  &.cancel {
+    background:transparent;
+    color:#616568;
+    position:relative;
   }
 }
 
@@ -481,8 +488,10 @@ button, input[type="submit"] {
     }
   }
   button {
-    display:block;
-    margin:20px 0 20px 33.3333%;
+    display:inline-block;
+    &:first-of-type {
+      margin:20px 20px 20px 33.3333%;
+    }
   }
 }
 // Parent element of dissabled form item

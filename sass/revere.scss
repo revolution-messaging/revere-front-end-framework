@@ -447,21 +447,25 @@ body.exchange {
   }
 
   // User Navigation
-  .button {
-    background:#3282f1;
-  	font-size: .75em;
-    line-height:1em;
-  	height: 1.65rem;
-    vertical-align:center;
-    padding:6px 18px 0;
-    color:white;
-    border:0;
-    cursor:pointer;
-    display:inline-block;
-    margin-top:1rem;
-    &.delete {
-      background:#f45454;
-      
+  .group-items {
+    .button {
+      background:#3282f1;
+      font-size: .75em;
+      line-height:1em;
+      height: 1.65rem;
+      vertical-align:center;
+      padding:6px 18px 0;
+      color:white;
+      border:0;
+      cursor:pointer;
+      display:inline-block;
+      margin-top:1rem;
+      &.delete {
+        background:#f45454;
+      }
+      &:hover, &.delete:hover {
+        background:#4aae74;
+      }
     }
   }
   .special-option {

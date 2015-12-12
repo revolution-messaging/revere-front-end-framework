@@ -26,11 +26,16 @@
   }
   var o = "/wp-content/themes/revere-pattern/front-end-framework/css/fonts.css";
   window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
-}();
-
+}
 // Toggles for Navigation
-$('li.has-children').addClass('contract').click( function (){
-  $(this).toggleClass('expand contract');
+$('li.has-children').click( function (){
+  if ($(this).hasClass('contract')) {
+    $(this).toggleClass('expand contract')
+  } else if ($(this).hasClass('expand')) {
+    $(this).toggleClass('expand contract')
+  } else {
+    $(this).addClass('expand');
+  }
 });
 // Class Toggles for Animation
 $('.modal .activate, .user li h6').click( function(){

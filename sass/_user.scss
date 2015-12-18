@@ -38,7 +38,7 @@
       }
       @include media($tablet) {
         height:auto;
-        @include flex(0 0 175px);
+        @include flex(0 0 225px);
         h6 {
           padding:12px 20px 22px;
         }

@@ -1,37 +1,65 @@
 .user {
-  font-weight: 300;
-  position:absolute;
-  right:15px;
-  top:8px;
-  min-width:174px;
-  z-index:4;
-  @include align-items(stretch);
+  @include align-items(flex-start);
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(flex-end);
-  @include flex-wrap(nowrap);  
+  @include flex-wrap(wrap);  
+  z-index:0;
+  font-weight: 300;
+  position:fixed;
+  min-width:250px;
   // To-do Mobile Interface for .user content
   list-style:none;
+  z-index:2;
   margin:0 10px 0 0;
-  padding: 0;
-  top: 15px;
+  padding: 5px 0;
+  @include media($notebook) {
+    @include flex-wrap(nowrap);
+    padding:0;  
+    min-width:174px;
+    right:15px;
+    top: 15px;
+    z-index:4;
+    background:transparent;
+  }
   > li {
     @include transition(all 200ms ease);
-    @include flex(0 0 auto);
     list-style:none;
     position:relative;
     margin-right: 0px;
     padding: 0;
-    &.clientmenu {
-      @include flex(1 0 175px);
+    @include flex(0 0 100%);
+    @include media($tablet) {
+      @include flex(0 0 auto);
     }
-    &:hover {
+    &.clientmenu {
+      h6 {
+        padding: 12px 20px 12px;
+      }
+      @include media($tablet) {
+        height:auto;
+        @include flex(0 0 175px);
+        h6 {
+          padding:12px 20px 22px;
+        }
+      }
+    }
+    &:hover, &.activated {
       svg.toggle {
         @include animation(rotate90reverse .2s 0s linear forwards);
       }
       > ul {
         @include animation(expand-modal 1s linear forwards);
         overflow-y:scroll;
+      }
+    }
+    &.deactivated {
+      svg.toggle {
+        @include animation(rotate90 .2s 0s linear forwards);
+      }
+      > ul {
+        @include animation(contract-modal 1s linear forwards);
+        overflow-y:hidden;
       }
     }
     img {
@@ -45,20 +73,29 @@
     }
     h6 {
       margin-right: 0;
-      padding: 12px 20px 22px;
-     display: block;
-     background-color: transparent;
-     border: 0;
-     outline: none;
+      display: block;
+      background-color: transparent;
+      border: 0;
+      outline: none;
+      padding: 12px 20px 12px;
+    }
+    &:first-of-type h6 {
+      padding:22px 20px 17px;
+      @include media($tablet) {
+        padding:12px 20px 22px;
+      }
     }
     svg.toggle {
       float:right;
       margin:0 10px;
       width: 1.4rem;
       position: relative;
-      top: 0;
+      top: -3.5rem;
       height: 1.4rem;
       @include animation(return90reverse .2s 0s linear forwards);
+      @include media($tablet) {
+        top:0;
+      }
     }
     > ul {
       list-style:none;

@@ -110,48 +110,8 @@ html,body {
 }
 
 body {
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
-  box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  -o-align-items: stretch;
-  align-items: stretch;
-  -ms-flex-align: stretch;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  box-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
-  -ms-flex-pack: start;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: table;
+  overflow-x: hidden;
 }
 
 body.app {
@@ -373,19 +333,21 @@ body.revere.pattern header h1.logo {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%22500%22%20height%3D%2240%22%20viewBox%3D%220%200%20500%2040%22%20enable-background%3D%22new%200%200%20500%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cpolygon%20fill%3D%22%23F5F6F7%22%20points%3D%2248.2%2C5.6%2051.5%2C15.8%2062%2C15.8%2053.5%2C21.9%2056.8%2C32%2048.2%2C25.8%2039.6%2C32%2042.9%2C21.9%2034.3%2C15.8%2044.9%2C15.8%20%22/%3E%0D%0A%3Cpolygon%20fill%3D%22%23F5F6F7%22%20points%3D%22451.8%2C5.6%20455.1%2C15.8%20465.7%2C15.8%20457.1%2C21.9%20460.4%2C32%20451.8%2C25.8%20443.2%2C32%20446.5%2C21.9%20438%2C15.8%20%0D%0A%09448.5%2C15.8%20%22/%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M88.8%2C27c-1.1-2.8-2-3.6-5.1-3.6c0%2C3.3%2C0%2C8.7%2C0%2C12.1l2.3%2C1.6v1.5c-3.1%2C0-6.9%2C0-10%2C0v-1.5l2.3-1.6%0D%0A%09%09c0-10.2%2C0-20.6%2C0-30.8l-1.9-1.4V1.8h10.7c5.7%2C0%2C10.3%2C2.2%2C10.3%2C8.6v4.8c0%2C4.5-2.5%2C7.1-5.9%2C7.7c1.6%2C0.8%2C2.3%2C1.8%2C2.8%2C3.5l2.5%2C6.8%0D%0A%09%09c0.5%2C1.4%2C1.5%2C3.5%2C3.2%2C3.1v2.1c-1.1%2C0.5-2.7%2C0.7-3.8%2C0.7c-3.3%2C0-3.6-2.4-4.7-5.2L88.8%2C27z%20M83.6%2C5.1c0%2C5.7%2C0%2C9.7%2C0%2C15.4H87%0D%0A%09%09c3.5%2C0%2C4.9-1.9%2C4.9-5.3v-4.8c0-3.4-1.2-5.3-4.8-5.3L83.6%2C5.1L83.6%2C5.1z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M102.9%2C38.6v-1.5l2.4-1.6c0-10.4%2C0-20.6%2C0-31l-2-1.4V1.7c6.4%2C0%2C12.3%2C0%2C18.7%2C0V10h-2.6l-1.5-5.2h-7.2%0D%0A%09%09c0%2C4.6%2C0%2C9.2%2C0%2C13.8h5.1l1.4-2.9h1.6c0%2C2.6%2C0%2C6.3%2C0%2C8.9h-1.6l-1.4-2.8h-5.1c0%2C3.9%2C0%2C7.7%2C0%2C11.6c0%2C0.8-0.2%2C1.3-1.1%2C1.6v0.3%0D%0A%09%09c3%2C0%2C5.9%2C0%2C8.9%2C0l1.8-5.1h2.3v8.3C116.1%2C38.6%2C109.6%2C38.6%2C102.9%2C38.6z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M139%2C32.4l6.5-28l-2-0.9V1.9h7.2v1.6l-1.8%2C1l-8.3%2C34.4h-5.4l-8.5-34.2l-1.9-1.2V1.9h9.6v1.4l-2%2C1.4%0D%0A%09%09L139%2C32.4L139%2C32.4z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M153.2%2C38.6v-1.5l2.4-1.6c0-10.4%2C0-20.6%2C0-31l-2-1.4V1.7c6.4%2C0%2C12.3%2C0%2C18.7%2C0V10h-2.6l-1.5-5.2H161%0D%0A%09%09c0%2C4.6%2C0%2C9.2%2C0%2C13.8h5.1l1.4-2.9h1.6c0%2C2.6%2C0%2C6.3%2C0%2C8.9h-1.6l-1.4-2.8H161c0%2C3.9%2C0%2C7.7%2C0%2C11.6c0%2C0.8-0.2%2C1.3-1.1%2C1.6v0.3%0D%0A%09%09c3%2C0%2C5.9%2C0%2C8.9%2C0l1.8-5.1h2.3v8.3C166.5%2C38.6%2C159.9%2C38.6%2C153.2%2C38.6z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M190.1%2C27c-1.1-2.8-2-3.6-5.1-3.6c0%2C3.3%2C0%2C8.7%2C0%2C12.1l2.3%2C1.6v1.5c-3.1%2C0-6.9%2C0-10%2C0v-1.5l2.3-1.6%0D%0A%09%09c0-10.2%2C0-20.6%2C0-30.8l-1.9-1.4V1.8h10.7c5.7%2C0%2C10.3%2C2.2%2C10.3%2C8.6v4.8c0%2C4.5-2.5%2C7.1-5.9%2C7.7c1.6%2C0.8%2C2.3%2C1.8%2C2.8%2C3.5l2.5%2C6.8%0D%0A%09%09c0.5%2C1.4%2C1.5%2C3.5%2C3.2%2C3.1v2.1c-1.1%2C0.5-2.7%2C0.7-3.8%2C0.7c-3.3%2C0-3.6-2.4-4.7-5.2L190.1%2C27z%20M184.9%2C5.1c0%2C5.7%2C0%2C9.7%2C0%2C15.4h3.4%0D%0A%09%09c3.5%2C0%2C4.9-1.9%2C4.9-5.3v-4.8c0-3.4-1.2-5.3-4.8-5.3L184.9%2C5.1L184.9%2C5.1z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M204.3%2C38.6v-1.5l2.4-1.6c0-10.4%2C0-20.6%2C0-31l-2-1.4V1.7c6.4%2C0%2C12.3%2C0%2C18.7%2C0V10h-2.6l-1.5-5.2H212%0D%0A%09%09c0%2C4.6%2C0%2C9.2%2C0%2C13.8h5.1l1.4-2.9h1.6c0%2C2.6%2C0%2C6.3%2C0%2C8.9h-1.6l-1.4-2.8H212c0%2C3.9%2C0%2C7.7%2C0%2C11.6c0%2C0.8-0.2%2C1.3-1.1%2C1.6v0.3%0D%0A%09%09c3%2C0%2C5.9%2C0%2C8.9%2C0l1.8-5.1h2.3v8.3C217.5%2C38.6%2C211%2C38.6%2C204.3%2C38.6z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M236.4%2C1h12.2c2.1%2C0%2C4%2C0.3%2C5.6%2C0.8c1.7%2C0.5%2C3.1%2C1.3%2C4.3%2C2.4c1.2%2C1.1%2C2.1%2C2.6%2C2.7%2C4.3%0D%0A%09%09c0.6%2C1.8%2C0.9%2C3.9%2C0.9%2C6.4c0%2C4.9-1.2%2C8.5-3.6%2C10.6s-5.7%2C3.2-9.9%2C3.2h-2.1v9.9h-10.1V1z%20M248.5%2C21.5c1.2%2C0%2C2.1-0.3%2C2.6-0.9%0D%0A%09%09s0.7-1.8%2C0.7-3.6v-3.6c0-1.7-0.3-2.8-0.8-3.4c-0.5-0.6-1.4-0.8-2.6-0.8h-2.1v12.4L248.5%2C21.5L248.5%2C21.5z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M269.7%2C38.6h-8.6L271%2C1h10.1l9.4%2C37.6h-10.6L279%2C34h-8.2L269.7%2C38.6z%20M275.9%2C18.7L275%2C8.9l-0.9%2C9.8l-2%2C8.8%0D%0A%09%09h5.6L275.9%2C18.7z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M288.9%2C9.5V1h23.9v8.5H306v29.1h-10.2V9.5H288.9z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M315.5%2C9.5V1h23.9v8.5h-6.9v29.1h-10.1V9.5H315.5z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M342.9%2C1h20.5v8.5h-10.8v6.7h8.9v7.7h-8.9v7H364v7.8h-21.1C342.9%2C38.6%2C342.9%2C1%2C342.9%2C1z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M391.2%2C27.2l3.6%2C11.4h-10.4l-4.2-13.3h-2.3v13.3h-10V1h12.4c2.1%2C0%2C4%2C0.2%2C5.6%2C0.6c1.7%2C0.4%2C3.1%2C1.1%2C4.3%2C2.1%0D%0A%09%09s2.1%2C2.3%2C2.8%2C3.9c0.6%2C1.6%2C1%2C3.6%2C1%2C6.1c0%2C2.9-0.5%2C5.2-1.6%2C6.8c-1.1%2C1.6-2.8%2C2.8-5.4%2C3.4L391.2%2C27.2z%20M380.1%2C19.1%0D%0A%09%09c1.2%2C0%2C2.2-0.3%2C2.7-0.8c0.6-0.6%2C0.8-1.5%2C0.8-2.9v-2.7c0-1.5-0.3-2.4-0.9-2.9c-0.6-0.5-1.5-0.7-2.8-0.7h-2.3v10.1L380.1%2C19.1%0D%0A%09%09L380.1%2C19.1z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23F5F6F7%22%20d%3D%22M397.9%2C1h10.1l6.4%2C14.6l3.6%2C12.9l-2.4-17V1h8.6v37.6h-9.8l-6.6-14.9l-3.6-12.7l2.4%2C16.7v10.8H398L397.9%2C1%0D%0A%09%09L397.9%2C1z%22/%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A");
 }
 
+body.revere.visible-nav > header {
+  margin-left: 250px;
+}
+
 body.revere > header {
   padding: 25px 0 20px;
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1;
-  width: 270px;
-}
-
-body.revere > header::after {
-  clear: both;
-  content: "";
-  display: table;
+  z-index: 3;
+  background: #202123;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 body.revere > header:before {
@@ -398,6 +360,8 @@ body.revere > header:before {
 }
 
 body.revere > header h1.logo {
+  position: relative;
+  z-index: 3;
   text-indent: -9999em;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -405,7 +369,7 @@ body.revere > header h1.logo {
   background-position: center center;
   height: 20px;
   min-width: 250px;
-  margin: 0 20px 0 0;
+  margin: 0;
   float: right;
 }
 
@@ -414,21 +378,15 @@ body.revere > header h1.logo a {
 }
 
 .user {
-  font-weight: 300;
-  position: absolute;
-  right: 15px;
-  top: 8px;
-  min-width: 174px;
-  z-index: 4;
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
-  box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  -o-align-items: stretch;
-  align-items: stretch;
-  -ms-flex-align: stretch;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -455,57 +413,68 @@ body.revere > header h1.logo a {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end;
-  -webkit-box-lines: single;
-  -moz-box-lines: single;
-  box-lines: single;
-  -webkit-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  z-index: 0;
+  font-weight: 300;
+  position: fixed;
+  min-width: 250px;
   list-style: none;
+  z-index: 2;
   margin: 0 10px 0 0;
-  padding: 0;
-  top: 15px;
+  padding: 5px 0;
 }
 
 .user > li {
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
   transition: all 200ms ease;
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -moz-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
   list-style: none;
   position: relative;
   margin-right: 0px;
   padding: 0;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 
-.user > li.clientmenu {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1 0 175px;
-  -moz-flex: 1 0 175px;
-  -ms-flex: 1 0 175px;
-  flex: 1 0 175px;
+.user > li.clientmenu h6 {
+  padding: 12px 20px 12px;
 }
 
-.user > li:hover svg.toggle {
+.user > li:hover svg.toggle,.user > li.activated svg.toggle {
   -webkit-animation: rotate90reverse 0.2s 0s linear forwards;
   -moz-animation: rotate90reverse 0.2s 0s linear forwards;
   animation: rotate90reverse 0.2s 0s linear forwards;
 }
 
-.user > li:hover > ul {
+.user > li:hover > ul,.user > li.activated > ul {
   -webkit-animation: expand-modal 1s linear forwards;
   -moz-animation: expand-modal 1s linear forwards;
   animation: expand-modal 1s linear forwards;
   overflow-y: scroll;
+}
+
+.user > li.deactivated svg.toggle {
+  -webkit-animation: rotate90 0.2s 0s linear forwards;
+  -moz-animation: rotate90 0.2s 0s linear forwards;
+  animation: rotate90 0.2s 0s linear forwards;
+}
+
+.user > li.deactivated > ul {
+  -webkit-animation: contract-modal 1s linear forwards;
+  -moz-animation: contract-modal 1s linear forwards;
+  animation: contract-modal 1s linear forwards;
+  overflow-y: hidden;
 }
 
 .user > li img {
@@ -520,11 +489,15 @@ body.revere > header h1.logo a {
 
 .user > li h6 {
   margin-right: 0;
-  padding: 12px 20px 22px;
   display: block;
   background-color: transparent;
   border: 0;
   outline: none;
+  padding: 12px 20px 12px;
+}
+
+.user > li:first-of-type h6 {
+  padding: 22px 20px 17px;
 }
 
 .user > li svg.toggle {
@@ -532,7 +505,7 @@ body.revere > header h1.logo a {
   margin: 0 10px;
   width: 1.4rem;
   position: relative;
-  top: 0;
+  top: -3.5rem;
   height: 1.4rem;
   -webkit-animation: return90reverse 0.2s 0s linear forwards;
   -moz-animation: return90reverse 0.2s 0s linear forwards;
@@ -627,14 +600,30 @@ body.dashboard .user > li:hover ul li {
 }
 
 nav.v {
-  display: none;
+  display: block;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 250px;
+  -moz-flex: 0 0 250px;
+  -ms-flex: 0 0 250px;
+  flex: 0 0 250px;
+  background-color: #202123;
+  position: fixed;
+  overflow-y: scroll;
+  top: 65px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-right: 1px solid #191919;
+  z-index: 1;
 }
 
 nav.v > ul {
-  position: fixed;
+  position: relative;
   padding-top: 69px;
-  margin: 0 20px;
-  min-width: 230px;
+  margin: 0 10px;
+  width: 230px;
 }
 
 nav.v > ul > li {
@@ -784,15 +773,48 @@ nav.v a {
   line-height: 1em;
 }
 
+.v-nav-toggle {
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  margin: -15px 0;
+  left: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999em;
+  overflow: hidden;
+  overflow-y: visible;
+}
+
+.nav-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  fill: #FFFFFF;
+  padding: 12px;
+}
+
 .primary {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1 1 75%;
-  -moz-flex: 1 1 75%;
-  -ms-flex: 1 1 75%;
-  flex: 1 1 75%;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   padding: 4px 15px 22rem;
+  position: relative;
+  z-index: 2;
+  margin-top: 65px;
+  left: auto;
+}
+
+.app .primary {
+  background: #F2F4F5;
+}
+
+body.visible-nav .primary {
+  margin-left: 250px;
 }
 
 .primary > header {
@@ -2509,576 +2531,6 @@ button.cancel,input[type="submit"].cancel,.settings-section a.button.cancel {
   opacity: .44;
 }
 
-body.exchange h2 a {
-  color: #575C64;
-}
-
-body.exchange span.filename,body.exchange span.budgetvalue {
-  display: block;
-  width: 100%;
-  padding: 12px 20px 12px 45px;
-}
-
-body.exchange .select-upload {
-  position: relative;
-}
-
-body.exchange .select-upload span.no-results {
-  width: 120%;
-  margin-left: 45px;
-  padding: 10px;
-  color: #D7DDE5;
-}
-
-body.exchange #campaign-name small {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  padding: 12px 10px;
-  font-size: .75rem;
-}
-
-body.exchange #ad-content .content button.btn-addad {
-  width: 100%;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 0.63em;
-  font-weight: 400;
-}
-
-body.exchange #ad-content .ad-select {
-  margin: 10px 0;
-}
-
-body.exchange #ad-content .ad-select label {
-  padding: 0;
-  width: 100%;
-}
-
-body.exchange #ad-content .ad-select select {
-  width: 100%;
-  margin: 5px 0;
-  padding: 10px;
-  line-height: 1rem;
-  background: #F2F4F5;
-}
-
-body.exchange #ad-content .saturation-level label {
-  padding: 0;
-  width: 100%;
-  min-height: auto;
-}
-
-body.exchange #ad-content .controls::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-body.exchange #ad-content .controls button {
-  float: left;
-  margin-right: 10px;
-}
-
-body.exchange .submit-btn {
-  padding: 0 !important;
-  text-align: center !important;
-}
-
-body.exchange .upload-btn,body.exchange .submit-btn {
-  width: 120px;
-  top: 8px;
-  right: 20px;
-  border: 0;
-  text-align: left;
-  line-height: 1em;
-  outline: none;
-  cursor: pointer;
-  text-align: right;
-  height: 1.65rem;
-  z-index: 2;
-  padding: 0 25px 0 0;
-  margin: 0;
-  font-size: .75rem;
-  background-color: #61e699;
-}
-
-body.exchange .upload-btn {
-  position: absolute;
-}
-
-body.exchange .upload-btn svg {
-  background-color: #49AE74;
-  border-right: 1px solid #61e699;
-  position: absolute;
-  top: 0;
-  left: 0;
-  fill: #FFFFFF;
-  padding: 0.45em;
-  box-sizing: border-box;
-  width: 1.75rem;
-  height: 1.65rem;
-}
-
-body.exchange .main {
-  -webkit-box-align: space-between;
-  -moz-box-align: space-between;
-  box-align: space-between;
-  -webkit-align-items: space-between;
-  -moz-align-items: space-between;
-  -ms-align-items: space-between;
-  -o-align-items: space-between;
-  align-items: space-between;
-  -ms-flex-align: space-between;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
-  margin: 0 -.5rem;
-}
-
-body.exchange .main li {
-  margin: .5rem;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1 1 24%;
-  -moz-flex: 1 1 24%;
-  -ms-flex: 1 1 24%;
-  flex: 1 1 24%;
-  padding: 12px 20px;
-  border: 1px solid #D7DDE5;
-  background: white;
-}
-
-body.exchange .supplamental {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  overflow: hidden;
-  max-height: 0;
-}
-
-body.exchange .supplamental.activated {
-  max-height: 500px;
-  background: white;
-}
-
-body.exchange .supplamental.activated .content {
-  margin: 12px 20px;
-}
-
-body.exchange .supplamental.activated .content h5 span {
-  padding-left: 20px;
-  color: #D7DDE5;
-}
-
-body.exchange .supplamental.activated .content > * {
-  margin: 12px 0;
-}
-
-body.exchange .set {
-  position: relative;
-}
-
-body.exchange .set div.settings {
-  opacity: 1;
-  display: block;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 50px;
-  z-index: 30000;
-}
-
-body.exchange .set div.settings svg {
-  width: 18px;
-  height: 18px;
-  margin-top: -9px;
-  fill: #575C64;
-  background: transparent;
-}
-
-body.exchange .set .selected.deactivated {
-  width: auto;
-}
-
-body.exchange .set button {
-  opacity: 0;
-}
-
-body.exchange .set span {
-  display: none;
-  margin-left: 12px;
-  font-size: 0.63em;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-body.exchange .ad-type div.shortenBox:hover input + label svg {
-  background-color: #4E97E2;
-  border-left: 1px solid #3381D2;
-  fill: white;
-}
-
-body.exchange .ad-type div.shortenBox:hover input + label svg.info {
-  display: block;
-}
-
-body.exchange .ad-type div.shortenBox:hover input + label svg.down {
-  display: block;
-}
-
-body.exchange .ad-type div.shortenBox:hover input + label svg.checkmark {
-  display: none;
-}
-
-body.exchange .ad-type div.shortenBox input:not(:checked) + label svg {
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-  right: 0;
-}
-
-body.exchange .ad-type div.shortenBox input:checked + label svg {
-  fill: #575C64;
-}
-
-body.exchange .ad-type div.shortenBox input:checked + label svg.info {
-  display: none;
-}
-
-body.exchange .ad-type div.shortenBox input:checked + label svg.down {
-  display: none;
-}
-
-body.exchange .ad-type div.shortenBox input:checked + label svg.checkmark {
-  display: block;
-}
-
-body.exchange .ad-type div.shortenBox input:checked + label:hover svg {
-  fill: white;
-}
-
-body.exchange .ad-type input[type="radio"] + label {
-  transition: all 0.1s linear 0s;
-}
-
-body.exchange .ad-type input[type="radio"] + label:hover {
-  color: white;
-  box-shadow: 0 0 5px black;
-  background: #3282F1;
-  z-index: 2;
-}
-
-body.exchange .ad-type input[type="checkbox"]:not(:checked) + label:hover {
-  margin-top: -4px;
-}
-
-body.exchange .ad-type input[type="checkbox"]:checked + label {
-  color: white;
-  background: #3282F1;
-  z-index: 2;
-  min-width: 237px;
-}
-
-body.exchange .ad-type input[type="checkbox"]:checked + label:hover {
-  box-shadow: none;
-}
-
-body.exchange table thead {
-  background: #D7DDE5;
-}
-
-body.exchange table tr {
-  border-color: #D7DDE5;
-  border-style: solid;
-  border-width: 1px 0 1px 0;
-}
-
-body.exchange table td,body.exchange table th {
-  padding: 0;
-  position: relative;
-}
-
-body.exchange table td *,body.exchange table th * {
-  padding: 12px 20px;
-}
-
-body.exchange #days-of-flight input.ng-datepicker-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
-  max-width: 196px;
-  padding-right: 0;
-}
-
-body.exchange #days-of-flight li > div > div:not(.ng-datepicker) {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-}
-
-body.exchange #days-of-flight .activate svg {
-  fill: #F2F4F5;
-  right: 0;
-  transition: all 0.1s linear 0s;
-}
-
-body.exchange #days-of-flight .activated input.ng-datepicker-input {
-  max-width: 120px;
-}
-
-body.exchange #days-of-flight .activated {
-  background: #3282F1;
-}
-
-body.exchange #days-of-flight .activated input.ng-datepicker-input {
-  color: white;
-}
-
-body.exchange #days-of-flight .selected {
-  background: transparent;
-}
-
-body.exchange #days-of-flight .selected input.ng-datepicker-input {
-  color: #575C64;
-}
-
-body.exchange #days-of-flight .ng-datepicker {
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  z-index: 2;
-}
-
-body.exchange #days-of-flight .ng-datepicker .controls {
-  background: #3282F1;
-  color: white;
-  font-size: 0.63em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1rem;
-  height: 40px;
-  padding: 12px 20px;
-  text-transform: uppercase;
-  vertical-align: baseline;
-}
-
-body.exchange #days-of-flight .ng-datepicker .controls div.left,body.exchange #days-of-flight .ng-datepicker .controls div.right {
-  display: inline-block;
-  width: 20px;
-}
-
-body.exchange #days-of-flight .ng-datepicker .controls .prev-year-btn,body.exchange #days-of-flight .ng-datepicker .controls .next-year-btn {
-  display: none;
-}
-
-body.exchange #days-of-flight .ng-datepicker .controls svg {
-  position: relative;
-  border: 0;
-  background: transparent;
-  fill: white;
-  display: inline-block;
-  left: auto;
-  padding: 0;
-  top: auto;
-  bottom: auto;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-}
-
-body.exchange #days-of-flight .ng-datepicker .calendar-container {
-  background-color: white;
-}
-
-body.exchange #days-of-flight .ng-datepicker .day-names {
-  background: white;
-  padding: 12px 10px 0;
-  -webkit-box-align: space-between;
-  -moz-box-align: space-between;
-  box-align: space-between;
-  -webkit-align-items: space-between;
-  -moz-align-items: space-between;
-  -ms-align-items: space-between;
-  -o-align-items: space-between;
-  align-items: space-between;
-  -ms-flex-align: space-between;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-lines: single;
-  -moz-box-lines: single;
-  box-lines: single;
-  -webkit-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  box-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
-  -ms-flex-pack: start;
-}
-
-body.exchange #days-of-flight .ng-datepicker .day-names > span {
-  display: block;
-  width: 14.25%;
-  padding: 5px;
-}
-
-body.exchange #days-of-flight .ng-datepicker .calendar {
-  background: white;
-  padding: 0 10px 12px;
-  -webkit-box-align: space-between;
-  -moz-box-align: space-between;
-  box-align: space-between;
-  -webkit-align-items: space-between;
-  -moz-align-items: space-between;
-  -ms-align-items: space-between;
-  -o-align-items: space-between;
-  align-items: space-between;
-  -ms-flex-align: space-between;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  box-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
-  -ms-flex-pack: start;
-}
-
-body.exchange #days-of-flight .ng-datepicker .calendar > span {
-  width: 12.25%;
-  display: block;
-  padding: 5px;
-  margin: 4px 1%;
-  background: #F2F4F5;
-}
-
-body.exchange #days-of-flight .ng-datepicker .calendar > span.notvalid {
-  background: #FFFFFF;
-  opacity: .6;
-  cursor: default;
-}
-
-body.exchange #days-of-flight .ng-datepicker .calendar > span > span {
-  display: block;
-  padding: 2px 5px;
-}
-
-body.exchange #days-of-flight .activated,body.exchange #days-of-flight .selected {
-  height: 100%;
-}
-
-body.exchange .group-items .button {
-  background: #3282F1;
-  font-size: .75em;
-  line-height: 1em;
-  height: 1.65rem;
-  vertical-align: center;
-  padding: 6px 18px 0;
-  color: white;
-  border: 0;
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 1rem;
-}
-
-body.exchange .group-items .button.delete {
-  background: #f45454;
-}
-
-body.exchange .group-items .button:hover,body.exchange .group-items .button.delete:hover {
-  background: #61e699;
-}
-
-body.exchange .special-option {
-  display: none;
-}
-
 body.app footer {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -3111,17 +2563,107 @@ body.app footer nav ul li {
 }
 
 @media screen and (min-width: 640px) {
+  body {
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: start;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
   .content h3 {
     margin-top: 2.5em;
   }
 
+  body.revere.visible-nav > header {
+    margin-left: 0;
+  }
+
+  body.revere > header {
+    background: transparent;
+    width: 270px;
+  }
+
   body.revere > header h1.logo {
     min-width: 270px;
+    margin-right: 20px;
     height: 18px;
     float: left;
   }
 
+  .user > li {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+
+  .user > li.clientmenu {
+    height: auto;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 175px;
+    -moz-flex: 0 0 175px;
+    -ms-flex: 0 0 175px;
+    flex: 0 0 175px;
+  }
+
+  .user > li.clientmenu h6 {
+    padding: 12px 20px 22px;
+  }
+
+  .user > li:first-of-type h6 {
+    padding: 12px 20px 22px;
+  }
+
+  .user > li svg.toggle {
+    top: 0;
+  }
+
   nav.v {
+    top: 0;
+    position: relative;
     display: block;
     -webkit-box-flex: 0;
     -moz-box-flex: 0;
@@ -3135,8 +2677,21 @@ body.app footer nav ul li {
     border-right: 1px solid #191919;
   }
 
+  .v-nav-toggle {
+    display: none;
+  }
+
   .primary {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 75%;
+    -moz-flex: 1 1 75%;
+    -ms-flex: 1 1 75%;
+    flex: 1 1 75%;
+    margin-top: 0;
     min-height: 772px;
+    background: transparent;
   }
 
   table colgroup {
@@ -3186,6 +2741,22 @@ body.app footer nav ul li {
 }
 
 @media screen and (min-width: 1024px) {
+  .user {
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 0;
+    min-width: 174px;
+    right: 15px;
+    top: 15px;
+    z-index: 4;
+    background: transparent;
+  }
+
   nav.v > ul > li.has-children ul .icon {
     width: 1.2em;
     height: 1.2em;

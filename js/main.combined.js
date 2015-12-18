@@ -28,6 +28,9 @@
   window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
 }
 // Toggles for Navigation
+$('#navigation-toggle').click( function () {
+  $('body').toggleClass('visible-nav');
+});
 $('li.has-children').click( function (){
   if ($(this).hasClass('contract')) {
     $(this).toggleClass('expand contract')
@@ -38,7 +41,7 @@ $('li.has-children').click( function (){
   }
 });
 // Class Toggles for Animation
-$('.modal .activate, .user li h6').click( function(){
+$('.modal .activate, .user li h6, .user li h6 svg').click( function(){
   var modalBox = $(this).parent()
   // $(this).parent().toggleClass('activated', 'deactivated');
   if (modalBox.hasClass('activated')) {

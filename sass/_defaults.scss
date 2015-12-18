@@ -15,14 +15,18 @@ html, body {
   line-height:1.125em;
 }
 body {
-  @include align-items(stretch);
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(flex-start);
-  @include flex-wrap(wrap);
+  display:table;
+  overflow-x:hidden;
   &.app {
   	color: $text;
     background:$ltbg;
+  }
+  @include media($tablet) {
+    @include align-items(stretch);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    @include flex-wrap(wrap);
   }
 }
 #sb-site {background: $greydk;}

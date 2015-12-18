@@ -1,9 +1,21 @@
 // Top Level Vertical Navigation
-
 nav.v {
-	display: none;
+//  display: none;
   // To-do Mobile Navigation Handling
+  display:block;
+  @include flex(0 0 250px);
+	background-color: $navbg;
+  position:fixed;
+  overflow-y:scroll;
+  top:65px;
+  bottom:0;
+  left:0;
+  right:0;
+	border-right: 1px solid $navborder;
+  z-index:1;
   @include media($tablet) {
+    top:0;
+    position:relative;
     display:block;
     @include flex(0 0 270px);
   	background-color: $navbg;
@@ -11,10 +23,10 @@ nav.v {
   	border-right: 1px solid $navborder;
   }
   > ul {
-    position:fixed;
+    position:relative;
     padding-top:69px;
-    margin:0 20px;
-    min-width:230px;
+    margin:0 10px;
+    width:230px;
     > li {
       font-size:12.5px;
       letter-spacing:3px;
@@ -167,4 +179,31 @@ nav.v {
     font-size: 0.9em;
     line-height:1em;
   }
+}
+
+// Vertical Navigation Menu toggle icon
+.v-nav-toggle {
+  background:transparent;
+  position:relative;
+  z-index:10;
+  margin:-15px 0;
+  left:0;
+  padding:0;
+  width:50px;
+  height:50px;
+  @include bgimg;
+  overflow-y:visible;
+  @include media($tablet) {
+    display:none;
+  }
+}
+.nav-menu {
+  cursor:pointer;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  fill:$white;
+  padding:12px;
 }

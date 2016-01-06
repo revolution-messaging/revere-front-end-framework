@@ -42,7 +42,7 @@ $('li.has-children').click( function (){
 });
 // Class Toggles for Animation
 $('.modal .activate, .user li h6, .user li h6 svg').click( function(){
-  var modalBox = $(this).parent()
+  var modalBox = $(this).parent();
   // $(this).parent().toggleClass('activated', 'deactivated');
   if (modalBox.hasClass('activated')) {
     modalBox.removeClass('activated');

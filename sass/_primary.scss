@@ -8,6 +8,9 @@
   .app & {
     background:$ltbg;
   }
+  body.exchange & {
+    padding-bottom: 30rem;
+  }
   body.visible-nav & {
     margin-left:250px;
   }

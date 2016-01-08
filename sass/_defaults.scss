@@ -197,5 +197,9 @@ p {
     color: $white;
     line-height: 1em;
     font-size: .9em;
+    a {
+      color: #4E6D71;
+      text-decoration: underline;
+    }
   }
 }

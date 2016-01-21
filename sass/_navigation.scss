@@ -36,6 +36,7 @@ nav.v {
       position: relative;
       &.has-children{
         ul {
+          margin:1rem 0 0;
           overflow:hidden;
     			.icon {
     				left: -2.4em;

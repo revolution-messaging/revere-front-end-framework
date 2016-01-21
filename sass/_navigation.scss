@@ -36,7 +36,6 @@ nav.v {
       position: relative;
       &.has-children{
         ul {
-          margin:1rem 0 0;
           overflow:hidden;
     			.icon {
     				left: -2.4em;
@@ -154,6 +153,9 @@ nav.v {
           list-style-type: none;
           margin: 1em 0 0;
           position: relative;
+          &:first-of-type {
+            margin: 2em 0 0;
+          }
           a {
             span {
               letter-spacing:0;

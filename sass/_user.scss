@@ -38,7 +38,7 @@
       }
       @include media($tablet) {
         height:auto;
-        @include flex(0 0 225px);
+        @include flex(1 0 225px);
         h6 {
           padding:12px 20px 22px;
         }
@@ -87,7 +87,7 @@
     }
     svg.toggle {
       float:right;
-      margin:0 10px;
+      margin:0 0 0 10px;
       width: 1.4rem;
       position: relative;
       top: -3.5rem;

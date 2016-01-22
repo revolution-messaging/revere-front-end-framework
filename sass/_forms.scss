@@ -393,6 +393,7 @@ button, input[type="submit"], .settings-section a.button {
       display:block;
       border:1px solid $ltborder;
       background:white;
+      width:100%;
       > label {
         display:block;
         @include flex(0 0 100%);

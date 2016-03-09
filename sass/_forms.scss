@@ -20,6 +20,18 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   @include appearance(none);
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  line-height: normal;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  line-height: normal;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  line-height: normal;
+}
+:-moz-placeholder { /* Firefox 18- */
+  line-height: normal;
+}
 textarea {
 	height: 150px;
 	margin: 5px 0px;
@@ -61,6 +73,24 @@ button, input[type="submit"], .settings-section a.button {
     color:$dkgray;
     position:relative;
   }
+  &.icon-button {
+    padding: 0;
+    position: relative;
+    border-left: 45px solid $bluedarktint;
+    padding: 12px 20px;
+    background: $blue;
+    svg.add {
+      width: 26px;
+      height: 26px;
+      fill: white !important;
+      position: absolute;
+      top: 7px;
+      left: -35px;
+    }
+    &:hover {
+      background:$bluehover;
+    }
+  }
 }
 
 .field-group {
@@ -89,6 +119,22 @@ button, input[type="submit"], .settings-section a.button {
     }
     input:not(:checked) + label {
       opacity:.6;
+    }
+  }
+  &.search {
+    border: 0;
+    background-color: #fff;
+    border: 1px solid #dcdee2;
+    svg.search {
+      fill: $blue;
+      width: 20px;
+      height: 20px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    input {
+      padding: 12px !important;
+      font-size: 0.75em !important;
     }
   }
   div.shortenBox {

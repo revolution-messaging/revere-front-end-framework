@@ -34,6 +34,16 @@ nav.v {
       padding:24px 30px;
       border-bottom:1px solid $greymid;
       position: relative;
+      .show-sub {
+        overflow: visible !important;
+        li {
+          display: none !important;
+          &.active {
+            display: block !important;
+            margin: 1em 0;
+          }
+        }
+      }
       &.has-children{
         ul {
           overflow:hidden;
@@ -69,6 +79,9 @@ nav.v {
         &.expand {
           &:before {
             @include transform(rotate(90deg));
+          }
+          li {
+            display: block !important;
           }
           ul {
             overflow:visible;
@@ -153,6 +166,22 @@ nav.v {
           list-style-type: none;
           margin: 1em 0 0;
           position: relative;
+          &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            left: -29px;
+            border-radius: 50%;
+            top: 0;
+            width: .8em;
+            height: .8em;
+            background-color: $nav-inactive;
+          }
+          &.active {
+            &:before {
+              background-color: $nav-active;
+            }
+          }
           &:first-of-type {
             margin: 2em 0 0;
           }

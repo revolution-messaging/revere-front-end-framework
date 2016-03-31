@@ -40,7 +40,8 @@ nav.v {
           display: none !important;
           &.active {
             display: block !important;
-            margin: 1em 0;
+            margin: 2em 0 1em;
+
           }
         }
       }
@@ -86,6 +87,13 @@ nav.v {
           ul {
             overflow:visible;
             @include animation(slide-down .2s linear forwards);
+          }
+          .show-sub {
+            li {
+              &.active {
+                margin: 1em 0;
+              }
+            }
           }
         }
         &.contract {

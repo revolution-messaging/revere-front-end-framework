@@ -31,49 +31,51 @@
 
 .revere-modal-container {
   display: none;
-    z-index: 1000;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-     &.activated {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+   &.activated {
     display: block;
   }
 }
 
 #revere-modal-background {
   background-color: #000;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    height: 100%;
-    left: 0;
-    opacity: 0.75;
-    z-index: 1;
-    cursor: pointer;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0.75;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .revere-modal {
-  box-shadow: 0 0 5px #000;
-  background: #3282F1;
-  width: 600px;
+  background: transparent;
+  width: 840px;
+  height: 90%;
+  overflow-y: scroll;
   position: fixed;
-  top: 25%;
+  top: 5%;
   left: 50%;
-  margin-left: -300px;
+  margin-left: -420px;
   z-index: 2;
   .revere-modal-header {
     color: #fff;
     font-size: 1rem;
     font-weight: 400;
     padding: 11px 20px;
+    background-color: #3282F1;
   }
   .revere-modal-content {
     background-color: white;
     padding: 20px;
     font-size: .9em;
-      line-height: 140%;
+    line-height: 140%;
   }
 }
 
@@ -99,6 +101,15 @@
     }
     select, option {
       background-color: white;
+    }
+  }
+  .field-subgroup {
+    padding: 5px 10px;
+    > * {
+      margin: 10px 0;
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 }

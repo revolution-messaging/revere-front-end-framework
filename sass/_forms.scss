@@ -83,13 +83,34 @@ button, input[type="submit"], .settings-section a.button {
     border-left: 45px solid $bluedarktint;
     padding: 12px 20px;
     background: $blue;
-    svg.add {
+    svg.add,
+    svg.minus {
       width: 26px;
       height: 26px;
       fill: white !important;
       position: absolute;
       top: 7px;
       left: -35px;
+    }
+    &:hover {
+      background:$bluehover;
+    }
+  }
+  &.icon-button-small {
+    padding: 0;
+    position: relative;
+    border-left: 30px solid $bluedarktint;
+    padding: 8px 10px;
+    background: $blue;
+    font-size: 0.875em;
+    svg.add,
+    svg.minus {
+      width: 16px;
+      height: 16px;
+      fill: white !important;
+      position: absolute;
+      top: 7px;
+      left: -23px;
     }
     &:hover {
       background:$bluehover;

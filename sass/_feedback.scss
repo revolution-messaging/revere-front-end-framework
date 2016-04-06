@@ -2,22 +2,14 @@
   zoom:1;
   float:left;
   display:inline-block;
-  
   width:16px;
   height:16px;
-  
   margin:0 0 0 -24px;
-  
   animation: wait 1.8s linear infinite;
-  
   background: linear-gradient(90deg, $ltbg 1px, $ltbg 0, $ltbg 3px, $ltbg 3px),
-    
               linear-gradient(90deg, $ltborder 1px, $ltborder 0, $ltborder 3px, $ltborder 3px),
-    
               linear-gradient(90deg, $ltborder 1px, $ltborder 0, $ltborder 3px, $ltborder 3px),
-    
               linear-gradient(90deg, $lticonhover 1px, $lticonhover 0, $lticonhover 3px, $lticonhover 3px),
-              
               linear-gradient(90deg, $dksubhead 1px, $dksubhead 0, $dksubhead 3px, $dksubhead 3px);  
   background-repeat: no-repeat;
   background-size: 4px 9px, 4px 9px, 4px 9px, 4px 11px, 4px 16px;  /* 1 */
@@ -57,7 +49,6 @@
 .revere-modal {
   background: transparent;
   width: 840px;
-  height: 90%;
   overflow-y: scroll;
   position: fixed;
   top: 5%;

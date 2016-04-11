@@ -116,6 +116,10 @@ button, input[type="submit"], .settings-section a.button {
       background:$bluehover;
     }
   }
+  &.button-small {
+    padding: 10px 20px;
+    font-size: 0.8125em;
+  }
 }
 
 .field-group {

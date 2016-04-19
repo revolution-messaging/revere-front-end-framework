@@ -594,6 +594,7 @@ button, input[type="submit"], .settings-section a.button {
     background-color: #fff;
     font-size: 0.6875em;
     margin: 0 !important;
+    float: left;
     &.active {
       background-color: #4682da;
       color: $white;

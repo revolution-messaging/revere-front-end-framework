@@ -112,7 +112,7 @@
       padding-left:0;
       top:2rem;
       right:0;
-      z-index:-1;
+      z-index:1;
       max-height:0;
       overflow:hidden;
       left: auto;
@@ -127,6 +127,14 @@
         border: 0;
         cursor: pointer;
       }
+    }
+  }
+  a {
+    color:#ccc;
+    text-decoration:none;
+    @include transition(all 100ms ease-in 500ms);   
+    &:hover {
+      color:white;
     }
   }
   body.app & {
@@ -191,14 +199,6 @@
           @include animation(show-text .1s linear forwards);
         }
       }
-    }
-  }
-  a {
-    color:#ccc;
-    text-decoration:none;
-    @include transition(all 100ms ease-in 500ms);   
-    &:hover {
-      color:white;
     }
   }
 }

@@ -32,6 +32,7 @@ $('#navigation-toggle').click( function () {
   $('body').toggleClass('visible-nav');
 });
 $('li.has-children').click( function (){
+  console.log('here');
   if ($(this).hasClass('contract')) {
     $(this).toggleClass('expand contract')
   } else if ($(this).hasClass('expand')) {

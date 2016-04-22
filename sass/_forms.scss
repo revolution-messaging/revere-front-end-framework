@@ -225,6 +225,83 @@ button, input[type="submit"], .settings-section a.button {
   &:last-of-type {
     border-width:1px;
   }
+  &.vertical {
+    height: auto;
+    flex-wrap: wrap;
+    border: 0;
+    border-bottom: 1px solid #dcdee2;
+    padding-bottom: 20px;
+    margin-bottom: 20px !important;
+    &.editting {
+      .edit-fields {
+        display: block;
+      }
+      .view-fields {
+        display: none !important;
+      }
+    }
+    label {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: auto;
+      min-height: 100%;
+      margin-bottom: 10px;
+      color: #a9aeb1;
+    }
+    .fields {
+      position: relative;
+      select {
+        width: 100%;
+        padding: 0 25px;
+        @include flex(0 0 100%);
+      }
+      .toggle {
+        top: 0;
+        left: 0px;
+      }
+    }
+    .tag-list {
+      margin-top: 20px;
+    }
+    .edit-fields {
+      display: none;
+      width: 100%;
+      position: relative;
+      &.add-keyword {
+        display: block;
+
+      }
+      
+      .add {
+        top: 5px;
+        right: 5px;
+        width: 16px;
+        height: 16px;
+        fill: #a9aeb1;
+        margin-left: 10px;
+        position: relative;
+        top: 2px;
+        cursor: pointer;
+        position: absolute;
+      }
+      input[type=text] {
+        padding: 0 25px 0 0;
+      }
+    }
+    .view-fields {
+      width: 100%;
+      .edit  {
+       width: 16px;
+        height: 16px;
+        fill: #a9aeb1;
+        margin-left: 10px;
+        position: relative;
+        top: 2px;
+        cursor: pointer;
+      }
+    }
+    
+  }
   select {
     option:checked:not(:disabled) {
       color:$topborder;
@@ -250,6 +327,16 @@ button, input[type="submit"], .settings-section a.button {
     padding: 12px 20px;
     text-transform: uppercase;
     vertical-align: middle;
+    &.full {
+      @include flex(0 0 100%);
+        max-width: 100%;
+        background-color: transparent !important;
+        border: 0;
+        padding-left: 0;
+        + * {
+          @include flex(0 0 100%);
+        }
+    }
   }
   input:not([type="radio"]), div.budgetvalue {
     @include flex(1 1 64%);

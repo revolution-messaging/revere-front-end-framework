@@ -55,7 +55,7 @@
     }
     &:hover, &.activated {
       svg.toggle {
-        @include animation(rotate90reverse .2s 0s linear forwards);
+        @include animation(rotate90 .2s 0s linear forwards);
       }
       > ul {
         @include animation(expand-modal .25s linear forwards);
@@ -101,7 +101,7 @@
       position: relative;
       top: -3.5rem;
       height: 1.4rem;
-      @include animation(return90reverse .2s 0s linear forwards);
+      @include animation(return90 .2s 0s linear forwards);
       @include media($tablet) {
         top:0;
       }
@@ -144,6 +144,9 @@
     > li {
       svg.toggle {
         fill: $dkgray;
+        -ms-transform: rotate(360deg); /* IE 9 */
+        -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+        transform: rotate(360deg);
       }
       &:hover,
       &:hover {

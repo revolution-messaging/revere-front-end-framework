@@ -39,6 +39,7 @@
     }
     &.clientmenu {
       h6 {
+        cursor:pointer;
         padding: 12px 20px 12px;
       }
       @include media($tablet) {
@@ -58,7 +59,7 @@
         margin-top: -2px;
       }
     }
-    &:hover, &.activated {
+    &.hover, &.activated {
       svg.toggle {
         @include animation(rotate90 .2s 0s linear forwards);
       }
@@ -152,7 +153,7 @@
         transform: rotate(360deg);
       }
       &:hover,
-      &:hover {
+      &.activated {
         background-color: $white;
         box-shadow: 0px 0px 3px 0px $ltgray;
         h6 {
@@ -179,7 +180,7 @@
     }
     > li {
       &:hover,
-      &.hover {
+      &.activated {
         background:$dkborder;
         .icon {
         }

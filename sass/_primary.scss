@@ -12,7 +12,7 @@
     padding-bottom: 30rem;
   }
   body.visible-nav & {
-    margin-left:250px;
+    margin-left:270px;
   }
   @include media($tablet) {
     @include flex(1 1 75%);

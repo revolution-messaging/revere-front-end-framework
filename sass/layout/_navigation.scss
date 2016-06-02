@@ -1,0 +1,51 @@
+.navigation {
+  display:block;
+  @include flex(0 0 250px);
+	background-color: $navbg;
+  position:fixed;
+  overflow-y:scroll;
+  left:0;
+  right:0;
+  // LINKS
+  a{
+    color: $navlink;
+    @include transition(all 100ms ease-in 50ms);    
+    &:hover{
+      color: $white;
+      & + svg {
+        fill:$white;
+      }
+    }
+  }
+  @import "../modules/navigation/user";
+  @import "../modules/navigation/main";
+}
+
+// Vertical Navigation Menu toggle icon
+.v-nav-toggle {
+  background:transparent;
+  position:relative;
+  z-index:10;
+  margin:-15px 0;
+  left:0;
+  padding:0;
+  width:50px;
+  height:50px;
+  @include bgimg;
+  overflow-y:visible;
+  @include media($tablet) {
+    display:none;
+  }
+}
+.nav-menu {
+  cursor:pointer;
+  position:absolute;
+  width:50px;
+  height:50px;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  fill:$white;
+  padding:14px;
+}

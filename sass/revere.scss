@@ -7,22 +7,29 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
-@import "fonts";
-@import "colors";
-@import "mixins";
-@import "defaults";
-@import "header";
-@import "navigation";
-@import "primary";
-@import "icons";
-@import "table";
-@import "forms";
-@import "pagination";
-@import "feedback";
-@import "animations";
-@import "helpers";
 
-//@import "login";
-@import "forms";
+// base
+@import "base/fonts";
+@import "base/colors";
+// helpers
+@import "helpers/mixins";
+// base
+@import "base/defaults";
+@import "base/table";
+// helpers
+@import "helpers/mixins";
+@import "helpers/animations";
+@import "helpers/icons";
 
-@import "footer";
+// layouts
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/canvas";
+@import "layout/footer";
+
+// modules
+@import "modules/forms/forms.scss";
+@import "modules/pagination";
+@import "modules/feedback";
+
+//@import "helpers"; --gone

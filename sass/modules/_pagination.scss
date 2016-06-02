@@ -1,0 +1,104 @@
+.pagination {
+	font-size: 0.9em;
+  list-style:none;
+  li {
+    display: inline-block;
+    a {
+      display:block;
+  		padding: 0.6em 0.8em 0.5em;
+      text-decoration: none;
+      @include transition(all 50ms cubic-bezier(0.86, 0, 0.07, 1) 50ms);
+      body.dashboard & {
+        background-color: $dkborder;
+        &:hover{
+          background-color: $lticon;
+        }
+      }
+      body.app & {
+    		background-color: $ltgray;
+    		&:hover{
+    			background-color: $white;
+    		}
+        
+      }
+    }
+    a:not([href]){
+      background-color: transparent;
+    }    
+  }
+  .mobile & {
+    @include display(flex);
+    span.arrow-left {
+      width: 8px; 
+      height: 13px;
+      display: block; 
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent; 
+      border-right: 6px solid #a9aeb1; 
+      float: left;
+    }
+    span.arrow-right {
+      width: 8px; 
+      height: 13px;
+      display: block; 
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent; 
+      border-left: 6px solid #a9aeb1; 
+      float: left;
+    }
+    ul {
+      @include clearfix;
+      li {
+        @include clearfix;
+        span {
+          @include clearfix;
+          display: block;
+          &.disabled {
+            opacity: 0.40;
+          }
+        }
+        a {
+          @include clearfix;
+          display: block;
+          padding: 0.6em 0.8em;
+          background-color: transparent;
+          &.current {
+            background-color: #a9aeb1;
+            color: black;
+          }
+        }
+      }
+    }
+    .pagination-firstprevious {
+      @include flex(0 0 10%);
+      text-align: left;
+      li {
+        @include clearfix;
+        > span,
+        a {
+          background-color: #dcdee2;
+          padding: 0.6em 0.8em 0.6em 0.6em;
+        }
+      }
+    }
+    .pagination-lastnext {
+      @include flex(0 0 10%);
+      text-align: right;
+      li {
+        @include clearfix;
+        > span,
+        > a {
+          background-color: #dcdee2;
+          padding: 0.6em 0.6em 0.6em 0.8em;
+        }
+      }
+    }
+    .pagination-pages {
+      @include flex(0 0 80%);
+      text-align: center;
+      li {
+        margin: 0 5px;
+      }
+    }
+  }
+}

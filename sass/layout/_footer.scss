@@ -11,6 +11,8 @@
 	background-size: rem(49px) rem(60px);
 	font-size: 0.9em;
   text-align: center;
+  position: relative;
+  z-index: 2;
   body.app & {
     color: $topborder;
   }

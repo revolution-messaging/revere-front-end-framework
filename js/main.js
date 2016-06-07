@@ -32,7 +32,6 @@ $('#navigation-toggle').click( function () {
   $('body').toggleClass('visible-nav');
 });
 $('li.has-children').click( function (){
-  console.log('here');
   if ($(this).hasClass('contract')) {
     $(this).toggleClass('expand contract')
   } else if ($(this).hasClass('expand')) {
@@ -40,6 +39,10 @@ $('li.has-children').click( function (){
   } else {
     $(this).addClass('expand');
   }
+});
+// User nav toggle 
+$('.clientmenu h6').click( function (){
+  $('.clientmenu').toggleClass('activated');
 });
 // Class Toggles for Animation
 $('.modal .activate, .user li h6, .user li h6 svg').click( function(){

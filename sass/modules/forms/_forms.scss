@@ -69,7 +69,7 @@ button, input[type="submit"], .settings-section a.button {
   &:hover {
     background:$green;
   }
-  &:active, &:focus {
+  .primary &:active, .primary &:focus {
     background:$red;
   }
   &.cancel {

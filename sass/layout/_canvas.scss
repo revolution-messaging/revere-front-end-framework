@@ -5,11 +5,9 @@
   z-index:2;
   margin-top:65px;
   left:auto;
+  padding-bottom: 30rem;
   .app & {
     background:$ltbg;
-  }
-  body.exchange & {
-    padding-bottom: 30rem;
   }
   body.visible-nav & {
     margin-left:270px;
@@ -62,7 +60,10 @@
     
   }
   .canvas {
-    padding:25px 35px 40px;
+    padding:25px rem(12px) 40px;
+    @include media($tablet) {
+      padding:25px 35px 40px;
+    }
     h3 {
       margin-bottom:12px;
     }

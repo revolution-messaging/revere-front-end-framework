@@ -18,9 +18,6 @@
   list-style:none;
   margin:0 10px 0 0;
   padding: 5px 0;
-  body.exchange & {
-    position: absolute;
-  }
   @include media($notebook) {
     @include flex-wrap(nowrap);
     padding:0;  

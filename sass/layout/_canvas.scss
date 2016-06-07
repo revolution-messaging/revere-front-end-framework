@@ -20,6 +20,10 @@
     min-height:772px;
     background:transparent;
   }
+  @include media($notebook) {
+    position:initial;
+    z-index:initial;
+  }
   > header {
     padding:15px 0 22px;
     .app & {

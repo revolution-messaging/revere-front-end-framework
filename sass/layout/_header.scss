@@ -20,6 +20,7 @@ body.revere {
     width:100%;
     @include transition(all .2s ease-in);
     @include media($notebook) {
+      position: absolute;
       background:transparent;
   		width: 270px;
       z-index:initial;

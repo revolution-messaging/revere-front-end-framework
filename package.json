@@ -1,0 +1,22 @@
+{
+  "name": "Revere-Front-End-Framework",
+  "version": "0.2.8",
+  "repository": "git@revmsg.beanstalkapp.com:/wordpressthemes.git",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-image-resize": "~0.7.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-replace": "~0.5.4",
+    "gulp-ruby-sass": "2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "~1.5.2",
+    "gulp-util": "~3.0.6",
+    "gulp-svgmin": "^1.1.1",
+    "gulp-svgstore": "^5.0.0",
+    "gulp-watch": "~3.0.0"
+  }
+}

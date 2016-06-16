@@ -189,6 +189,9 @@ p {
   &.success {
     background-color: $green;
   }
+  &.notice {
+    background-color: $blue;
+  }
   p {
     padding: 10px;
     color: $white;

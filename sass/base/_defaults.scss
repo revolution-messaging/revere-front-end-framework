@@ -18,7 +18,7 @@ body {
   overflow-x:hidden;
   &.app {
   	color: $text;
-    background:$ltbg;
+   background:$ltbg;
   }
   @include media($tablet) {
     @include align-items(stretch);
@@ -31,8 +31,23 @@ body {
 #sb-site {background: $greydk;}
 
 a {
-	color: $dklink;
-  text-decoration: none;
+ text-decoration: none;
+ .dashboard .primary & {
+  &:link, &:visited {
+   color: $dklink; 
+  }
+  &:hover {
+   color:$dkbtnhover;
+  } 
+ }
+ .app .primary & {
+  &:link, &:visited {
+   color:$bluedarktint;
+  }
+  &:hover {
+   color:$bluehover;
+  }
+ }
 }
 
 h1, h2 ,h3, h4 {

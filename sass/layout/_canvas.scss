@@ -31,34 +31,6 @@
       margin:0.2em 0 0 14px;
     }
   }
-  .main {  // Changed to .overview .main still used on Exchange
-    @include align-items(space-between);
-    @include display(flex);
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-    @include justify-content(space-between);
-    margin:0 -.5rem;
-    > * { // li on Echange
-      margin:.5rem;
-      @include flex(1 1 24%);
-      padding:12px 20px;
-      border:1px solid $ltborder;
-      background:white;
-    }
-    > h3 {
-      @include flex(0 0 100%);
-      padding:12px 0;
-      border:0;
-      background:transparent;
-    }
-    .pattern & {
-      @include justify-content(flex-start);
-      > div {
-        @include flex(0 1 216px);
-      }
-    }
-    
-  }
   .canvas {
     padding:25px rem(12px) 40px;
     @include media($tablet) {
@@ -71,5 +43,28 @@
       position:relative;
       margin-bottom:30px;
     }
+  }
+}
+.main {  
+ // Changed to .overview .main still used on Exchange
+  @include align-items(space-between);
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  margin:0 -.5rem;
+  > * {
+   // li on Echange
+    margin:.5rem;
+    @include flex(1 1 24%);
+    padding:12px 20px;
+    border:1px solid $ltborder;
+    background:white;
+  }
+  > h3 {
+    @include flex(0 0 100%);
+    padding:12px 0;
+    border:0;
+    background:transparent;
   }
 }

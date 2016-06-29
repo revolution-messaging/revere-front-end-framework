@@ -1,4 +1,4 @@
-table{
+table {
 	margin: 1.5em 0 1em;
 	width: 100%;
 	font-weight: 300;
@@ -14,7 +14,7 @@ table{
 			display: table-column-group;
 		}
 	}
-	thead{
+	thead {
 		display: none;
 		@include media($tablet) {
 			display: table-header-group;
@@ -47,7 +47,7 @@ table{
       }      
     }
 	}
-	th{
+	th, tfoot td {
 		font-weight: 300;
 		text-transform: uppercase;
 		font-size: 0.75em;

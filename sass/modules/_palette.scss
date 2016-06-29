@@ -1,0 +1,13 @@
+.palette {
+ @include justify-content(flex-start);
+ &__swatch {
+  @include flex(0 1 216px);
+  &--hed {
+   color:$dkgray;
+   padding:rem(14px) 0 rem(2.5px);
+  }
+ }
+ svg {
+  border:1px solid $dktext;
+ }
+}

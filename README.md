@@ -32,12 +32,36 @@ This `button` will be consistent throughout all apps.
 </button>
 ```
 
+### Main Navigation
+
+Main navigation provides the user with a way to navigate through top levels of each app and between various Revere apps and products through an unordered list of items. Each app will display app specific links as the first list items and the last list items consist of the standard items across all apps listed below:
+
+* **Revere Suite**
+** All apps beginning with **Revere Dashboard**, then remaining apps in alphabetical order. All apps include Revere as the first word followed by [app name]
+* **Knowledge Base** - http://kb.reverehq.com/
+* **Support** - http://dashboard.reverehq.com/support/ 
+
+Class Structure for Main Navigation below, [view html](https://github.com/revolution-messaging/revere-pattern/blob/staging/views/_mainnav.html)
+
+```
+.navigation__main
+	.navigation__main--list
+		.navigation__main--list-item
+		.navigation__main--list-item-parent // li with child ul
+   .navigation__main--list-child
+   
+  // Icons
+  .navigation__main--icon
+```
+
 ### User Navigation
 User Navigation contains the username (and gravatar where applicable) of the individual user with one of two actions available depending upon the app.
 1. username and gravatar links to the users settings page on dashboard: https://dashboard.reverehq.com/settings/
 2. username clicks to reveal a logout action that logs the user out of the Revere Suite.
 
 The second component within the User navigation is the client menu. The client menu is placed after the username in mark-up as a dropdown allowing the user to switch between client accounts on various apps. 
+
+Design pattern for User Navigation is similar to Main Navigation, with `navigation__[element]` changed from `main` to `user`. [View raw mark-up here](https://github.com/revolution-messaging/revere-pattern/blob/staging/views/_usernav.html)
 
 #### Additional content
 
@@ -51,15 +75,6 @@ Multiple Revere Apps require additional items in the page header. On a large vie
 * **Mobile**
 ** Broadcast Scheduler
 ** Subscriber Search
-
-### Main Navigation
-
-Main navigation provides the user with a way to navigate through top levels of each app and between various Revere apps and products through an unordered list of items. Each app will display app specific links as the first list items and the last list items consist of the standard items across all apps listed below:
-
-* **Revere Suite**
-** All apps beginning with **Revere Dashboard**, then remaining apps in alphabetical order. All apps include Revere as the first word followed by [app name]
-* **Knowledge Base** - http://kb.reverehq.com/
-* **Support** - http://dashboard.reverehq.com/support/ 
 
 ### Canvas
 ### Footer

@@ -5,13 +5,13 @@ SASS (& HTML examples) for the Revere Suite.
 
 Revere pages are broken up into the following five sections.
 
-* Page Header
-* Main Navigation
-* User Navigation
-* Canvas
-* Page Footer
+* [Page Header](#page-header)
+* [Main Navigation](#main-navigation)
+* [User Navigation](#user-navigation)
+* [Canvas](#canvas)
+* [Page Footer](page-footer)
 
-### Page Header
+## Page Header
 
 Page header consists of the app logo and a button visible on small viewports to toggle between the _navigation_ and _canvas_.
 
@@ -32,7 +32,7 @@ This `button` will be consistent throughout all apps.
 </button>
 ```
 
-### Main Navigation
+## Main Navigation
 
 Main navigation provides the user with a way to navigate through top levels of each app and between various Revere apps and products through an unordered list of items. Each app will display app specific links as the first list items and the last list items consist of the standard items across all apps listed below:
 
@@ -54,7 +54,7 @@ Class Structure for Main Navigation below, [view html](https://github.com/revolu
   .navigation__main--icon
 ```
 
-### User Navigation
+## User Navigation
 User Navigation contains the username (and gravatar where applicable) of the individual user with one of two actions available depending upon the app.
 1. username and gravatar links to the users settings page on dashboard: https://dashboard.reverehq.com/settings/
 2. username clicks to reveal a logout action that logs the user out of the Revere Suite.
@@ -76,13 +76,17 @@ Multiple Revere Apps require additional items in the page header. On a large vie
 ** Broadcast Scheduler
 ** Subscriber Search
 
-### Canvas
-### Footer
+*During certain actions within Revere Apps, it is undesirable to permit users to switch accounts. To achieve the disabling of the account switcher, add the class `.disabled`.
 
-### Standards across apps
+##### To-Dos
+* Incorporate @Dauzy's js for `.disabled` on the user nav into vanilla jquery or javascript for incorporation in the FEF.
+
+## Canvas
+## Footer
+
+## Standards across apps
 
 * No `:hover` to reveal actions. Dropdown menus and miscellaneous reveals will always appear _on-click_, never _on-hover_.
-
 
 ###### To-Dos
 

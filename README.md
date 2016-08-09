@@ -9,7 +9,7 @@ Revere pages are broken up into the following five sections.
 * [Main Navigation](#main-navigation)
 * [User Navigation](#user-navigation)
 * [Canvas](#canvas)
-* [Page Footer](page-footer)
+* [Page Footer](#page-footer)
 
 ## Page Header
 
@@ -82,7 +82,7 @@ Multiple Revere Apps require additional items in the page header. On a large vie
 * Incorporate @Dauzy's js for `.disabled` on the user nav into vanilla jquery or javascript for incorporation in the FEF.
 
 ## Canvas
-## Footer
+## Page Footer
 
 ## Standards across apps
 
@@ -91,6 +91,7 @@ Multiple Revere Apps require additional items in the page header. On a large vie
 ###### To-Dos
 
 * create boilerplate Revere logo
+* `.dashboard .navigation__user` needs to reveal on _click_ not on _hover_. Note: `navigation__user` works as intended in the `.app` environment.
 
 ## Body Classes
 
@@ -98,12 +99,6 @@ Design for specific apps is defined by the body class. Each app must contain the
 
 
 ## Page Structure
-
-
-## Logotype Handling
-
-
-## Navigation Handling
 
 
 ## Icon handling
@@ -115,7 +110,7 @@ The default style for all icons can be found in `revere-front-end-framework/sass
 Markup:
 
 ```html
-    <svg class="icon icon-name">
+    <svg class="icon icon-[name]">
       <use xlink:href="#icon-name"></use>
     </svg>
 ```    
@@ -123,6 +118,11 @@ Markup:
 * to do: Automate inclusion of markup to display icons in icons.php include
 
 ## Patterns
+
+
+## Misc. Todos
+
+
 
 
 

@@ -1,4 +1,5 @@
 # revere-front-end-framework
+
 SASS (& HTML examples) for the Revere Suite.
 
 ## Page Structure
@@ -81,9 +82,34 @@ Multiple Revere Apps require additional items in the page header. On a large vie
 ##### To-Dos
 * Incorporate @Dauzy's js for `.disabled` on the user nav into vanilla jquery or javascript for incorporation in the FEF.
 
-## Canvas
+## Primary
+
+The main content area of Dashboards and Apps is defined by the `.primary` class and consists of two types of interfaces, **canvas** and **flow**. 
+
+### Canvas
+
+The canvas interface is used to display content as well as linear and simple user flows. Please look to any portion of [Revere Dashboard](https://dashboard.reverehq.com/), [Revere Direction](https://direction.reverehq.com/) or [Revere Exchange](https://exchange.reverehq.com/).
+
+### Flow
+
+The flow interface is intended to display more complex and non-linear user flows such as the call-flow builder in **[Revere Calling](https://calling.reverehq.com/)** and mobile flows in **[Revere Mobile](https://mobile.reverehq.com/)**
+
+_* Flow interfaces have not officially been added to the FEF._
+
+
 ## Page Footer
 
+The footer will be identical across all apps, and dashboard footers will differ from apps in color alone. 
+
+### New App
+
+Follow the procedure below when creating a new app or dashboard. 
+
+* Copy the the `views/_footer.html` file from [Revere Pattern](https://github.com/revolution-messaging/revere-pattern/) 
+* Locate the `// Footer Copyright` in `main.js` file in the [FEF]("Revere Front End Framework"), add your app name to the  section.
+
+Content from the `views/_footer.html` file in Revere Pattern is required to be a direct descendant and final block element in the `<body>` and directly above the `<script>` tags just above the `</body>`.
+ 
 ## Standards across apps
 
 * No `:hover` to reveal actions. Dropdown menus and miscellaneous reveals will always appear _on-click_, never _on-hover_.

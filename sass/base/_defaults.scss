@@ -57,7 +57,11 @@ h1, h2 ,h3, h4 {
 }
 
 h1 {
-
+	font-size: 1.65em;
+  .content & {
+		font-weight: 300;
+		letter-spacing: 0;
+ }
 }
 
 h2 {

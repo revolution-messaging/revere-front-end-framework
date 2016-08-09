@@ -45,6 +45,9 @@
     }
   }
 }
+.canvas {
+	max-width:980px;
+}
 .overview {
  @include align-items(space-between);
  @include display(flex);

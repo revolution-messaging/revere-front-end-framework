@@ -100,8 +100,34 @@ p {
 	font-size: .9em;
 	line-height: 140%;
 }
-
-
+pre {
+ margin: 20px 0;
+ padding: 11px 20px;
+ font-family:monospace;
+ background:$white;
+ border:1px solid $ltgray;
+ border-radius:2px;
+}
+code {
+ background:$white;
+ font-family:monospace;
+ padding:rem(3px);
+ border-radius:2px;
+}
+article {
+ p {
+  padding-bottom: rem(11px);
+ }
+ ul {
+  padding: 11px 20px;
+  list-style:inherit;
+ }
+ li {
+  padding:0 0 11px;
+ 	font-size: .9em;
+ 	line-height: 140%;
+ }
+}
 // MODAL & TIP BOXES
 // .modal-c on click / .modal-h on hover
 .modal-c, .modal-h {

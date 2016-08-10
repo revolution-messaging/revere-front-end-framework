@@ -104,7 +104,7 @@ _* Flow interfaces have not officially been added to the FEF._
 
 The footer will be identical across all apps, and dashboard footers will differ from apps in color alone. 
 
-### New App
+### Adding Footers to New Apps
 
 Follow the procedure below when creating a new app or dashboard. 
 
@@ -148,8 +148,37 @@ Markup:
 
 ## Patterns
 
+*This is where Patterns go.*
+
+- 
+
+### SASS File Structure
+- Base Styles `/base`: Base directory contains boilerplate styles.
+ - Fonts `/base/_fonts.scss`: **Helvetica Neue** is the standard Revere Typeface. *Browser caching needs to be added*
+ - Colors `/base/_colors.scss`: All the colors of the rainbow that are permitted in the Revere Suite
+ - Defaults `/base/_defaults.scss`: Standard formatting across the Revere Suite.
+ - Tables `/base/_fonts.scss`: Default display of tables throughout the Revere Suite.
+- Helper Styles `/helpers`: Helpers directory contains support files.
+ - Logos `/helpers/_revere_logo.scss`: For caching purposes, we load all logos in one file.
+ - Icons `/helpers/_icons.scss`: Icon styles for various contexts
+ - Mixins `/helpers/_mixins.scss`: The Mixins file holds mixins. 
+ - Animations `/helpers/.scss`: Animations are contained within a single file so they can easily be added to new apps and contexts
+- Layouts `/layouts/`: The Layout directory
+- Modules `/modules`: The modules directory contains display modules.
+ - Feedback `/modules/_feedback.scss`:
+ - Pagination `/modules/_pagination.scss`:
+ - Forms `/modules/forms/*`:
+  - Forms `/_forms.scss`: **Needs Modification** elements in this directory need to be updated to sub-files for individual elements.
+ - Navigation `/modules/navigation/*.scss`:
+ - Palette `/modules/_palette.scss`:
+ - Header `/modules/_hed.scss`:
+
+
+### 
 
 ## Misc. Todos
+
+
 
 
 

@@ -9,7 +9,7 @@ Revere pages are broken up into the following five sections.
 * [Page Header](#page-header)
 * [Main Navigation](#main-navigation)
 * [User Navigation](#user-navigation)
-* [Canvas](#canvas)
+* [Primary](#primary)
 * [Page Footer](#page-footer)
 
 ## Page Header
@@ -150,7 +150,7 @@ Markup:
 
 *This is where Patterns go.*
 
-- 
+- Pagination: Revere currently has a standard pagination display (just page numbers), and an advanced display (adds Previous, Next, First and Last). 
 
 ### SASS File Structure
 - Base Styles `/base`: Base directory contains boilerplate styles.
@@ -164,14 +164,14 @@ Markup:
  - Mixins `/helpers/_mixins.scss`: The Mixins file holds mixins. 
  - Animations `/helpers/.scss`: Animations are contained within a single file so they can easily be added to new apps and contexts
 - Layouts `/layouts/`: The Layout directory
-- Modules `/modules`: The modules directory contains display modules.
+- Modules `/modules`: The modules directory contains display modules. 
  - Feedback `/modules/_feedback.scss`:
- - Pagination `/modules/_pagination.scss`:
+ - [Pagination `/modules/_pagination.scss`](/blocks.html#pagination):
  - Forms `/modules/forms/*`:
-  - Forms `/_forms.scss`: **Needs Modification** elements in this directory need to be updated to sub-files for individual elements.
+   - Forms `/_forms.scss`: **Probably Needs Work** elements in this directory need to be updated to sub-files for individual elements.
  - Navigation `/modules/navigation/*.scss`:
  - Palette `/modules/_palette.scss`:
- - Header `/modules/_hed.scss`:
+ - Header `/modules/_hed.scss`: The Header module contains standard padding for standard `.[block]__hed` headers.
 
 
 ### 

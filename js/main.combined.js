@@ -24,9 +24,10 @@
     var t = document.createElement("style");
     t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t)
   }
-  var o = "/wp-content/themes/revere-pattern/front-end-framework/css/fonts.css";
+  var o = "/2-0-1/css/fonts.css";
   window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
 }
+
 // Toggles for Navigation
 $('#navigation-toggle').click( function () {
   $('body').toggleClass('visible-nav');
@@ -40,9 +41,14 @@ $('li.has-children').click( function (){
     $(this).addClass('expand');
   }
 });
+
+// User nav toggle 
+$('.clientmenu h6').click( function (){
+  $('.clientmenu').toggleClass('activated');
+});
 // Class Toggles for Animation
 $('.modal .activate, .user li h6, .user li h6 svg').click( function(){
-  var modalBox = $(this).parent()
+  var modalBox = $(this).parent();
   // $(this).parent().toggleClass('activated', 'deactivated');
   if (modalBox.hasClass('activated')) {
     modalBox.removeClass('activated');
@@ -56,7 +62,31 @@ var $disabled = '.setting :disabled';
 if ($($disabled) ) {
   $($disabled).closest('div.setting').addClass('disabled');
 }
+// Footer Copyright
+ var url = window.location.hostname;
+ if ( url == 'dashboard.reverehq.com' ) {
+  var app = "Dashboard"
+ } else if ( url == 'calling.reverehq.com' ) {
+  var app = "Calling"
+ } else if ( url == 'direction.reverehq.com' ) {
+  var app = "Direction"
+ } else if ( url == 'exchange.reverehq.com' ) {
+  var app = "Exchange"
+ } else if ( url == 'mobile.reverehq.com' ) {
+  var app = "Mobile"
+ } else if ( url == 'sync.reverehq.com' ) {
+  var app = "Sync"
+ } else if ( url == 'pattern.reverehq.com' ) {
+  var app = "Pattern"
+ } else {
+  var app = 'Suite'
+ }
+ $('.revere__footer p').text(function(index, text) {
+  return text.replace('HQ', app);
+ });
+
 // Margins field-group
+// NEEDS WORK
 $('input').focusin(function() {
   $(this).parent('.field-group').addClass('active');
 });

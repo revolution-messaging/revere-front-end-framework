@@ -1,6 +1,6 @@
 {
   "name": "Revere-Front-End-Framework",
-  "version": "0.2.8",
+  "version": "2.0.1",
   "repository": "git@revmsg.beanstalkapp.com:/wordpressthemes.git",
   "devDependencies": {
     "gulp": "^3.9.1",

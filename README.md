@@ -9,8 +9,13 @@ Revere pages are broken up into the following five sections.
 * [Page Header](#page-header)
 * [Main Navigation](#main-navigation)
 * [User Navigation](#user-navigation)
-* [Primary](#primary)
+* [Layouts](#layouts)
+ * [Primary](#primary)
+ * [Overview](#overview)
+ * [Settings](#settings)
+ * [Flow](#flows)
 * [Page Footer](#page-footer)
+* [Standards Across Apps](#standards-across-apps)
 
 ## Page Header
 
@@ -85,13 +90,26 @@ Multiple Revere Apps require additional items in the page header. On a large vie
 ##### To-Dos
 * Incorporate @Dauzy's js for `.disabled` on the user nav into vanilla jquery or javascript for incorporation in the FEF.
 
-## Primary
+## Layouts
 
-The main content area of Dashboards and Apps is defined by the `.primary` class and consists of two types of interfaces, **canvas** and **flow**. 
+### Primary
+
+The main content area of Dashboards and Apps is defined by the `.primary` class and consists of a `header` followed by a _canvas_ area that is defined by the `.canvas` class.
 
 ### Canvas
 
+The canvas area is the main body of any revere app, and consists of three different types of interfaces, **overview**, **settings** and **flow**. .
+
 The canvas interface is used to display content as well as linear and simple user flows. Please look to any portion of [Revere Dashboard](https://dashboard.reverehq.com/), [Revere Direction](https://direction.reverehq.com/) or [Revere Exchange](https://exchange.reverehq.com/).
+
+### Overview
+
+Overview `.overview` layouts are used to display summary or overview information. This could be tiles of all ad campaigns in [Exchange](https://exchange.reverehq.com/), account management in [Direction](//direction.reverehq.com), or documentation in the [Pattern Library](//pattern.reverehq.com).
+
+### Settings
+
+The Settings `.settings` layout is designed primarily for linear forms and other interactions. An example of a _settings_ layout is the ad campaign builder in [Exchange](//exchange.reverehq.com) and the user settings page in [Dashboard](//dashboard.reverehq.com).
+
 
 ### Flow
 
@@ -122,15 +140,16 @@ Content from the `views/_footer.html` file in Revere Pattern is required to be a
 * create boilerplate Revere logo
 * `.dashboard .navigation__user` needs to reveal on _click_ not on _hover_. Note: `navigation__user` works as intended in the `.app` environment.
 
-## Body Classes
+<!-- ### Body Classes
 
-Design for specific apps is defined by the body class. Each app must contain the following body classes, 
-
-
-## Page Structure
+Design for specific apps is defined by the body class. Each app must contain the following body classes,  -->
 
 
-## Icon handling
+### Page Structure
+
+**Needs Writeup on page structure**
+
+### Icon handling
 
 All icon art should be exported as SVGs with no fill or stroke applied. This is so that we can control those and others filters via CSS. SVGs should be saved in to `icons/svg/`. When new icons have been saved to this folder, it will be necessary to re-generate the SVG sprite. Run `gulp svgstore`. This will create a new SVG sprite file called `icons.svg` in `icons/`. All of the SVG icons will be saved with the ID of the file name of which they were saved.
 
@@ -148,8 +167,6 @@ Markup:
 
 ## Patterns
 
-*This is where Patterns go.*
-
 - Pagination: Revere currently has a standard pagination display (just page numbers), and an advanced display (adds Previous, Next, First and Last). 
 
 ### SASS File Structure
@@ -157,7 +174,7 @@ Markup:
  - Fonts `/base/_fonts.scss`: **Helvetica Neue** is the standard Revere Typeface. *Browser caching needs to be added*
  - Colors `/base/_colors.scss`: All the colors of the rainbow that are permitted in the Revere Suite
  - Defaults `/base/_defaults.scss`: Standard formatting across the Revere Suite.
- - Tables `/base/_fonts.scss`: Default display of tables throughout the Revere Suite.
+ - Tables `/base/table.scss`: Default display of tables throughout the Revere Suite.
 - Helper Styles `/helpers`: Helpers directory contains support files.
  - Logos `/helpers/_revere_logo.scss`: For caching purposes, we load all logos in one file.
  - Icons `/helpers/_icons.scss`: Icon styles for various contexts
@@ -168,26 +185,7 @@ Markup:
  - Feedback `/modules/_feedback.scss`:
  - [Pagination `/modules/_pagination.scss`](/blocks.html#pagination):
  - Forms `/modules/forms/*`:
-   - Forms `/_forms.scss`: **Probably Needs Work** elements in this directory need to be updated to sub-files for individual elements.
+   - Forms `/_forms.scss`: **Needs work** elements in this directory need to be updated to sub-files for individual elements.
  - Navigation `/modules/navigation/*.scss`:
  - Palette `/modules/_palette.scss`:
  - Header `/modules/_hed.scss`: The Header module contains standard padding for standard `.[block]__hed` headers.
-
-
-### 
-
-## Misc. Todos
-
-
-
-
-
-
-
-
-
-
-
-
-
-

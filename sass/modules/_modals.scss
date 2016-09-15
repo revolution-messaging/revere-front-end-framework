@@ -1,0 +1,106 @@
+#loader{
+  zoom:1;
+  float:left;
+  display:inline-block;
+  width:16px;
+  height:16px;
+  margin:0 0 0 -24px;
+  animation: wait 1.8s linear infinite;
+  background: linear-gradient(90deg, $ltbg 1px, $ltbg 0, $ltbg 3px, $ltbg 3px),
+              linear-gradient(90deg, $ltborder 1px, $ltborder 0, $ltborder 3px, $ltborder 3px),
+              linear-gradient(90deg, $ltborder 1px, $ltborder 0, $ltborder 3px, $ltborder 3px),
+              linear-gradient(90deg, $lticonhover 1px, $lticonhover 0, $lticonhover 3px, $lticonhover 3px),
+              linear-gradient(90deg, $dksubhead 1px, $dksubhead 0, $dksubhead 3px, $dksubhead 3px);  
+  background-repeat: no-repeat;
+  background-size: 4px 9px, 4px 9px, 4px 9px, 4px 11px, 4px 16px;  /* 1 */
+  background-position: -4px 3px, -4px 3px, -4px 3px, -4px 2px, -4px 0;
+}
+
+/* Revere Modal */
+.show-revere-modal {
+  overflow: hidden;
+}
+
+.revere-modal-container {
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+   &.activated {
+    display: block;
+  }
+}
+
+#revere-modal-background {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0.75;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.revere-modal {
+  background: transparent;
+  width: 840px;
+  overflow-y: scroll;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  margin-left: -420px;
+  z-index: 2;
+  .revere-modal-header {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 11px 20px;
+    background-color: #3282F1;
+  }
+  .revere-modal-content {
+    background-color: white;
+    padding: 20px;
+    font-size: .9em;
+    line-height: 140%;
+  }
+}
+
+.revere-modal-seperator {
+  font-size: .75rem;
+  margin: 0 5px;
+  cursor: default;
+}
+
+.revere-modal-close {
+  font-size: .75rem;
+    color: #4E97E2;
+    text-decoration: none;
+}
+
+.revere-modal-content {
+  .field-group {
+    margin: 10px 0;
+    label,
+    input {
+      line-height: 1rem;
+      padding: 12px !important;
+    }
+    select, option {
+      background-color: white;
+    }
+  }
+  .field-subgroup {
+    padding: 5px 10px;
+    > * {
+      margin: 10px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

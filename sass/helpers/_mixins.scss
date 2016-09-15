@@ -128,3 +128,11 @@ color: $topBorderGray; // Might remove this one. Not sure if its going to be use
   &&:nth-child(#{$nth}) { margin-right: flex-gutter(); }
   &&:nth-child(#{$nth}+1) { clear: none }
 }
+// Form Mixins
+@mixin noiOS { // Remove Mobile appearance on Form Elements
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}

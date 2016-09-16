@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 var revvar = '2-0-1'
 var paths = {
   // coffee: 'js/coffee.coffee',
-  rstyle: 'sass/*.scss',
+  rstyle: ['sass/*.scss', 'sass/**/*.scss'],
   rscript: ['js/main.js']
 };
 function eatError (error) {

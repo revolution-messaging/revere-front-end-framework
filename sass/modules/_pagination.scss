@@ -2,6 +2,7 @@
 .pagination {
 	font-size: rem(14px);
   list-style:none;
+  @include flex(0 0 100%);
   &__list {
    @include display(flex);
    @include justify-content(center);

@@ -33,6 +33,7 @@
   height:50px;
   @include bgimg;
   overflow-y:visible;
+  border:0;
   @include media($tablet) {
     display:none;
   }

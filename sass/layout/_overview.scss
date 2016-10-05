@@ -1,0 +1,25 @@
+.overview {
+ @include align-items(space-between);
+ @include display(flex);
+ @include flex-direction(row);
+ @include flex-wrap(wrap);
+ @include justify-content(space-between);
+ margin:0 rem(-8px);
+ &__hed {
+  @include flex(0 0 100%);
+  padding:rem(12px) rem(8px);
+  border:0;
+  background:transparent;
+ }
+ &__item {
+  margin:.5rem;
+  @include flex(1 1 24%);
+  padding:12px 20px;
+  border:1px solid $ltborder;
+  background:white;
+  &--hed {
+   color:$dkgray;
+   padding:rem(14px) 0 rem(2.5px);
+  }
+ }
+}

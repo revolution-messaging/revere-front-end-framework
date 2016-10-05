@@ -1,11 +1,11 @@
 .primary {
+  max-width:100%;
   @include transition(all .2s ease-in);
   padding: 4px 15px 18rem;
   position:relative;
   z-index:2;
   margin-top:65px;
   left:auto;
-//  padding-bottom: 30rem;
   .app & {
     background:$ltbg;
   }
@@ -13,7 +13,7 @@
     margin-left:270px;
   }
   @include media($tablet) {
-    @include flex(1 1 75%);
+    @include flex(0 1 75%);
     margin-top:0;
     min-height:100vh;
     background:transparent;
@@ -46,37 +46,13 @@
   }
   // Articles need readable line widths
   article {
+   width:100%;
   	max-width:860px;
    h1, h2 {
     margin-top:30px;
     
    }
   }
-}
-.overview {
- @include align-items(space-between);
- @include display(flex);
- @include flex-direction(row);
- @include flex-wrap(wrap);
- @include justify-content(space-between);
- margin:0 rem(-8px);
- &__hed {
-  @include flex(0 0 100%);
-  padding:rem(12px) rem(8px);
-  border:0;
-  background:transparent;
- }
- &__item {
-  margin:.5rem;
-  @include flex(1 1 24%);
-  padding:12px 20px;
-  border:1px solid $ltborder;
-  background:white;
-  &--hed {
-   color:$dkgray;
-   padding:rem(14px) 0 rem(2.5px);
-  }
- }
 }
 .main {  
  // Changed to .overview .main still used on Exchange

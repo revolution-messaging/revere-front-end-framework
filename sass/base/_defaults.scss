@@ -13,7 +13,7 @@ html, body {
   line-height:1.125em;
 }
 body {
-  display:table;
+  @include display(flex);
   overflow-x:hidden;
   &.app {
   	color: $text;
@@ -100,6 +100,7 @@ p {
 	line-height: 140%;
 }
 pre {
+ overflow-x:scroll;
  margin: 20px 0;
  padding: 11px 20px;
  font-family:monospace;

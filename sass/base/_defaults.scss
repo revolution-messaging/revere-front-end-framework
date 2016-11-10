@@ -14,17 +14,16 @@ html, body {
 }
 body {
   @include display(flex);
+  @include align-items(stretch);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  @include flex-wrap(wrap);
   overflow-x:hidden;
   &.app {
   	color: $text;
    background:$ltbg;
   }
   @include media($tablet) {
-    @include align-items(stretch);
-    @include display(flex);
-    @include flex-direction(row);
-    @include justify-content(flex-start);
-    @include flex-wrap(wrap);
   }
 }
 #sb-site {background: $greydk;}
@@ -113,6 +112,10 @@ code {
  font-family:monospace;
  padding:rem(3px);
  border-radius:2px;
+}
+svg {
+  display:block;
+  max-width:100%;
 }
 article {
  p {

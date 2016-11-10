@@ -3,7 +3,7 @@
   @include flex(0 0 250px);
 	background-color: $navbg;
   position:fixed;
-  overflow-y:scroll;
+  overflow-y:auto;
   left:0;
   right:0;
   // LINKS

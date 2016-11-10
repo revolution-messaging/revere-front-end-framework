@@ -1,20 +1,8 @@
 .palette {
- @include display(flex);
- @include justify-content(flex-start);
  &__swatch {
-  @include flex(0 1 216px);
   color:$dkgray;
  }
  svg {
   border:1px solid $dktext;
- }
-}
-
-
-.icons {
- @include display(flex);
- @include justify-content(flex-start);
- .overview__item {
-  @include flex(0 1 216px);
  }
 }

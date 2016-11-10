@@ -4,6 +4,7 @@
   @include flex(1 0 auto);
 	margin: -14em 0 0;
 	padding: 7em 1.3625em 1.3625em;
+  background:url('/img/revmsg-logo@2x.png');
   background-color:$ltbg;
   background-position:center rem(16px);
   background-repeat:no-repeat;
@@ -22,7 +23,7 @@
     margin-left:270px;
   }
   @include media($notebook) {
-  	margin: 0 0 0 270px;
+  	margin-left:270px;
   }
 	a {
     body.app & {

@@ -3,7 +3,7 @@
  @include display(flex);
  @include flex-direction(row);
  @include flex-wrap(wrap);
- @include justify-content(space-between);
+ @include justify-content(flex-start);
  margin:0 rem(-8px);
  &__hed {
   @include flex(0 0 100%);
@@ -13,10 +13,14 @@
  }
  &__item {
   margin:.5rem;
-  @include flex(1 1 24%);
-  padding:12px 20px;
+  @include flex(0 1 44%);
+  padding:rem(12px);
   border:1px solid $ltborder;
   background:white;
+  @include media($tablet) {
+    @include flex(0 1 23%);
+    padding:rem(12px) rem(20px);
+  }
   &--hed {
    color:$dkgray;
    padding:rem(14px) 0 rem(2.5px);

@@ -22,26 +22,18 @@
     position:initial;
     z-index:initial;
   }
-  > header {
+  &__hed {
     padding:15px 0 22px;
     .app & {
       border-bottom:1px solid $ltborder;
     }
     h2 {
-      margin:0.2em 0 0 14px;
+      margin:rem(3.2px) 0 0;
     }
-  }
-  .canvas {
-    padding:25px rem(12px) 40px;
     @include media($tablet) {
-      padding:25px 35px 40px;
-    }
-    h3 {
-      margin-bottom:12px;
-    }
-    h2, h1 {
-      position:relative;
-      margin-bottom:30px;
+      h2 {
+        margin-left: rem(14px);
+      }
     }
   }
   // Articles need readable line widths
@@ -52,6 +44,19 @@
     margin-top:30px;
     
    }
+  }
+}
+.canvas {
+  padding:rem(25px) 0 rem(40px);
+  @include media($tablet) {
+    padding:25px 35px 40px;
+  }
+  h3 {
+    margin-bottom:12px;
+  }
+  h2, h1 {
+    position:relative;
+    margin-bottom:30px;
   }
 }
 .main {  

@@ -5,6 +5,7 @@
  @include flex-wrap(wrap);
  @include justify-content(flex-start);
  margin:0 rem(-8px);
+ max-width:980px;
  &__hed {
   @include flex(0 0 100%);
   padding:rem(12px) rem(8px);

@@ -5,7 +5,7 @@
  @include flex-wrap(wrap);
  @include justify-content(flex-start);
  margin:0 rem(-8px);
- max-width:980px;
+ max-width:684px;
  &__hed {
   @include flex(0 0 100%);
   padding:rem(12px) rem(8px);
@@ -13,13 +13,12 @@
   background:transparent;
  }
  &__item {
-  margin:.5rem;
-  @include flex(0 1 44%);
+  margin:.5rem 0;
+  @include flex(0 0 100%);
   padding:rem(12px);
   border:1px solid $ltborder;
   background:white;
   @include media($tablet) {
-    @include flex(0 1 23%);
     padding:rem(12px) rem(20px);
   }
   &--hed {

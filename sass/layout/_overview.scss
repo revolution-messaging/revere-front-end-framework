@@ -5,7 +5,7 @@
  @include flex-wrap(wrap);
  @include justify-content(flex-start);
  margin:0 rem(-8px);
- max-width:754px;
+ max-width:752px;
  &__hed {
   @include flex(0 0 100%);
   padding:rem(12px) rem(8px);
@@ -36,7 +36,7 @@
   &--toggle {
     position: absolute;
     top: rem(18px);
-    right: rem(24px);
+    right: rem(22px);
     fill: $lticonhover;
     font-size: 2rem;
     cursor: pointer;

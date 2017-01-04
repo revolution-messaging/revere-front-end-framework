@@ -105,3 +105,15 @@ var $disabled = '.setting :disabled';
 if ($($disabled) ) {
   $($disabled).closest('div.setting').addClass('disabled');
 }
+
+//Overview Opt Toggle
+$('.overview__item--toggle').click(function(){
+  var opt = $(this).next('.overview__item--opt');
+  if(opt.hasClass('show')) {
+    opt.removeClass('show');
+    opt.addClass('hide');
+  } else {
+    opt.removeClass('hide');
+    opt.addClass('show');
+  }
+});

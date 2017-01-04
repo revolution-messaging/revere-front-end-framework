@@ -13,17 +13,86 @@
   background:transparent;
  }
  &__item {
+  position: relative;
   margin:.5rem 0;
   @include flex(0 0 100%);
   padding:rem(12px);
-  border:1px solid $ltborder;
+//  border:1px solid $ltborder;
+  box-shadow: 0px 3px 6px $ltgray;
   background:white;
+  em {
+    margin-left: rem(16px);
+    font-size: rem(10px);
+    font-weight: 300;
+    padding: rem(4px) rem(6px);
+    border-radius: 4px;
+    background:$dkgreen;
+    color:white;
+  }
   @include media($tablet) {
     padding:rem(12px) rem(20px);
   }
+  &--toggle {
+    position: absolute;
+    top: 0;
+    right: rem(20px);
+    color: $lticonhover;
+    font-size: 2rem;
+    cursor: pointer;
+    span {
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      position: absolute;
+      left: -9999px;
+    }
+  }
+  &--opt.show {
+    @include animation(expand-modal .5s);
+    border-top: 4px solid $blue;
+    box-shadow: 0px 3px 6px $ltgray;
+    padding: rem(10px) rem(12px);
+    max-height: 400px;
+  }
+  &--opt.hide {
+    @include animation(contract-modal .5s);
+  }
+  &--opt {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: rem(20px);
+    right: rem(20px);
+    @include display(flex);
+    @include flex-direction(column);
+    padding: 0 rem(12px);
+    background:white;
+    @include transition(all .5s);
+  }
+  &--action {
+    font-size: rem(14px);
+    padding: rem(4px) 0;
+  }
   &--hed {
-   color:$dkgray;
-   padding:rem(14px) 0 rem(2.5px);
+   color:$text;
+   font-weight: 900;
+   padding:0;
+   margin-bottom: .25em !important;
+  }
+  ul {
+    @include display(flex);
+  }
+  &--sub {
+    color:$lticonhover;
+    font-size: rem(14px);
+    margin-right: rem(18px);
+    @include display(flex);
+    @include align-items(center);
+    svg.icon {
+      width: rem(14px);
+      height: rem(14px);
+      margin-right: rem(6px);
+    }
   }
  }
 }

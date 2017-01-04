@@ -5,7 +5,7 @@
  @include flex-wrap(wrap);
  @include justify-content(flex-start);
  margin:0 rem(-8px);
- max-width:684px;
+ max-width:754px;
  &__hed {
   @include flex(0 0 100%);
   padding:rem(12px) rem(8px);
@@ -28,18 +28,22 @@
     border-radius: 4px;
     background:$dkgreen;
     color:white;
+    vertical-align:middle;
   }
   @include media($tablet) {
     padding:rem(12px) rem(20px);
   }
   &--toggle {
     position: absolute;
-    top: 0;
-    right: rem(20px);
-    color: $lticonhover;
+    top: rem(18px);
+    right: rem(24px);
+    fill: $lticonhover;
     font-size: 2rem;
     cursor: pointer;
+    width:rem(21px);
+    height:rem(5px);
     span {
+      //      @include clipIt;
       height: 1px;
       width: 1px;
       overflow: hidden;
@@ -61,8 +65,8 @@
     max-height: 0;
     overflow: hidden;
     position: absolute;
-    top: rem(20px);
-    right: rem(20px);
+    top: rem(24px);
+    right: rem(24px);
     @include display(flex);
     @include flex-direction(column);
     padding: 0 rem(12px);
@@ -79,7 +83,7 @@
    padding:0;
    margin-bottom: .25em !important;
   }
-  ul {
+  &--list {
     @include display(flex);
   }
   &--sub {
@@ -88,6 +92,9 @@
     margin-right: rem(18px);
     @include display(flex);
     @include align-items(center);
+    &:first-of-type {
+      margin-right: rem(12px);
+    }
     svg.icon {
       width: rem(14px);
       height: rem(14px);

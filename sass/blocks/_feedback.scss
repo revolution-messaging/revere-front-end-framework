@@ -1,28 +1,22 @@
 .feedback {
-  padding: rem(10px);
-  background: $white;
-  line-height: 1.14;
-  font-size: rem(14px);
-  border-style:solid;
-  border-width:rem(2px) rem(2px) rem(2px) rem(46px);
-  border-radius:rem(2px);
-  &--icon {
-    
-  }
+  padding: 10px;
+  color: $white;
+  line-height: 1em;
+  font-size: .9em;
   a {
    &:link, &:visited &:hover {
-//    color: $ltbg !important;
+    color: $ltbg !important;
     text-decoration: underline;
    }
   }
-  border-color: $green;
+  background-color: $green;
   &.error {
-    border-color: $red;
+    background-color: $red;
   }
   &.success {
-    border-color: $green;
+    background-color: $green;
   }
   &.notice {
-    border-color: $blue;
+    background-color: $blue;
   }
 }

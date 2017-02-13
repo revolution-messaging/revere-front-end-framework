@@ -1,51 +1,3 @@
-.primary {
-  max-width:100%;
-  @include transition(all .2s ease-in);
-  padding: 4px 15px 18rem;
-  position:relative;
-  z-index:2;
-  margin-top:65px;
-  left:auto;
-  .app & {
-    background:$ltbg;
-  }
-  body.visible-nav & {
-    margin-left:270px;
-  }
-  @include media($tablet) {
-    @include flex(1 1 75%);
-    margin-top:0;
-    min-height:100vh;
-    background:transparent;
-  }
-  @include media($notebook) {
-    position:initial;
-    z-index:initial;
-  }
-  &__hed {
-    padding:15px 0 22px;
-    .app & {
-      border-bottom:1px solid $ltborder;
-    }
-    h2 {
-      margin:rem(3.2px) 0 0;
-    }
-    @include media($tablet) {
-      h2 {
-        margin-left: rem(14px);
-      }
-    }
-  }
-  // Articles need readable line widths
-  article {
-   width:100%;
-  	max-width:860px;
-   h1, h2 {
-    margin-top:30px;
-    
-   }
-  }
-}
 .canvas {
   padding:rem(25px) 0 rem(40px);
   @include media($tablet) {
@@ -57,28 +9,5 @@
   h2, h1 {
     position:relative;
     margin-bottom:30px;
-  }
-}
-.main {  
- // Changed to .overview .main still used on Exchange
-  @include align-items(space-between);
-  @include display(flex);
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  @include justify-content(space-between);
-  margin:0 -.5rem;
-  > * {
-   // li on Echange
-    margin:.5rem;
-    @include flex(0 1 24%);
-    padding:12px 20px;
-    border:1px solid $ltborder;
-    background:white;
-  }
-  > h3 {
-    @include flex(0 0 100%);
-    padding:12px 0;
-    border:0;
-    background:transparent;
   }
 }

@@ -1,111 +1,109 @@
 .overview {
- @include align-items(space-between);
- @include display(flex);
- @include flex-direction(row);
- @include flex-wrap(wrap);
- @include justify-content(flex-start);
- margin:0 rem(-8px);
- max-width:752px;
- &__hed {
-  @include flex(0 0 100%);
-  padding:rem(12px) 0 rem(14px);
-  border:0;
-  background:transparent;
- }
- &__item {
-   &--hed {
-    color:$text;
-//    font-weight: 900;
-//    margin-bottom: .25em;
-    padding:0 0 rem(6px);
-    h3 {
-      display:inline-block;
-      font-weight: 900;
-      margin-right:rem(16px);
-      margin-bottom:0;
+  @include align-items(space-between);
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(flex-start);
+  margin:0 rem(-8px);
+  max-width:752px;
+  &__hed {
+    @include flex(0 0 100%);
+    padding:rem(12px) 0 rem(14px);
+    border:0;
+    background:transparent;
+  }
+  &__item {
+    &--hed {
+      color:$text;
+      padding:0 0 rem(6px);
+      h3 {
+        display:inline-block;
+        font-weight: 900;
+        margin-right:rem(16px);
+        margin-bottom:0;
+      }
     }
-   }
-  position: relative;
-  margin:.5rem 0;
-  @include flex(0 0 100%);
-  padding:rem(12px);
-  box-shadow: 0px 3px 6px $ltgray;
-  background:white;
-  em {
-    line-height:1;
-    display:inline-block;
-    font-size: rem(10px);
-    font-weight: 300;
-    padding: rem(4px) rem(6px);
-    border-radius: 4px;
-    background:$dkgreen;
-    color:white;
-    vertical-align:text-bottom;
-  }
-  @include media($tablet) {
-    padding:rem(12px) rem(20px);
-  }
-  &--toggle {
-    position: absolute;
-    top: rem(18px);
-    right: rem(22px);
-    fill: $lticonhover;
-    font-size: 2rem;
-    cursor: pointer;
-    width:rem(21px);
-    height:rem(5px);
-    span {
-      //      @include clipIt;
-      height: 1px;
-      width: 1px;
+    position: relative;
+    margin:.5rem 0;
+    @include flex(0 0 100%);
+    padding:rem(12px);
+    box-shadow: 0px 3px 6px $ltgray;
+    background:white;
+    em {
+      line-height:1;
+      display:inline-block;
+      font-size: rem(10px);
+      font-weight: 300;
+      padding: rem(4px) rem(6px);
+      border-radius: 4px;
+      background:$dkgreen;
+      color:white;
+      vertical-align:text-bottom;
+    }
+    @include media($tablet) {
+      padding:rem(12px) rem(20px);
+    }
+    &--toggle {
+      position: absolute;
+      top: rem(18px);
+      right: rem(22px);
+      fill: $lticonhover;
+      font-size: 2rem;
+      cursor: pointer;
+      width:rem(21px);
+      height:rem(5px);
+      span {
+        //      @include clipIt;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        position: absolute;
+        left: -9999px;
+      }
+    }
+    &--opt {
+      max-height: 0;
       overflow: hidden;
       position: absolute;
-      left: -9999px;
+      top: rem(24px);
+      right: rem(24px);
+      @include display(flex);
+      @include flex-direction(column);
+      padding: 0 rem(12px);
+      background:white;
+      @include transition(all .5s);
+      &.show {
+        @include animation(expand-modal .5s);
+        border-top: 4px solid $blue;
+        box-shadow: 0px 3px 6px $ltgray;
+        padding: rem(10px) rem(12px);
+        max-height: 400px;
+      }
+      &.hide {
+        @include animation(contract-modal .5s);
+      }
+    }
+    &--action {
+      font-size: rem(14px);
+      padding: rem(4px) 0;
+    }
+    &--list {
+      @include display(flex);
+    }
+    &--sub {
+      color:$lticonhover;
+      font-size: rem(13px);
+      margin-right: rem(18px);
+      @include display(flex);
+      @include align-items(center);
+      &:first-of-type {
+        margin-right: rem(12px);
+      }
+      svg.icon {
+        width: rem(14px);
+        height: rem(14px);
+        margin-right: rem(6px);
+      }
     }
   }
-  &--opt.show {
-    @include animation(expand-modal .5s);
-    border-top: 4px solid $blue;
-    box-shadow: 0px 3px 6px $ltgray;
-    padding: rem(10px) rem(12px);
-    max-height: 400px;
-  }
-  &--opt.hide {
-    @include animation(contract-modal .5s);
-  }
-  &--opt {
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    top: rem(24px);
-    right: rem(24px);
-    @include display(flex);
-    @include flex-direction(column);
-    padding: 0 rem(12px);
-    background:white;
-    @include transition(all .5s);
-  }
-  &--action {
-    font-size: rem(14px);
-    padding: rem(4px) 0;
-  }
-  &--list {
-    @include display(flex);
-  }
-  &--sub {
-    color:$lticonhover;
-    font-size: rem(13px);
-    margin-right: rem(18px);
-    @include display(flex);
-    @include align-items(center);
-    &:first-of-type {
-      margin-right: rem(12px);
-    }
-    svg.icon {
-      width: rem(14px);
-      height: rem(14px);
-      margin-right: rem(6px);
-    }
-  }
- }
 }

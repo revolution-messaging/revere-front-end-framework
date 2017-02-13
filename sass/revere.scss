@@ -28,15 +28,18 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 // layouts
 @import "layout/header";
 @import "layout/navigation";
+@import "layout/primary";
 @import "layout/canvas";
 @import "layout/overview";
 @import "layout/footer";
 
 // modules
 @import "modules/forms/forms.scss";
-@import "modules/pagination";
-@import "modules/feedback";
 @import "modules/modals";
+
+// modules
+@import "blocks/pagination";
+@import "blocks/feedback";
 
 // Pattern Modules
 //@import "modules/pattern";

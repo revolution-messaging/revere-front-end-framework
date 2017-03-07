@@ -32,10 +32,18 @@ body {
 #sb-site {background: $greydk;}
 
 a {
-	color: $dklink;
-	&:hover {
-		text-decoration: none;
-	}
+  .dashboard & {
+  	color: $dklink;
+  	&:hover {
+  		text-decoration: none;
+  	}
+  }
+  .app & {
+    color:$blue;
+    &:hover {
+      color:$bluehover;
+    }
+  }
 }
 
 h1, h2 ,h3, h4 {

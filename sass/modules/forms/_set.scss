@@ -1,0 +1,37 @@
+&__set {
+  display:flex;
+  flex-flow:row wrap;
+  margin:rem(16px) 0;
+  background:#d1d8e2;
+  border:1px solid #c5cdd9;
+  border-radius:2px;
+  @include media($tablet) {
+    flex-wrap:nowrap;
+    align-items:center;
+  }
+  &--label {
+    color: #1f2124;
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: 0.125em;
+    font-weight: 400;
+    font-size: 0.675em;
+    padding: 0.35rem 1rem 0.4rem;
+    box-sizing: border-box;
+    flex:1 0 rem(288px);
+    @include media($tablet) {
+      padding:0 1.75rem 0 1rem;
+    }
+  }
+  &--input {
+    outline: 0;
+    color: #1f2124;
+    font-size: 1em;
+    padding: 0.65em 1rem;
+    letter-spacing: 0.025em;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    border-radius: 0 2px 2px 0;
+    @include media($tablet) {
+    }
+  }
+}

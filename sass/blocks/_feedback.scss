@@ -1,6 +1,7 @@
 .feedback {
   padding: rem(9px) rem(16px) rem(11px);
   margin:0 0 rem(16px);
+  position: relative;
 //  color: $white;
   line-height: 1;
   font-size: rem(14.4px);
@@ -23,5 +24,14 @@
   }
   &.notice {
     border-color: $warning;
+  }
+  .icon.checkmark {
+    width: 100px;
+    height: auto;
+    fill: white;
+    position: absolute;
+    top: 50%;
+    left: -70px;
+    transform: translateY(-50%);
   }
 }

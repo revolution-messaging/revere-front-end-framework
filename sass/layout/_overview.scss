@@ -39,6 +39,9 @@
       background:$dkgreen;
       color:white;
       vertical-align:text-bottom;
+      .minutemen & {
+        background: $blue;
+      }
     }
     @include media($tablet) {
       padding:rem(12px) rem(20px);
@@ -67,25 +70,44 @@
       position: absolute;
       top: rem(24px);
       right: rem(24px);
+      min-width: 125px;
+      background:white;
       @include display(flex);
       @include flex-direction(column);
-      padding: 0 rem(12px);
-      background:white;
       @include transition(all .5s);
+      z-index: 10;
       &.show {
         @include animation(expand-modal .5s);
         border-top: 4px solid $blue;
         box-shadow: 0px 3px 6px $ltgray;
-        padding: rem(10px) rem(12px);
+        // padding: rem(10px) rem(12px);
         max-height: 400px;
       }
       &.hide {
         @include animation(contract-modal .5s);
       }
+      .minutemen & {
+        border-top: 0 !important;
+      }
     }
     &--action {
-      font-size: rem(14px);
+      font-size: rem(13px);
       padding: rem(4px) 0;
+      padding: rem(5px) rem(12px);
+      margin: rem(2px) 0;
+      color: $text !important;
+      cursor: pointer;
+      line-height: 1em;
+      &:hover {
+        background-color: $ltbg;
+        color: $bluehover !important;
+      }
+    }
+    &--delete {
+      color: $red !important;
+      &:hover {
+        color: $redhover !important;
+      }
     }
     &--list {
       @include display(flex);
@@ -103,6 +125,16 @@
         width: rem(14px);
         height: rem(14px);
         margin-right: rem(6px);
+      }
+      a {
+        padding-left: 5px;
+      }
+      strong {
+        font-weight: bold;
+        padding-left: 5px;
+      }
+      .minutemen & {
+        color: $dkgray;
       }
     }
   }

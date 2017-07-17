@@ -5,6 +5,7 @@
   background:#d1d8e2;
   border:1px solid #c5cdd9;
   border-radius:2px;
+  position: relative;
   @include media($tablet) {
     flex-wrap:nowrap;
     align-items:center;
@@ -19,8 +20,15 @@
     padding: 0.35rem 1rem 0.4rem;
     box-sizing: border-box;
     flex:1 0 rem(288px);
-    @include media($tablet) {
+     @include media($tablet) {
       padding:0 1.75rem 0 1rem;
+      .minutemen & {
+        padding: 10px 1rem;
+      }
+    }
+    .minutemen & {
+      padding: 10px 1rem;
+      align-self: flex-start;
     }
   }
   &--input {
@@ -33,5 +41,45 @@
     border-radius: 0 2px 2px 0;
     @include media($tablet) {
     }
+  }
+  &--check {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    &-item {
+      margin-right: 30px;
+    }
+  }
+  &--radio {
+    width: 100%;
+    padding: 10px;
+    background-color: white;   
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    &-item {
+      margin-right: 30px;
+    }
+  }
+  &--textarea {
+    resize: none;
+    border: 0;
+    outline: 0;
+    color: #1f2124;
+    font-size: 1em;
+    padding: 0.65em 1rem;
+    letter-spacing: 0.025em;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    border-radius: 0 2px 2px 0;
+    @include media($tablet) {
+    }
+  }
+  &--action {
+    position: absolute;
+    top: 5px;
+    right: 5px;
   }
 }

@@ -1,0 +1,22 @@
+.billboard {
+    text-align: center;
+    border: 1px solid $ltborder;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.billboard--hed {
+    font-size: 2em;
+    line-height: 1.15em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.billboard--dek {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin-bottom: 15px;
+    display: block;
+}

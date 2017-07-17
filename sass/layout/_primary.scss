@@ -27,6 +27,13 @@
     .app & {
       border-bottom:1px solid $ltborder;
     }
+    .minutemen & {
+      border-bottom: 0px;
+    }
+    h1 {
+      font-size: 2.25em;
+      font-weight: bold;
+    }
     h2 {
       margin:rem(3.2px) 0 0;
     }

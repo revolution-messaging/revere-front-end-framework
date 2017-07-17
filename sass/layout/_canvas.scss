@@ -9,5 +9,8 @@
   h2, h1 {
     position:relative;
     margin-bottom:30px;
+    .minutemen & {
+      margin-bottom: 0;
+    }
   }
 }

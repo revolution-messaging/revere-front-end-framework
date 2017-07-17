@@ -1,0 +1,45 @@
+&__app {
+    position: static;
+    border-bottom:1px solid $ltborder;
+}
+&__app--list {
+  @include align-items(flex-start);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  @include flex-wrap(wrap);  
+  font-weight: 300;
+  min-width:250px;
+  list-style:none;
+  margin:0 10px 0 0;
+  padding: 0;
+  > li {
+    @include transition(all 200ms ease);
+    list-style:none;
+    position:relative;
+    margin-right: 30px;
+    padding: 0;
+    @include flex(0 0 auto);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    display: block;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    &.active {
+      border-bottom: 3px solid $blue;
+    }
+   // @include transition(all 100ms ease-in 500ms);   
+    .app & {
+      &:link,
+      &:visited {
+        color: $text;
+      }
+    }
+  }
+}

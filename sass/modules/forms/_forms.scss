@@ -70,6 +70,11 @@ input {
    background:$cta1;
   }
  }
+ .minutemen & {
+   &[type="text"] {
+    width: calc(100% - 18rem);
+   }
+ }
 }
 
 textarea {
@@ -91,7 +96,7 @@ textarea {
   align-items:center;
 }
 
-.upload__item {
+.upload__item {  
   &--toggle {
     position: absolute;
     top: auto;

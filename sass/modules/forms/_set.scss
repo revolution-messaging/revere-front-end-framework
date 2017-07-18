@@ -9,6 +9,9 @@
   @include media($tablet) {
     flex-wrap:nowrap;
     align-items:center;
+    .minutemen & {
+      flex-wrap: wrap;
+    }
   }
   &--label {
     color: #1f2124;
@@ -49,8 +52,8 @@
     display:flex;
     flex-flow:row wrap;
     align-items: center;
-    &-item {
-      margin-right: 30px;
+    .minutemen & {
+      width: calc(100% - 18rem);
     }
   }
   &--radio {
@@ -63,6 +66,9 @@
     &-item {
       margin-right: 30px;
     }
+    .minutemen & {
+      width: calc(100% - 18rem);
+    }
   }
   &--textarea {
     resize: none;
@@ -74,6 +80,9 @@
     letter-spacing: 0.025em;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     border-radius: 0 2px 2px 0;
+    .minutemen & {
+      width: calc(100% - 18rem);
+    }
     @include media($tablet) {
     }
   }
@@ -81,5 +90,19 @@
     position: absolute;
     top: 5px;
     right: 5px;
+  }
+  &--upload-container {
+    &.column {
+      .form__set--input {
+        width: 100% !important;
+      }
+    }
+  }
+  .error {
+    width: 100%;
+    background-color: $orange;
+    color: white;
+    font-size: rem(12px);
+    padding: rem(7px) rem(14px);
   }
 }

@@ -1,213 +1,213 @@
 // Depricate v3
-&__user {
-  top:12px;
-  z-index:1;
-  overflow:visible;
-  @include media($notebook) {
-    z-index:3;
-  }
-}
-&__user--list {
-  @include align-items(flex-start);
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(flex-end);
-  @include flex-wrap(wrap);  
-  font-weight: 300;
-  position:fixed;
-  min-width:250px;
-  list-style:none;
-  margin:0 10px 0 0;
-  padding: 5px 0;
-  @include media($notebook) {
-    @include flex-wrap(nowrap);
-    padding:0;  
-    min-width:174px;
-    right:15px;
-    top: 15px;
-    z-index:4;
-    position:absolute;
-    background:transparent;
-  }
-  > li {
-    @include transition(all 200ms ease);
-    list-style:none;
-    position:relative;
-    margin-right: 0px;
-    padding: 0;
-    @include flex(0 0 100%);
-    @include media($tablet) {
-      @include flex(0 0 auto);
-    }
-    &.clientmenu {
-      h6 {
-        cursor:pointer;
-        padding: 12px 20px 12px;
-      }
-      @include media($tablet) {
-        height:auto;
-        @include flex(1 0 225px);
-        h6 {
-          padding:12px 20px 22px;
-        }
-      }
-    }
-    &.currentuser {
-      svg:not(.toggle) {
-        width: 1.75rem;
-        height: 1.5rem;
-        float: left;
-        margin-right: 10px;
-        margin-top: -2px;
-      }
-    }
-    &.hover, &.activated {
-      svg.toggle {
-        @include animation(rotate90 .2s 0s linear forwards);
-      }
-      > ul {
-        @include animation(expand-modal .25s linear forwards);
-        overflow-y:scroll;
-      }
-    }
-    &.deactivated {
-      svg.toggle {
-        @include animation(rotate90 .2s 0s linear forwards);
-      }
-      > ul {
-        @include animation(contract-modal .25s linear forwards);
-        overflow-y:hidden;
-      }
-    }
-    img {
-      display:inline-block;
-      width:24px;
-      height:24px;
-      border-radius:50%;
-      overflow:hidden;
-      margin-right:10px;
-      vertical-align:middle;
-    }
-    h6 {
-      margin-right: 0;
-      display: block;
-      background-color: transparent;
-      border: 0;
-      outline: none;
-      padding: 12px 20px 12px;
-    }
-    svg.toggle {
-      float:right;
-      margin:0 0 0 10px;
-      width: 1.4rem;
-      position: relative;
-      top: -3.5rem;
-      height: 1.4rem;
-      @include animation(return90 .2s 0s linear forwards);
-      @include media($tablet) {
-        top:0;
-      }
-    }
-    > ul {
-      width: 100%;
-      list-style:none;
-      padding-left:0;
-      top:2rem;
-      right:0;
-      z-index:1;
-      max-height:0;
-      overflow:hidden;
-      left: auto;
-      margin: 0;
-      position: absolute;;
-      padding-top: 0 !important;
-      background-color: white;
-      @include animation(contract-modal .1s linear forwards);
-      li {
-        margin: 0;
-        padding: 10px 20px;
-        border: 0;
-        cursor: pointer;
-      }
-    }
-  }
-  a {
-    color:#ccc;
-    text-decoration:none;
-    @include transition(all 100ms ease-in 500ms);   
-    &:hover {
-      color:white;
-    }
-  }
-  body.app & {
-    background-color: lighten($action-200, 2%);
-    @include media($notebook) {
-      background:transparent;
-    }
-    a:link, a:visited {
-      color:$mg-100;
-    }
-    > li {
-      svg.toggle {
-        fill: $mg-100;
-        -ms-transform: rotate(360deg); /* IE 9 */
-        -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
-        transform: rotate(360deg);
-      }
-      &:hover,
-      &.activated {
-        background-color: $white;
-        box-shadow: 0px 0px 3px 0px $mg-300;
-        h6 {
-          border-bottom: 1px solid $mg-300;
-        }
-        > ul {
-          > li {
-            border-bottom: 1px solid $mg-300;
-            &:hover, &:hover a {
-              background-color: lighten($action-200, 2%);
-              color: $action-100;;         
-            }
-          }
-        }
-      }
-    }
-  }
-  body.dashboard & {
-    a:link, a:visited {
-      color:$mg-100;
-    }
-    .icon {
-      fill: $white;
-    }
-    > li {
-      &:hover,
-      &.activated {
-        background:$fg-100;
-        .icon {
-        }
-        ul {
-          background:darken($fg-100,5%);
-          @include animation(expand-modal .25s linear forwards);
-        }
-      }
-      
-      &.deactivated {
-        background-color: transparent;
-        svg.toggle {
-          @include animation(rotate90 .2s 0s linear forwards);
-        }
-        > ul {
-          @include animation(contract-modal .25s linear forwards);
-          overflow-y:hidden;
-        }
-      }
-
-      &:hover {
-        ul li {
-          @include animation(show-text .1s linear forwards);
-        }
-      }
-    }
-  }
-}
+//&__user {
+//  top:12px;
+//  z-index:1;
+//  overflow:visible;
+//  @include media($notebook) {
+//    z-index:3;
+//  }
+//}
+//&__user--list {
+//  @include align-items(flex-start);
+//  @include display(flex);
+//  @include flex-direction(row);
+//  @include justify-content(flex-end);
+//  @include flex-wrap(wrap);
+//  font-weight: 300;
+//  position:fixed;
+//  min-width:250px;
+//  list-style:none;
+//  margin:0 10px 0 0;
+//  padding: 5px 0;
+//  @include media($notebook) {
+//    @include flex-wrap(nowrap);
+//    padding:0;
+//    min-width:174px;
+//    right:15px;
+//    top: 15px;
+//    z-index:4;
+//    position:absolute;
+//    background:transparent;
+//  }
+//  > li {
+//    @include transition(all 200ms ease);
+//    list-style:none;
+//    position:relative;
+//    margin-right: 0px;
+//    padding: 0;
+//    @include flex(0 0 100%);
+//    @include media($tablet) {
+//      @include flex(0 0 auto);
+//    }
+//    &.clientmenu {
+//      h6 {
+//        cursor:pointer;
+//        padding: 12px 20px 12px;
+//      }
+//      @include media($tablet) {
+//        height:auto;
+//        @include flex(1 0 225px);
+//        h6 {
+//          padding:12px 20px 22px;
+//        }
+//      }
+//    }
+//    &.currentuser {
+//      svg:not(.toggle) {
+//        width: 1.75rem;
+//        height: 1.5rem;
+//        float: left;
+//        margin-right: 10px;
+//        margin-top: -2px;
+//      }
+//    }
+//    &.hover, &.activated {
+//      svg.toggle {
+//        @include animation(rotate90 .2s 0s linear forwards);
+//      }
+//      > ul {
+//        @include animation(expand-modal .25s linear forwards);
+//        overflow-y:scroll;
+//      }
+//    }
+//    &.deactivated {
+//      svg.toggle {
+//        @include animation(rotate90 .2s 0s linear forwards);
+//      }
+//      > ul {
+//        @include animation(contract-modal .25s linear forwards);
+//        overflow-y:hidden;
+//      }
+//    }
+//    img {
+//      display:inline-block;
+//      width:24px;
+//      height:24px;
+//      border-radius:50%;
+//      overflow:hidden;
+//      margin-right:10px;
+//      vertical-align:middle;
+//    }
+//    h6 {
+//      margin-right: 0;
+//      display: block;
+//      background-color: transparent;
+//      border: 0;
+//      outline: none;
+//      padding: 12px 20px 12px;
+//    }
+//    svg.toggle {
+//      float:right;
+//      margin:0 0 0 10px;
+//      width: 1.4rem;
+//      position: relative;
+//      top: -3.5rem;
+//      height: 1.4rem;
+//      @include animation(return90 .2s 0s linear forwards);
+//      @include media($tablet) {
+//        top:0;
+//      }
+//    }
+//    > ul {
+//      width: 100%;
+//      list-style:none;
+//      padding-left:0;
+//      top:2rem;
+//      right:0;
+//      z-index:1;
+//      max-height:0;
+//      overflow:hidden;
+//      left: auto;
+//      margin: 0;
+//      position: absolute;;
+//      padding-top: 0 !important;
+//      background-color: white;
+//      @include animation(contract-modal .1s linear forwards);
+//      li {
+//        margin: 0;
+//        padding: 10px 20px;
+//        border: 0;
+//        cursor: pointer;
+//      }
+//    }
+//  }
+//  a {
+//    color:#ccc;
+//    text-decoration:none;
+//    @include transition(all 100ms ease-in 500ms);
+//    &:hover {
+//      color:white;
+//    }
+//  }
+//  body.app & {
+//    background-color: lighten($action-200, 2%);
+//    @include media($notebook) {
+//      background:transparent;
+//    }
+//    a:link, a:visited {
+//      color:$mg-100;
+//    }
+//    > li {
+//      svg.toggle {
+//        fill: $mg-100;
+//        -ms-transform: rotate(360deg); /* IE 9 */
+//        -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+//        transform: rotate(360deg);
+//      }
+//      &:hover,
+//      &.activated {
+//        background-color: $white;
+//        box-shadow: 0px 0px 3px 0px $mg-300;
+//        h6 {
+//          border-bottom: 1px solid $mg-300;
+//        }
+//        > ul {
+//          > li {
+//            border-bottom: 1px solid $mg-300;
+//            &:hover, &:hover a {
+//              background-color: lighten($action-200, 2%);
+//              color: $action-100;;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//  body.dashboard & {
+//    a:link, a:visited {
+//      color:$mg-100;
+//    }
+//    .icon {
+//      fill: $white;
+//    }
+//    > li {
+//      &:hover,
+//      &.activated {
+//        background:$fg-100;
+//        .icon {
+//        }
+//        ul {
+//          background:darken($fg-100,5%);
+//          @include animation(expand-modal .25s linear forwards);
+//        }
+//      }
+//
+//      &.deactivated {
+//        background-color: transparent;
+//        svg.toggle {
+//          @include animation(rotate90 .2s 0s linear forwards);
+//        }
+//        > ul {
+//          @include animation(contract-modal .25s linear forwards);
+//          overflow-y:hidden;
+//        }
+//      }
+//
+//      &:hover {
+//        ul li {
+//          @include animation(show-text .1s linear forwards);
+//        }
+//      }
+//    }
+//  }
+//}

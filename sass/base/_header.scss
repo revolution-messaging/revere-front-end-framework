@@ -1,6 +1,6 @@
 .revere {
-  @include flex(0 0 auto);
   &__hed {
+    @include flex(0 0 25%);
     &--title {}
     &--toggle {}
     &--icon {}

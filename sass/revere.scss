@@ -29,7 +29,8 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 @import "layout/primary";
 @import "layout/canvas";
 @import "layout/overview";
-@import "layout/footer";
+@import "layout/navigation";
+//@import "layout/footer";
 
 // modules
 @import "modules/forms/forms.scss";

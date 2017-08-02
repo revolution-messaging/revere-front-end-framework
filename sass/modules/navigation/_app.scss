@@ -1,45 +1,44 @@
 &__app {
-    position: static;
-    border-bottom:1px solid $fg-300;
-}
-&__app--list {
-  @include align-items(flex-start);
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(flex-start);
-  @include flex-wrap(wrap);  
+  list-style:none;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content:flex-start;
+  align-items:stretch;
   font-weight: 300;
   min-width:250px;
-  list-style:none;
-  margin:0 10px 0 0;
-  padding: 0;
-  > li {
+  min-height:rem(29px);
+  margin:0 rem(-15px) 0;
+  &--item {
     @include transition(all 200ms ease);
+    line-height:.8;
     list-style:none;
     position:relative;
-    margin-right: 30px;
-    padding: 0;
+    margin:0 rem(15px);
     @include flex(0 0 auto);
-    &:last-child {
-      margin-right: 0;
+    &.active,
+    &:hover {
+      border-bottom: 3px solid $action-100;
     }
   }
-  a {
+  &--link {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.75em;
-    display: block;
-    padding-bottom: 5px;
-    letter-spacing: 1px;
-    &.active {
-      border-bottom: 3px solid $action-100;;
-    }
-   // @include transition(all 100ms ease-in 500ms);   
-    .app & {
-      &:link,
-      &:visited {
-        color: $bg-200;
-      }
-    }
+    letter-spacing: rem(1px);
+    color:$bg-200;
+    display:inline-block;
+    height:100%;
+  }
+  &--info {
+    font-size:rem(10px);
+    line-height:1.2;
+    font-weight:500;
+    color:$fg-500;
+    background:$attn;
+    vertical-align:top;
+    margin-left:rem(4.65px);
+    padding:rem(1px) rem(4px) rem(2px);
+    border-radius:rem(2px);
+    display:inline-block;
   }
 }

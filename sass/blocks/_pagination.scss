@@ -11,7 +11,7 @@
    }
   }
   span {
- 		color: $dkborder;
+ 		color: $fg-100;
 			background-color: $white;
   }
   a, span {
@@ -22,13 +22,13 @@
   a {
     @include transition(all 50ms cubic-bezier(0.86, 0, 0.07, 1) 50ms);
     body.dashboard & {
-      background-color: $dkborder;
+      background-color: $fg-100;
       &:hover{
-        background-color: $lticon;
+        background-color: $fg-200;
       }
     }
     body.app & {
-  		background-color: $ltgray;
+  		background-color: $mg-300;
    		&:hover{
    			background-color: $white;
    		}

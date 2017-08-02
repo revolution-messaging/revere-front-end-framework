@@ -1,0 +1,9 @@
+.admin {
+  @include flex(1 1 75%);
+  &__list {
+    &--item {}
+  }
+  &__finder {
+    &--item {}
+  }
+}

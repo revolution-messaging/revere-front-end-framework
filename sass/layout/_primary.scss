@@ -7,7 +7,7 @@
   margin-top:65px;
   left:auto;
   .app & {
-    background:$ltbg;
+    background:$fg-400;
   }
   body.visible-nav & {
     margin-left:270px;
@@ -25,12 +25,12 @@
   &__hed {
     padding:15px 0 22px;
     .app & {
-      border-bottom:1px solid $ltborder;
+      border-bottom:1px solid $fg-300;
     }
     .minutemen & {
       border-bottom: 0px;
     }
-    h1 {
+    &--title, h1 {
       font-size: 2.25em;
       font-weight: bold;
     }

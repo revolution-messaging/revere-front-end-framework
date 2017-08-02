@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin');
-var revvar = '2-0-3'
+var revvar = '3-0-0'
 var paths = {
   // coffee: 'js/coffee.coffee',
   rstyle: ['sass/*.scss', 'sass/**/*.scss'],

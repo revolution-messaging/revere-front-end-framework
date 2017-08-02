@@ -30,7 +30,7 @@ input {
  &[type="tel"],
  &[type="submit"]  {
  	font-size: 1em;
- 	color: $greydk;
+ 	color: $bg-200;
  	padding: 10px;
  	line-height: 1em;
  }
@@ -58,7 +58,7 @@ input {
  &[type="submit"] {
   border:0;
   display:inline-block;
-  background:$blue;
+  background:$action-100;;
   color:$white;
   letter-spacing:rem(3px);
   text-transform:uppercase;
@@ -67,7 +67,7 @@ input {
   cursor:pointer;
   @include transition( ease-in-out .3s);
   &:hover {
-   background:$cta1;
+   background:$action-200;
   }
  }
  .minutemen & {
@@ -81,7 +81,7 @@ textarea {
   width: 100%;
   min-height: 80px;
   font-size: 1em;
-  color: $greydk;
+  color: $bg-200;
   padding: 10px;
   line-height: 1em;
 }
@@ -103,7 +103,7 @@ textarea {
     bottom: 15px;
     left: auto;
     right: 15px;
-    fill: $lticonhover;
+    fill: $mg-100;
     font-size: 2rem;
     cursor: pointer;
     width:rem(21px);
@@ -131,8 +131,8 @@ textarea {
     z-index: 10;
     &.show {
       @include animation(expand-modal .5s);
-      border-top: 4px solid $blue;
-      box-shadow: 0px 3px 6px $ltgray;
+      border-top: 4px solid $action-100;;
+      box-shadow: 0px 3px 6px $mg-300;
       // padding: rem(10px) rem(12px);
       max-height: 400px;
     }

@@ -1,0 +1,24 @@
+.suite {
+  display:block;
+  @include flex(0 0 250px);
+	background-color: $bg-100;
+  left:0;
+  right:0;
+  // LINKS
+  a{
+    color: $mg-200;
+    fill:$mg-200;
+    @include transition(all 100ms ease-in 50ms);    
+    &:hover{
+      color: $fg-500;
+      fill:$fg-500;
+      & svg {
+        fill:$fg-500;
+      }
+    }
+  }
+  &__list {
+    &--item {}
+    &--icon {}
+  }
+}

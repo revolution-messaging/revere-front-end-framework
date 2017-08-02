@@ -1,0 +1,34 @@
+// Colors http://pattern.reverehq.com/
+// Numbers go up, colors brighten
+
+$fg-100: #C9CDD9; 
+$fg-200: #DDE4ED;
+$fg-300: #D1D8E2; 
+$fg-400: #F4F6FA;
+$fg-500: #FFFFFF;   // Foreground/Brightest
+
+$mg-100: #4F5359;
+$mg-200: #858990;   // Middleground/Middle
+$mg-300: #8A90A0;
+
+$bg-100: #141518;   // Background/Darkest
+$bg-200: #191B1E;
+$bg-300: #1F2227;
+
+$attn: #1DBEED;
+
+// Helpers
+$black:$bg-100;
+$white:$fg-100;
+
+// Calls to Action
+
+$action-100: #2B77EF;   // Blue
+$action-200: #2B77EF;
+
+// Notifications
+
+$notice: #F47801;  // Orange
+$error: #F54652;    // Red
+$success: #11C07C;  // Green
+

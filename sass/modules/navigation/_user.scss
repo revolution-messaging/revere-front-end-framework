@@ -1,3 +1,4 @@
+// Depricate v3
 &__user {
   top:12px;
   z-index:1;
@@ -139,16 +140,16 @@
     }
   }
   body.app & {
-    background-color: lighten($ltbg, 2%);
+    background-color: lighten($action-200, 2%);
     @include media($notebook) {
       background:transparent;
     }
     a:link, a:visited {
-      color:$topborder;
+      color:$mg-100;
     }
     > li {
       svg.toggle {
-        fill: $dkgray;
+        fill: $mg-100;
         -ms-transform: rotate(360deg); /* IE 9 */
         -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
         transform: rotate(360deg);
@@ -156,16 +157,16 @@
       &:hover,
       &.activated {
         background-color: $white;
-        box-shadow: 0px 0px 3px 0px $ltgray;
+        box-shadow: 0px 0px 3px 0px $mg-300;
         h6 {
-          border-bottom: 1px solid $ltgray;
+          border-bottom: 1px solid $mg-300;
         }
         > ul {
           > li {
-            border-bottom: 1px solid $ltgray;
+            border-bottom: 1px solid $mg-300;
             &:hover, &:hover a {
-              background-color: lighten($ltbg, 2%);
-              color: $blue;         
+              background-color: lighten($action-200, 2%);
+              color: $action-100;;         
             }
           }
         }
@@ -174,7 +175,7 @@
   }
   body.dashboard & {
     a:link, a:visited {
-      color:$topborder;
+      color:$mg-100;
     }
     .icon {
       fill: $white;
@@ -182,11 +183,11 @@
     > li {
       &:hover,
       &.activated {
-        background:$dkborder;
+        background:$fg-100;
         .icon {
         }
         ul {
-          background:darken($dkborder,5%);
+          background:darken($fg-100,5%);
           @include animation(expand-modal .25s linear forwards);
         }
       }

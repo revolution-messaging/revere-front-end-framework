@@ -1,7 +1,9 @@
 .canvas {
   padding:rem(25px) 0 rem(40px);
   @include media($tablet) {
-    padding:25px 35px 40px;
+    @include media($tablet) {
+      padding:rem(22px) rem(64px);
+    }
   }
   h3 {
     margin-bottom:12px;

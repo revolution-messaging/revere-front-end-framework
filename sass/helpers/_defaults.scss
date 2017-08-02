@@ -20,30 +20,30 @@ body {
   @include flex-wrap(wrap);
   overflow-x:hidden;
   &.app {
-  	color: $text;
-   background:$ltbg;
+  	color: $bg-200;
+   background:$fg-400;
   }
   @include media($tablet) {
   }
 }
-#sb-site {background: $greydk;}
+#sb-site {background: $bg-200;}
 
 a {
  text-decoration: none;
  .dashboard .primary & {
   &:link, &:visited {
-   color: $dklink; 
+   color: $attn; 
   }
   &:hover {
-   color:$dkbtnhover;
+   color:$action-200;
   } 
  }
  .app .primary & {
   &:link, &:visited {
-   color:$bluedarktint;
+   color:$action-200;
   }
   &:hover {
-   color:$bluehover;
+   color:$attn;
   }
  }
 }
@@ -104,7 +104,7 @@ pre {
  padding: 11px 20px;
  font-family:monospace;
  background:$white;
- border:1px solid $ltgray;
+ border:1px solid $mg-300;
  border-radius:2px;
 }
 code {
@@ -200,7 +200,7 @@ article {
   cursor: pointer;
   height: 2.5rem;
   .modal & {
-    background-color: $blue;
+    background-color: $action-100;;
     text-shadow: -1px -1px 1px rgba(42, 112, 185, 0.5);
     color: white;
   }
@@ -219,8 +219,8 @@ article {
     position: absolute;
     .modal, .modal-c {
       left: 0;
-      background-color: $blue;
-      border-right: 1px solid $bluedarktint;
+      background-color: $action-100;;
+      border-right: 1px solid $action-200;
     }
     .modal-h & {
       right:0;

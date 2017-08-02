@@ -1,4 +1,4 @@
-$version: 2-0-2;
+$version: 3-0-3;
 
 
 // Rummelize Based on (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
@@ -11,23 +11,21 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
-// base
-@import "base/colors";
-
 // helpers
+@import "helpers/colors";
 @import "helpers/mixins";
-
-// base
-@import "base/defaults";
-@import "base/table";
-
-// helpers
+@import "helpers/defaults";
+//@import "helpers/table";
 @import "helpers/animations";
 @import "helpers/icons";
 
+// Base Wrapper
+@import "base/header";
+@import "base/suite";
+@import "base/admin";
+
+
 // layouts
-@import "layout/header";
-@import "layout/navigation";
 @import "layout/primary";
 @import "layout/canvas";
 @import "layout/overview";

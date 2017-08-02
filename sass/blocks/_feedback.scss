@@ -7,7 +7,7 @@
   font-size: rem(14.4px);
   a {
    &:link, &:visited &:hover {
-//    color: $ltbg !important;
+//    color: $action-200 !important;
     text-decoration: underline;
    }
   }
@@ -23,7 +23,7 @@
     border-color: $success;
   }
   &.notice {
-    border-color: $warning;
+    border-color: $notice;
   }
   .icon.checkmark {
     width: 100px;

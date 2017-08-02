@@ -26,7 +26,7 @@ table {
 	tr{
     display: table-row;
     body.dashboard & {
-  		border-bottom: 1px solid $dkborder;
+  		border-bottom: 1px solid $fg-100;
   		&.link-item{
   			&:hover{
   				background-color: $white;
@@ -34,7 +34,7 @@ table {
   		}
     }
     body.app & {
-  		border-bottom: 1px solid $ltborder;
+  		border-bottom: 1px solid $fg-300;
   		&.link-item{
   			&:hover{
   				background-color: $white;
@@ -57,14 +57,14 @@ table {
 			padding-left: 0.5em;
 		}
 		a {
-			color: $dkgray;
+			color: $mg-100;
 			text-decoration: none;
 		}
     body.dashboard & {
   		color: $dklabeltxt;
     }
     body.app & {
-      color: $dkgray;
+      color: $mg-100;
     }
 	}
 	.actions{
@@ -113,15 +113,15 @@ table {
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
     body.dashboard & {
-  		background-color: $lticon;
+  		background-color: $fg-200;
   		&:hover{
-  			background-color: $blue;
+  			background-color: $action-100;;
   		}
     }
     body.app & {
-      background-color: $lticon;
+      background-color: $fg-200;
       &:hover{
-        background-color: $blue;
+        background-color: $action-100;;
       }
     }
 	}

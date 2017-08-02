@@ -23,104 +23,104 @@ $fg-column: 7.107%;
 $fg-gutter: 1.3377%;
 $fg-max-columns: 12;
 
-//@include $greylogin(lt);
-// Colors
-$greylogin:	#eee;
-$greydk:	#2f3032;
-$greywt:	#f9f9f9;
-$greylt: 	#ccc;
-$greymid:	$topborder;
-
-$bluewt:	#e4eef6;
-$bluelt: 	#b3d2ed;
-$bluemid:	#5a96cc;
-$bluedk:	#3E7DB7;
-
-$actgreen:	#82b96a;
-$actgreendk:#649d2e;
-$actred:	#CC3535;
-$actreddk:	#B12C2C;
-
-$notice: $green;
-$warning: #f38a26;
-$error:$red;
-$success:$green;
-
-
-// Color Test
-$lightPrimary: #cccccc;
-$primary: #dddddd;
-$darkerPrimary: #90949a;
-$darkestPrimary: #414348;
-$headerPrimary: #a8adb5;
-$bkgdPrimary: #2b2d30;
-$bkgdSecondary: #202123;
-$green: #61e699;
-$red: #f45454;
-$cta1: #50a1f7;
-$cta2: $green;
-$cta3: #717171;
-$cta4: #F49F54;
-$linkColor: $dklink;
-$formBkgd: #47494d;
-
-$border: #333333;
-$topBorderGray: $topborder; // Might remove this one. Not sure if its going to be used multiple times.
-
-
-.lightPrimary {
-  color: $lightPrimary;
-  color:shade($primary, 7.5%);
-}
-.primary{
-//color: $primary;
-}
-.darkerPrimary{
-color: $darkerPrimary;
-color:shade($primary, 25%);
-}
-.darkestPrimary{
- color:$darkestPrimary;
-}
-.headerPrimary{
-  color: $headerPrimary;
-}
-.bkgdPrimary{
-color: $bkgdPrimary;
-}
-.bkgdSecondary{
-color: $bkgdSecondary;
-}
-.green{
-color: $green;
-}
-.red{
-color: $red;
-}
-.cta1{
-color: $cta1;
-}
-.cta2{
-color: $cta2;
-}
-.cta3 {
-  color: $cta3;
-}
-.cta4{
-color: $cta4;
-}
-.linkColor{
-color: $linkColor;
-}
-.formBkgd{
-color: $formBkgd;
-}
-.border{
-color: $border;
-}
-.topBorderGray{
-color: $topBorderGray; // Might remove this one. Not sure if its going to be used multiple times.
-}
+////@include $greylogin(lt);
+//// Colors
+//$greylogin:  #eee;
+//$bg-200:  #2f3032;
+//$greywt:  #f9f9f9;
+//$mg-100:   #ccc;
+//$greymid:  $mg-100;
+//
+//$action-100;wt:  #e4eef6;
+//$action-100;lt:   #b3d2ed;
+//$action-100;mid:  #5a96cc;
+//$action-100;dk:  #3E7DB7;
+//
+//$actgreen:  #82b96a;
+//$actgreendk:#649d2e;
+//$actred:  #CC3535;
+//$actreddk:  #B12C2C;
+//
+//$notice: $green;
+//$warning: #f38a26;
+//$error:$error;
+//$success:$green;
+//
+//
+//// Color Test
+//$lightPrimary: #cccccc;
+//$primary: #dddddd;
+//$darkerPrimary: #90949a;
+//$darkestPrimary: #414348;
+//$headerPrimary: #a8adb5;
+//$bkgdPrimary: #2b2d30;
+//$bkgdSecondary: #202123;
+//$green: #61e699;
+//$error: #f45454;
+//$action: #50a1f7;
+//$cta2: $green;
+//$cta3: #717171;
+//$cta4: #F49F54;
+//$linkColor: $attn;
+//$formBkgd: #47494d;
+//
+//$border: #333333;
+//$mg-100Gray: $mg-100; // Might remove this one. Not sure if its going to be used multiple times.
+//
+//
+//.lightPrimary {
+//  color: $lightPrimary;
+//  color:shade($primary, 7.5%);
+//}
+//.primary{
+////color: $primary;
+//}
+//.darkerPrimary{
+//color: $darkerPrimary;
+//color:shade($primary, 25%);
+//}
+//.darkestPrimary{
+// color:$darkestPrimary;
+//}
+//.headerPrimary{
+//  color: $headerPrimary;
+//}
+//.bkgdPrimary{
+//color: $bkgdPrimary;
+//}
+//.bkgdSecondary{
+//color: $bkgdSecondary;
+//}
+//.green{
+//color: $green;
+//}
+//.red{
+//color: $error;
+//}
+//.cta1{
+//color: $action-200;
+//}
+//.cta2{
+//color: $cta2;
+//}
+//.cta3 {
+//  color: $cta3;
+//}
+//.cta4{
+//color: $cta4;
+//}
+//.linkColor{
+//color: $linkColor;
+//}
+//.formBkgd{
+//color: $formBkgd;
+//}
+//.border{
+//color: $border;
+//}
+//.topBorderGray{
+//color: $mg-100Gray; // Might remove this one. Not sure if its going to be used multiple times.
+//}
 
 // ------------------------------------------------------------
 // Omega Reset

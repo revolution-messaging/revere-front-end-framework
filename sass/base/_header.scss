@@ -1,0 +1,8 @@
+.revere {
+  @include flex(0 0 auto);
+  &__hed {
+    &--title {}
+    &--toggle {}
+    &--icon {}
+  }
+}

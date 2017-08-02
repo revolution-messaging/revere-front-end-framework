@@ -1,11 +1,11 @@
-// FOOTER v2.0
+// Depricate v3
 
 .revere__footer {
   @include flex(1 0 auto);
 	margin: -14em 0 0;
 	padding: 7em 1.3625em 1.3625em;
   background:url('/img/revmsg-logo@2x.png');
-  background-color:$ltbg;
+  background-color:$action-200;
   background-position:center rem(16px);
   background-repeat:no-repeat;
 	background-size: rem(49px) rem(60px);
@@ -14,10 +14,10 @@
   position: relative;
   z-index: 2;
   body.app & {
-    color: $topborder;
+    color: $mg-100;
   }
   body.dashboard & {
-    color: $dktext;
+    color: $mg-200;
   }
   body.visible-nav & {
     margin-left:270px;
@@ -26,12 +26,7 @@
   	margin-left:270px;
   }
 	a {
-    body.app & {
-  		color: $bluedarktint;
-    }
-    body.dashboard & {
-      color: $dkbtnhover;
-    }
+		color: $action-200;
 	}
   &--list {
 		margin:1em auto;
@@ -41,13 +36,8 @@
 			@include media($tablet) {
 				display:inline-block;
 				vertical-align:top;
-        body.app & {
-  				border-right:1px solid $greylt;
-        }
-        body.dashboard & {
-  				border-right:1px solid $dklabelbg;
-        }
-				&:last-of-type {
+  			border-right:1px solid $mg-100;
+        &:last-of-type {
 					border:0;
 				}
 			}

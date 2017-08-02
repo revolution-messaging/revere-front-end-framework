@@ -1,6 +1,6 @@
 &__app {
     position: static;
-    border-bottom:1px solid $ltborder;
+    border-bottom:1px solid $fg-300;
 }
 &__app--list {
   @include align-items(flex-start);
@@ -32,13 +32,13 @@
     padding-bottom: 5px;
     letter-spacing: 1px;
     &.active {
-      border-bottom: 3px solid $blue;
+      border-bottom: 3px solid $action-100;;
     }
    // @include transition(all 100ms ease-in 500ms);   
     .app & {
       &:link,
       &:visited {
-        color: $text;
+        color: $bg-200;
       }
     }
   }

@@ -6,11 +6,11 @@
   height:16px;
   margin:0 0 0 -24px;
   animation: wait 1.8s linear infinite;
-  background: linear-gradient(90deg, $ltbg 1px, $ltbg 0, $ltbg 3px, $ltbg 3px),
-              linear-gradient(90deg, $ltborder 1px, $ltborder 0, $ltborder 3px, $ltborder 3px),
-              linear-gradient(90deg, $ltborder 1px, $ltborder 0, $ltborder 3px, $ltborder 3px),
-              linear-gradient(90deg, $lticonhover 1px, $lticonhover 0, $lticonhover 3px, $lticonhover 3px),
-              linear-gradient(90deg, $dksubhead 1px, $dksubhead 0, $dksubhead 3px, $dksubhead 3px);  
+  background: linear-gradient(90deg, $action-200 1px, $action-200 0, $action-200 3px, $action-200 3px),
+              linear-gradient(90deg, $fg-300 1px, $fg-300 0, $fg-300 3px, $fg-300 3px),
+              linear-gradient(90deg, $fg-300 1px, $fg-300 0, $fg-300 3px, $fg-300 3px),
+              linear-gradient(90deg, $mg-100 1px, $mg-100 0, $mg-100 3px, $mg-100 3px),
+              linear-gradient(90deg, $mg-200 1px, $mg-200 0, $mg-200 3px, $mg-200 3px);  
   background-repeat: no-repeat;
   background-size: 4px 9px, 4px 9px, 4px 9px, 4px 11px, 4px 16px;  /* 1 */
   background-position: -4px 3px, -4px 3px, -4px 3px, -4px 2px, -4px 0;

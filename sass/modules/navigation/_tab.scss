@@ -1,6 +1,6 @@
 &__tab {
-    position: static;
-    border-bottom:1px solid $ltborder;
+  position: static;
+  border-bottom:1px solid $fg-300;
 }
 &__tab--list {
   @include align-items(flex-start);
@@ -28,10 +28,10 @@
 &__tab--item {
     display: block;
     padding: rem(12px) rem(24px);
-    border-top: 1px solid $ltborder;
-    border-left: 1px solid $ltborder;
-    border-right: 1px solid $ltborder;
-    border-bottom: 1px solid $ltborder;
+    border-top: 1px solid $fg-300;
+    border-left: 1px solid $fg-300;
+    border-right: 1px solid $fg-300;
+    border-bottom: 1px solid $fg-300;
     position: relative;
     -webkit-border-top-left-radius: 2px;
     -webkit-border-top-right-radius: 2px;
@@ -39,7 +39,7 @@
     border-top-right-radius: 2px;
     top: 1px;
     &.selected {
-        color: $text !important;
+        color: $bg-200 !important;
         cursor: default !important;
         border-bottom: 1px solid #F2F4F5;
     }

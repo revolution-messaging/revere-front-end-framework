@@ -2,8 +2,8 @@
   display:flex;
   flex-flow:row wrap;
   margin:rem(16px) 0;
-  background:#d1d8e2;
-  border:1px solid #c5cdd9;
+  background:$fg-300;
+  border:1px solid $fg-100;
   border-radius:2px;
   position: relative;
   @include media($tablet) {
@@ -100,7 +100,7 @@
   }
   .error {
     width: 100%;
-    background-color: $orange;
+    background-color: $notice;
     color: white;
     font-size: rem(12px);
     padding: rem(7px) rem(14px);

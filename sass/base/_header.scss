@@ -1,8 +1,33 @@
 .revere {
   @include flex(0 0 auto);
+  height: rem(75px);
   &__hed {
-    &--title {}
-    &--toggle {}
-    &--icon {}
+    background-color: $bg-100;
+    border-bottom: 1px solid $bg-300;
+    height: rem(75px);
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--title {
+      display: inline-block;
+      width: 100%;
+      padding: 20px auto;
+      text-align: center;
+      text-transform: uppercase;
+      a {
+        color: $fg-500;
+        font-size: rem(20px);
+        height: rem(75px);
+      }
+    }
+    &--toggle {
+      display: none;
+    }
+    &--icon {
+      width: rem(12px);
+      height: rem(12px);
+      display: inline-block;
+    }
   }
 }

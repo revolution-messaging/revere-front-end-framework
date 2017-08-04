@@ -1,9 +1,31 @@
 .admin {
   @include flex(1 1 75%);
+  height: rem(75px);
+  width: 80%;
+  border-bottom: 1px solid $fg-300;
+  display: flex;
+  align-items: center;
   &__list {
-    &--item {}
+    font-size: rem(16px);
+    width: 100%;
+    text-align: right;
+    &--item {
+      display: inline-block;
+      margin-right: rem(30px);
+    }
+    svg {
+      display: inline-block;
+      fill: $bg-200;
+      margin-left: rem(5px);
+    }
   }
   &__finder {
     &--item {}
+  }
+  a {
+    color: $admin-text;
+  }
+  a:focus, a:hover {
+    color: $bg-200;
   }
 }

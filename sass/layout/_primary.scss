@@ -8,7 +8,8 @@
   &__hed {
     &--title {
       margin-bottom:rem(29px);
-      font-size: 2.25em;
+      font-size: rem(36px);
+      line-height:1;
       font-weight: bold;
     }
     &--nav {

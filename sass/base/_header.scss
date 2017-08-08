@@ -12,7 +12,7 @@
     &--title {
       display: inline-block;
       width: 100%;
-      padding: 20px auto;
+      padding: 20px;
       text-align: center;
       text-transform: uppercase;
       a {
@@ -23,6 +23,8 @@
     }
     &--logo {
       fill:$fg-500;
+      display:block;
+      max-width:100%;
     }
     &--toggle {
       display: none;

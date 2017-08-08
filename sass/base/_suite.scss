@@ -1,24 +1,39 @@
 .suite {
+  background-color: $bg-100;
   display:block;
-  @include flex(0 0 250px);
-	background-color: $bg-100;
   left:0;
-  right:0;
+  width: 20%;
   // LINKS
   a{
+    font-size: rem(12px);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: rem(2px);
+    line-height: rem(14px);
     color: $mg-200;
-    fill:$mg-200;
-    @include transition(all 100ms ease-in 50ms);    
-    &:hover{
-      color: $fg-500;
-      fill:$fg-500;
-      & svg {
-        fill:$fg-500;
-      }
+    fill: $mg-200;
+    & svg {
+      display: inline-block;
+      margin: 0px 20px -3px;
+      height: rem(18px);
+      width: rem(18px);
     }
   }
-  &__list {
-    &--item {}
-    &--icon {}
+  &__sub {
+    &--item {
+      padding: 20px 0;
+      border-bottom: 1px solid $bg-300;
+      @include transition(all 100ms ease-in 50ms);
+      &:hover {
+        background-color: $bg-100;
+        border-left: 4px solid $action-100;
+        & a {
+          color: $fg-500;
+        }
+        & svg {
+          fill: $fg-500;
+        }
+      }
+    }
   }
 }

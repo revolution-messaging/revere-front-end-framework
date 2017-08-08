@@ -1,9 +1,9 @@
 // Colors http://pattern.reverehq.com/
 // Numbers go up, colors brighten
 
-$fg-100: #C9CDD9; 
+$fg-100: #C9CDD9;
 $fg-200: #DDE4ED;
-$fg-300: #D1D8E2; 
+$fg-300: #D1D8E2;
 $fg-400: #F4F6FA;
 $fg-500: #FFFFFF;   // Foreground/Brightest
 
@@ -16,6 +16,8 @@ $bg-200: #191B1E;
 $bg-300: #1F2227;
 
 $attn: #1DBEED;
+
+$admin-text: #1660D4;
 
 // Helpers
 $black:$bg-100;
@@ -31,4 +33,3 @@ $action-200: #2B77EF;
 $notice: #F47801;  // Orange
 $error: #F54652;    // Red
 $success: #11C07C;  // Green
-

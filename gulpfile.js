@@ -57,7 +57,9 @@ gulp.task('rscripts', function() {
 });
 gulp.task('svgs', function() {
  gulp.src('icons/icons.svg')
-  .pipe(gulp.dest('../public/'+revvar+'/icons/'));
+  .pipe(gulp.dest('../public/'+revvar+'/icons/'))
+ gulp.src('logos/*.svg')
+  .pipe(gulp.dest('../public/'+revvar+'/logos/'));
 });
 gulp.task('fonts', function() {
  gulp.src('fonts/fonts.css')

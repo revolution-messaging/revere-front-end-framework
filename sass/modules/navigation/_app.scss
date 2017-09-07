@@ -15,19 +15,20 @@
     position:relative;
     margin:0 rem(15px);
     @include flex(0 0 auto);
-    &.active,
-    &:hover {
-      border-bottom: 3px solid $action-100;
-    }
   }
   &--link {
+    @include transition(all 200ms ease);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.75em;
     letter-spacing: rem(1px);
     color:$bg-200;
-    display:inline-block;
+    display:block;
     height:100%;
+    &.selected,
+    &:hover {
+      border-bottom: 3px solid $action-100;
+    }
   }
   &--info {
     font-size:rem(10px);

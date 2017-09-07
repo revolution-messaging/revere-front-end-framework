@@ -30,7 +30,8 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 @import "layout/canvas";
 @import "layout/overview";
 @import "layout/navigation";
-//@import "layout/footer";
+@import "layout/section";
+@import "layout/footer";
 
 // modules
 @import "modules/forms/forms.scss";

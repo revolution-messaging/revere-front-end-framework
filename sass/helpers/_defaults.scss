@@ -6,12 +6,13 @@ html {
   font-family: $helvetica;
 	font-weight: 300;
 }
-
+html * { box-sizing: border-box; }
 html, body {
   min-height: 100% !important;
 	min-width: 320px;
   line-height:1.125em;
 }
+
 body {
   @include display(flex);
   @include align-items(stretch);
@@ -26,6 +27,11 @@ body {
   @include media($tablet) {
   }
 }
+
+
+svg { display: block; }
+
+
 //#sb-site {background: $bg-200;}
 
 //a {

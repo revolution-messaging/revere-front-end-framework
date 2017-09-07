@@ -1,4 +1,22 @@
 .navigation {
+  display:block;
+  @include flex(0 0 250px);
+	//background-color: $navbg;
+  position:fixed;
+  overflow-y:auto;
+  left:0;
+  right:0;
+  // LINKS
+  a{
+    //color: $navlink;
+    @include transition(all 100ms ease-in 50ms);    
+    &:hover{
+      color: $white;
+      & + svg {
+        fill:$white;
+      }
+    }
+  }
   @import "../modules/navigation/user";
 //  @import "../modules/navigation/main";
   @import "../modules/navigation/app";

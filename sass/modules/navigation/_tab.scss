@@ -38,6 +38,8 @@
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     top: 1px;
+    text-decoration: none;
+    color: $action-200;
     &.selected {
         color: $bg-200 !important;
         cursor: default !important;

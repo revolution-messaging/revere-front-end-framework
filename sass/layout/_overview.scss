@@ -1,142 +1,131 @@
 .overview {
-  @include flex(1 1 75%);
-  margin-top:0;
-  min-height:100vh;
-  
-//  @include align-items(space-between);
-//  @include display(flex);
-//  @include flex-direction(row);
-//  @include flex-wrap(wrap);
-//  @include justify-content(flex-start);
-//  margin:0 rem(-8px);
-//  max-width:752px;
-//  &__hed {
-//    @include flex(0 0 100%);
-//    padding:rem(12px) 0 rem(14px);
-//    border:0;
-//    background:transparent;
-//  }
-//  &__item {
-//    &--hed {
-//      color:$bg-200;
-//      padding:0 0 rem(6px);
-//      h3 {
-//        display:inline-block;
-//        font-weight: 900;
-//        margin-right:rem(16px);
-//        margin-bottom:0;
-//      }
-//    }
-//    position: relative;
-//    margin:.5rem 0;
-//    @include flex(0 0 100%);
-//    padding:rem(12px);
-//    box-shadow: 0px 3px 6px $mg-300;
-//    background:white;
-//    em {
-//      line-height:1;
-//      display:inline-block;
-//      font-size: rem(10px);
-//      font-weight: 300;
-//      padding: rem(4px) rem(6px);
-//      border-radius: 4px;
-//      background:$attn;
-//      color:white;
-//      vertical-align:text-bottom;
-//      .minutemen & {
-//        background: $action-100;;
-//      }
-//    }
-//    @include media($tablet) {
-//      padding:rem(12px) rem(20px);
-//    }
-//    &--toggle {
-//      position: absolute;
-//      top: rem(18px);
-//      right: rem(22px);
-//      fill: $mg-100;
-//      font-size: 2rem;
-//      cursor: pointer;
-//      width:rem(21px);
-//      height:rem(5px);
-//      span {
-//        //      @include clipIt;
-//        height: 1px;
-//        width: 1px;
-//        overflow: hidden;
-//        position: absolute;
-//        left: -9999px;
-//      }
-//    }
-//    &--opt {
-//      max-height: 0;
-//      overflow: hidden;
-//      position: absolute;
-//      top: rem(24px);
-//      right: rem(24px);
-//      min-width: 125px;
-//      background:white;
-//      @include display(flex);
-//      @include flex-direction(column);
-//      @include transition(all .5s);
-//      z-index: 10;
-//      &.show {
-//        @include animation(expand-modal .5s);
-//        border-top: 4px solid $action-100;;
-//        box-shadow: 0px 3px 6px $mg-300;
-//        // padding: rem(10px) rem(12px);
-//        max-height: 400px;
-//      }
-//      &.hide {
-//        @include animation(contract-modal .5s);
-//      }
-//      .minutemen & {
-//        border-top: 0 !important;
-//      }
-//    }
-//    &--action {
-//      font-size: rem(13px);
-//      padding: rem(4px) 0;
-//      padding: rem(5px) rem(12px);
-//      margin: rem(2px) 0;
-//      color: $bg-200 !important;
-//      cursor: pointer;
-//      line-height: 1em;
-//      &:hover {
-//        background-color: $action-200;
-//        color: $attn !important;
-//      }
-//    }
-//    &--delete {
-//      color: $error !important;
-//      &:hover {
-//        color: $error !important;
-//      }
-//    }
-//    &--list {
-//      @include display(flex);
-//    }
-//    &--sub {
-//      color:$mg-100;
-//      font-size: rem(13px);
-//      margin-right: rem(18px);
-//      @include display(flex);
-//      @include align-items(center);
-//      &:first-of-type {
-//        margin-right: rem(12px);
-//      }
-//      svg.icon {
-//        width: rem(14px);
-//        height: rem(14px);
-//        margin-right: rem(6px);
-//      }
-//      a {
-//        padding-left: 5px;
-//      }
-//      strong {
-//        font-weight: bold;
-//        padding-left: 5px;
-//      }
-//    }
-//  }
+  @include align-items(space-between);
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(flex-start);
+  &__hed {
+    @include flex(0 0 100%);
+    padding:rem(12px) 0 rem(14px);
+    border:0;
+    background:transparent;
+  }
+  &__item {
+    &--hed {
+      color:$black;
+      padding:0 0 rem(6px);
+      h3 {
+        display:inline-block;
+        font-weight: 900;
+        margin-right:rem(16px);
+        margin-bottom:0;
+        font-size: rem(18px);
+      }
+    }
+    position: relative;
+    margin:.5rem 0;
+    @include flex(0 0 100%);
+    padding:rem(12px);
+    box-shadow: 0px 3px 6px $fg-200;
+    background:white;
+    em {
+      line-height:1;
+      display:inline-block;
+      font-size: rem(10px);
+      font-weight: 300;
+      padding: rem(4px) rem(6px);
+      border-radius: 4px;
+      background: $attn;
+      color:white;
+      vertical-align:text-bottom;
+    }
+    @include media($tablet) {
+      padding:rem(12px) rem(20px);
+    }
+    &--toggle {
+      position: absolute;
+      top: rem(18px);
+      right: rem(22px);
+      fill: $fg-100;
+      font-size: 2rem;
+      cursor: pointer;
+      width:rem(21px);
+      height:rem(5px);
+      span {
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        position: absolute;
+        left: -9999px;
+      }
+    }
+    &--opt {
+      max-height: 0;
+      overflow: hidden;
+      position: absolute;
+      top: rem(24px);
+      right: rem(24px);
+      min-width: 125px;
+      background:white;
+      @include display(flex);
+      @include flex-direction(column);
+      @include transition(all .5s);
+      z-index: 10;
+      &.show {
+        @include animation(expand-modal .5s);
+       border-top: 4px solid $attn;
+       box-shadow: 0px 3px 6px $fg-200;
+        //padding: rem(10px) rem(12px);
+        max-height: 400px;
+      }
+      &.hide {
+        @include animation(contract-modal .5s);
+      }
+      .minutemen & {
+        border-top: 0 !important;
+      }
+    }
+    &--action {
+      font-size: rem(13px);
+      padding: rem(10px) rem(12px);
+      margin: rem(2px) 0;
+      color: $black !important;
+      cursor: pointer;
+      line-height: 1em;
+      text-decoration: none;
+      &:hover {
+       background-color: $fg-400;
+       color: $action-200 !important;
+      }
+    }
+    &--delete {
+      color: $error !important;
+    }
+    &--list {
+      @include display(flex);
+    }
+    &--sub {
+      font-size: rem(13px);
+      margin-right: rem(18px);
+      @include display(flex);
+      @include align-items(center);
+      &:first-of-type {
+        margin-right: rem(12px);
+      }
+      svg.icon {
+        width: rem(14px);
+        height: rem(14px);
+        margin-right: rem(6px);
+      }
+      a {
+        padding-left: 5px;
+        text-decoration: none;
+        color: $action-200;
+      }
+      strong {
+        font-weight: bold;
+        padding-left: 5px;
+      }
+    }
+  }
 }

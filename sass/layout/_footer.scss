@@ -2,17 +2,17 @@
 
 .revere__footer {
   @include flex(1 0 auto);
-	margin: -14em 0 0;
+	margin: -16em 0 0;
 	padding: 7em 1.3625em 1.3625em;
   background:url('/img/revmsg-logo@2x.png');
-  background-color:$action-200;
+  //background-color:$action-200;
   background-position:center rem(16px);
   background-repeat:no-repeat;
 	background-size: rem(49px) rem(60px);
-	font-size: 0.9em;
+	font-size: 0.8175em;
   text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   body.app & {
     color: $mg-100;
   }
@@ -20,14 +20,18 @@
     color: $mg-200;
   }
   body.visible-nav & {
-    margin-left:270px;
+    margin-left:220px;
   }
   @include media($notebook) {
-  	margin-left:270px;
+  	margin-left:220px;
   }
 	a {
-		color: $action-200;
-	}
+    color: $action-200;
+    text-decoration: none;
+  }
+  a:focus, a:hover {
+    color: $bg-200;
+  }
   &--list {
 		margin:1em auto;
     &-item {

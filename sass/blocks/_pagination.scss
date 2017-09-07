@@ -2,6 +2,7 @@
 .pagination {
 	font-size: rem(14px);
   list-style:none;
+  margin-top: rem(25px);
   @include flex(0 0 100%);
   &__list {
    @include display(flex);
@@ -11,8 +12,8 @@
    }
   }
   span {
- 		color: $fg-100;
-			background-color: $white;
+ 		 color: $fg-100;
+    // background-color: $white;
   }
   a, span {
    display:block;
@@ -20,19 +21,21 @@
    text-decoration: none;
   }
   a {
+    background-color: white;
+    color: $action-200;
     @include transition(all 50ms cubic-bezier(0.86, 0, 0.07, 1) 50ms);
-    body.dashboard & {
-      background-color: $fg-100;
-      &:hover{
-        background-color: $fg-200;
-      }
-    }
-    body.app & {
-  		background-color: $mg-300;
-   		&:hover{
-   			background-color: $white;
-   		}
-    }
+    // body.dashboard & {
+    //   background-color: $fg-100;
+    //   &:hover{
+    //     background-color: $fg-200;
+    //   }
+    // }
+    // body.app & {
+  	// 	background-color: $mg-300;
+   	// 	&:hover{
+   	// 		background-color: $white;
+   	// 	}
+    // }
   }
   a:not([href]) {
     background-color: transparent;
@@ -73,6 +76,7 @@
           display: block;
           padding: 0.6em 0.8em;
           background-color: transparent;
+          color: $action-200; 
           &.current {
             background-color: #a9aeb1;
             color: black;
@@ -113,3 +117,82 @@
     }
   }
 }
+
+
+.pagination > .pagination__list > .pagination__list--item:first-child {
+  border-left: 1px solid $fg-100;
+  border-top: 1px solid $fg-100;
+  border-bottom: 1px solid $fg-100;
+  text-indent: -999999999px;
+  position: relative;
+  a, span {
+      padding: .5625rem 1rem .5rem;
+      &:before {
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 4px 6px 4px 0;
+          border-color: transparent $fg-100 transparent transparent;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+      }
+  }
+  a:before {
+      border-color: transparent $action-200 transparent transparent !important;        
+  }
+}
+
+// Updates for 3.0
+.pagination > .pagination__list > .pagination__list--item:last-child {
+  border-right: 1px solid $fg-100;
+  border-top: 1px solid $fg-100;
+  border-bottom: 1px solid $fg-100;
+  text-indent: -999999999px;
+  position: relative;
+  a, span {
+      padding: .5625rem 1rem .5rem;
+      &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 4px 0 4px 6px;
+          border-color: transparent transparent transparent $fg-100;
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          transform: translate(50%, -50%);
+      }
+  }
+  a:after {
+      border-color: transparent transparent transparent $action-200;
+  }  
+}
+
+.pagination__list--item  {
+  margin: 0;
+}
+
+ol.pagination__list {
+  border: 1px solid $fg-100;
+  .pagination__list--item  {
+      border-right: 1px solid $fg-100;
+      &:last-child {
+          border-right: 0;
+      }
+  }
+}
+
+// .pagination__list--item a {
+//   background-color: white;
+// }
+
+// .pagination__list--item span {
+//   background-color: transparent;
+//   color: $fg-100;
+// }

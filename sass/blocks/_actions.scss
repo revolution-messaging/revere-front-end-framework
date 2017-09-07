@@ -3,7 +3,7 @@
   &--tertiary {
     border:0;
     background:$action-200;
-    color:$white;
+    color: #fff;
     text-transform: none;
     @include noiOS;
     border-radius: rem(2px);
@@ -28,12 +28,13 @@
   }
   &--link {
     padding: 0;
-    color: $attn;
+    color: $action-200;
     background-color: transparent;
     border: 0;
     font-size: inherit;
+    text-decoration: none;
     &:hover {
-      color: $action-200;
+      color: $black;
     }
   }
 }

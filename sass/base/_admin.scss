@@ -1,5 +1,5 @@
 .admin {
-  @include flex(1 1 75%);
+  @include flex(1 1 65%);
   height: rem(75px);
   width: 80%;
   border-bottom: 1px solid $fg-300;
@@ -12,11 +12,72 @@
     &--item {
       display: inline-block;
       margin-right: rem(30px);
+      position: relative;
+      padding: rem(15px) 0;
+    }
+    &--signout {
+      a {
+        color: $error !important;
+        background-color: transparent !important;
+        &:hover {
+          color: $error !important;
+          background-color: transparent !important;
+        } 
+      }   
     }
     svg {
       display: inline-block;
       fill: $bg-200;
       margin-left: rem(5px);
+    }
+    &--submenu {
+      width: 420px;
+      max-height: 0;
+      overflow: hidden;
+      position: absolute;
+      top: rem(45px);
+      background:white;
+      @include display(flex);
+      @include flex-direction(column);
+      @include transition(all .5s);
+      z-index: 10;
+      &.show {
+        @include animation(expand-modal .5s);
+        box-shadow: 0px 3px 6px $fg-200;
+        max-height: 400px;
+        padding: rem(8px) 0;
+      }
+      &.hide {
+        @include animation(contract-modal .5s);
+      }
+      li {
+        text-align: left;
+        margin-right: 0;
+        padding: 0;
+        &.admin__list--signout {
+          a {
+            color: $error !important;
+            background-color: transparent !important;
+            &:hover {
+              color: $error !important;
+              background-color: transparent !important;
+            } 
+          }   
+        }
+      }
+      a {
+        font-size: 0.8125rem;
+        padding: rem(5px) rem(12px);
+        color: #141518 !important;
+        cursor: pointer;
+        line-height: 1em;
+        text-decoration: none;
+        display: block;
+        &:hover {
+          background-color: $fg-400;
+          color: $action-200 !important;
+        }
+      }
     }
   }
   &__finder {
@@ -28,5 +89,8 @@
   }
   a:focus, a:hover {
     color: $bg-200;
+  }
+  span {
+    cursor: default;
   }
 }

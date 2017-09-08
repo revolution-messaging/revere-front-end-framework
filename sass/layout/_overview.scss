@@ -73,9 +73,9 @@
       z-index: 10;
       &.show {
         @include animation(expand-modal .5s);
-       border-top: 4px solid $attn;
-       box-shadow: 0px 3px 6px $fg-200;
-        //padding: rem(10px) rem(12px);
+        border-top: 4px solid $attn;
+        box-shadow: 0px 3px 6px $fg-200;
+        padding: rem(8px) 0;
         max-height: 400px;
       }
       &.hide {
@@ -87,8 +87,7 @@
     }
     &--action {
       font-size: rem(13px);
-      padding: rem(10px) rem(12px);
-      margin: rem(2px) 0;
+      padding: rem(5px) rem(12px);
       color: $black !important;
       cursor: pointer;
       line-height: 1em;

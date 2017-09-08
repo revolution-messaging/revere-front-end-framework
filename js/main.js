@@ -46,6 +46,12 @@ $('li.has-children').click( function (){
 $('.clientmenu h6').click( function (){
   $('.clientmenu').toggleClass('activated');
 });
+
+// Client nav toggle
+$('.clients__current').on('click', function(e) {
+  $(e.currentTarget).next().toggleClass('show');
+});
+
 // Class Toggles for Animation
 $('.modal .activate, .user li h6, .user li h6 svg').click( function(){
   var modalBox = $(this).parent();
